@@ -3,478 +3,409 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>뉴스 클리핑 리포트 2026-07-16</title>
+<title>뉴스 클리핑 · 2026-07-16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#f6f7f9; --card:#fff; --text:#1a1c1f; --muted:#6b7280; --line:#e5e7eb;
-    --accent:#2563eb; --risk:#dc2626; --opp:#059669; --strat:#d97706; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#14161a; --card:#1e2127; --text:#e6e8eb;
-    --muted:#9aa2ad; --line:#2c313a; --accent:#60a5fa; --risk:#f87171; --opp:#34d399; --strat:#fbbf24; } }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text);
-    font-family:'Segoe UI','Malgun Gothic','Noto Sans KR',system-ui,sans-serif; line-height:1.55; }
-  .wrap { max-width:920px; margin:0 auto; padding:28px 18px 60px; }
-  header h1 { font-size:1.55rem; margin:0 0 6px; }
-  header .sub { color:var(--muted); font-size:.9rem; margin:0; }
-  .summary { display:flex; flex-wrap:wrap; gap:12px; margin:22px 0; }
-  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; flex:1; min-width:120px; }
-  .stat .n { font-size:1.7rem; font-weight:700; }
-  .stat .l { color:var(--muted); font-size:.82rem; }
-  .stat.strat .n { color:var(--strat); } .stat.risk .n { color:var(--risk); } .stat.opp .n { color:var(--opp); }
-  .tables { display:flex; flex-wrap:wrap; gap:18px; margin-bottom:10px; }
-  .tables > div { flex:1; min-width:240px; }
-  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:.88rem; }
-  th, td { text-align:left; padding:8px 12px; border-bottom:1px solid var(--line); }
-  th { background:rgba(127,127,127,.06); font-weight:600; }
-  tr:last-child td { border-bottom:none; }
-  td.num { text-align:right; font-variant-numeric:tabular-nums; }
-  h2 { font-size:1.15rem; margin:30px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--line); }
-  h2 .count { font-size:.8rem; color:var(--muted); font-weight:500; }
-  .card { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--line); border-radius:10px; padding:12px 14px; margin-bottom:10px; }
-  .card.has-risk { border-left-color:var(--risk); }
-  .card.has-strat { border-left-color:var(--strat); }
-  .card.has-opp { border-left-color:var(--opp); }
-  .meta { font-size:.78rem; color:var(--muted); margin-bottom:4px; }
-  .meta .dot { margin:0 6px; opacity:.6; }
-  a.title { display:inline-block; font-size:1.02rem; font-weight:600; color:var(--accent); text-decoration:none; margin:2px 0; }
-  a.title:hover { text-decoration:underline; }
-  .desc { margin:6px 0 4px; font-size:.9rem; opacity:.9; }
-  .badges { margin-top:6px; }
-  .badge { display:inline-block; font-size:.74rem; padding:2px 8px; border-radius:999px; margin-right:6px; margin-top:3px; }
-  .badge.strat { background:rgba(217,119,6,.13); color:var(--strat); }
-  .badge.risk { background:rgba(220,38,38,.12); color:var(--risk); }
-  .badge.opp { background:rgba(5,150,105,.12); color:var(--opp); }
-  .muted { color:var(--muted); font-size:.9rem; }
-  .srccount { color:var(--muted); }
-  .single { color:var(--muted); font-size:.82rem; font-weight:500; }
-  .insight { background:linear-gradient(0deg,rgba(37,99,235,.06),rgba(37,99,235,.06)),var(--card);
-    border:1px solid var(--line); border-radius:12px; padding:6px 22px 18px; margin-top:34px; }
-  .insight h2 { border-bottom:2px solid var(--accent); }
-  .insight ol { margin:6px 0 0; padding-left:20px; }
-  .insight li { margin:6px 0; font-size:.94rem; }
-  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.78rem; }
+  :root{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+    --serif:"Nanum Myeongjo","AppleMyungjo",Batang,Georgia,serif;
+    --sans:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+      --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14); }
+  }
+  :root[data-theme="light"]{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+  }
+  :root[data-theme="dark"]{
+    --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+    --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ transition:none!important; } }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px 72px; }
+  a{ color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  .masthead{ text-align:center; padding:46px 0 20px; border-bottom:3px double var(--rule); }
+  .kicker{ margin:0; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .nameplate{ margin:.22em 0 .14em; font-family:var(--serif); font-weight:800; color:var(--ink);
+    font-size:clamp(2.1rem,6vw,2.9rem); letter-spacing:-.01em; }
+  .dateline{ margin:0; font-size:.82rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+
+  .summary{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px;
+    padding:16px 2px; border-bottom:1px solid var(--line); }
+  .figs{ display:flex; gap:26px; }
+  .fig{ display:flex; flex-direction:column; line-height:1.05; }
+  .fig .n{ font-family:var(--serif); font-size:1.55rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .fig .l{ font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); margin-top:4px; }
+  .topsrc{ margin:0 0 0 auto; font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .topsrc-l{ color:var(--faint); margin-right:6px; }
+
+  .deptnav{ position:sticky; top:0; z-index:5; display:flex; gap:4px; flex-wrap:wrap;
+    padding:10px 0; margin-bottom:6px; background:var(--paper); border-bottom:1px solid var(--line); }
+  .deptnav a{ font-size:.82rem; color:var(--muted); text-decoration:none; padding:4px 11px;
+    border-radius:999px; white-space:nowrap; transition:background .15s,color .15s; }
+  .deptnav a:hover{ color:var(--ink); background:var(--accent-soft); }
+  .deptnav a b{ color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; margin-left:3px; }
+
+  .dept{ margin-top:36px; scroll-margin-top:58px; }
+  .dept-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    margin:0 0 4px; padding-bottom:9px; border-bottom:2px solid var(--ink); }
+  .dept-name{ font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--ink); }
+  .dept-count{ font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .stories{ list-style:none; margin:0; padding:0; }
+  .story{ padding:16px 0; border-top:1px solid var(--line); }
+  .stories .story:first-child{ border-top:none; }
+  .s-title{ display:block; font-family:var(--serif); font-size:1.14rem; font-weight:700;
+    line-height:1.38; color:var(--ink); text-decoration:none; text-wrap:balance; transition:color .15s; }
+  .s-title:hover{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+  .s-meta{ margin:6px 0 0; font-size:.76rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .s-src{ color:var(--muted); font-weight:600; }
+  .s-kw{ color:var(--faint); }
+  .s-dot{ color:var(--faint); margin:0 7px; }
+  .s-media{ color:var(--accent); font-weight:600; }
+  .s-single{ color:var(--faint); font-style:italic; }
+  .s-desc{ margin:7px 0 0; font-size:.875rem; color:var(--muted); line-height:1.6; }
+  .empty{ color:var(--faint); font-size:.9rem; padding:8px 0; }
+
+  footer{ margin-top:54px; padding-top:18px; border-top:3px double var(--rule);
+    color:var(--faint); font-size:.76rem; line-height:1.65; }
+  footer p{ margin:0 0 6px; }
+  footer strong{ color:var(--muted); }
+  footer .gen{ font-variant-numeric:tabular-nums; }
+
+  @media (max-width:560px){
+    .summary{ gap:12px 18px; } .figs{ gap:18px; }
+    .topsrc{ margin:6px 0 0; width:100%; }
+    .deptnav{ overflow-x:auto; flex-wrap:nowrap; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>📰 뉴스 클리핑 리포트 <span style="color:var(--muted);font-weight:500;">2026-07-16</span></h1>
-    <p class="sub">수집창: 2026-07-15 11:37 ~ 2026-07-16 11:37 (KST) · 생성: 2026-07-16 11:37:24<br>수집 101건 → 동일 사실 통합 55건 · 제외 400건(광고·주식·출간·공연 등)</p>
+  <header class="masthead">
+    <p class="kicker">출판·유통 시장 데일리 브리프</p>
+    <h1 class="nameplate">뉴스 클리핑</h1>
+    <p class="dateline">2026년 7월 16일 목요일 · 최근 24시간 07/15 13:09–07/16 13:09 KST</p>
   </header>
 
   <div class="summary">
-    <div class="stat"><div class="n">55</div><div class="l">총 기사(통합 후)</div></div>
-    <div class="stat"><div class="n">12</div><div class="l">다중매체 보도</div></div>
-    <div class="stat"><div class="n">43</div><div class="l">단일 출처</div></div>
-    <div class="stat"><div class="n">4</div><div class="l">키워드 그룹</div></div>
+    <div class="figs">
+      <div class="fig"><span class="n">54</span><span class="l">총 기사</span></div>
+      <div class="fig"><span class="n">10</span><span class="l">다중매체</span></div>
+      <div class="fig"><span class="n">44</span><span class="l">단일 출처</span></div>
+      <div class="fig"><span class="n">4</span><span class="l">분야</span></div>
+    </div>
+    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>뉴시스 4 · 서울경제 3 · 서울신문 3 · 한국경제 2 · 아시아경제 2</p>
   </div>
 
-  <div class="tables">
-    <div><table><thead><tr><th>키워드 그룹</th><th class="num">건수</th></tr></thead><tbody><tr><td>출판</td><td class='num'>28</td></tr><tr><td>리테일 업계</td><td class='num'>23</td></tr><tr><td>경쟁사</td><td class='num'>1</td></tr><tr><td>자사·주주사</td><td class='num'>3</td></tr></tbody></table></div>
-    <div><table><thead><tr><th>상위 출처(도메인/매체)</th><th class="num">건수</th></tr></thead><tbody><tr><td>서울경제</td><td class='num'>3</td></tr><tr><td>뉴시스</td><td class='num'>3</td></tr><tr><td>서울신문</td><td class='num'>3</td></tr><tr><td>아시아경제</td><td class='num'>2</td></tr><tr><td>조선일보</td><td class='num'>2</td></tr><tr><td>newscham.net</td><td class='num'>1</td></tr><tr><td>techm.kr</td><td class='num'>1</td></tr><tr><td>노컷뉴스</td><td class='num'>1</td></tr></tbody></table></div>
-  </div>
+  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>30</b></a><a href="#g1">리테일 업계 <b>21</b></a><a href="#g2">경쟁사 <b>1</b></a><a href="#g3">자사·주주사 <b>2</b></a></nav>
 
-    <section class="group">
-      <h2>출판 <span class="count">28건</span></h2>
-      <div class="card">
-        <div class="meta">
-          <span class="src">newscham.net</span><span class="dot">·</span><span class="time">2026-07-16 11:30</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://newscham.net/articles/116925" target="_blank" rel="noopener noreferrer">자신에게만 몰두한 중국, 세계를 배울 기회를 잃는다</a> <span class="single">(단일 출처)</span>
-        <p class="desc">중국 출판사의 편집자와 이야기를 나눴다. 그는 ⟪글로벌 불평등⟫(Global Inequality)이 중국에서 좋은... 중국산 전기차가 세계 시장에서 폭발적으로 성장한 것과 중국의 소프트파워가 커진 속도를 비교해 보라....</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">techm.kr</span><span class="dot">·</span><span class="time">2026-07-16 10:20</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.techm.kr/news/articleView.html?idxno=153424" target="_blank" rel="noopener noreferrer">리디, 커머스로 영역 확장...실물 상품 판매 위한 약관 개정</a> <span class="single">(단일 출처)</span>
-        <p class="desc">전자책과 웹툰·웹소설 등 디지털 콘텐츠 중심 사업을 출판물과 지식재산권(IP) 상품 등 실물 커머스까지... 시장에서는 리디가 보유한 콘텐츠와 이용자 기반을 활용해 종이책과 웹툰·웹소설 관련 굿즈 등을 판매할...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">노컷뉴스</span><span class="dot">·</span><span class="time">2026-07-16 09:56</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.nocutnews.co.kr/news/6548972?utm_source=naver&amp;utm_medium=article&amp;utm_campaign=20260716095546" target="_blank" rel="noopener noreferrer">전국 독립출판 축제 &#x27;전주책쾌&#x27;…전주 남부시장서 17일 개막</a> <span class="single">(단일 출처)</span>
-        <p class="desc">전북 전주시의 대표 독립출판 축제인 &#x27;제4회 독립출판 북페어 전주책쾌&#x27;가 오는 17일부터 이틀간 남부시장 문화공판장 작당과 로컬공판장 모이장에서 열린다. &#x27;전국 서포를 품고 책쾌가 온다&#x27;를 주제로 열리는 올해...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">beyondpost.co.kr</span><span class="dot">·</span><span class="time">2026-07-16 09:44</span><span class="dot">·</span><span class="kw">출판업계</span>
-        </div>
-        <a class="title" href="http://www.beyondpost.co.kr/view.php?ud=20260716092249615092e75d13a3_30" target="_blank" rel="noopener noreferrer">고교 수학 &#x27;조건부확률&#x27; 난도 1위…교육계, &#x27;개념·유형&#x27; 연계 학습으로...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">이에 따라 교육 현장과 출판 업계는 단순한 공식 암기를 넘어, 개념과 유형을 유기적으로 연결하는 방향으로 학습 전략을 전면 재편하고 있다. ◆ 확통 내 최고 난도 단원 &#x27;조건부확률&#x27;…&quot;단순 암기 안 통해&quot; 16일 입시...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">아주경제</span><span class="dot">·</span><span class="time">2026-07-16 09:38</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.ajunews.com/view/20260716092323328" target="_blank" rel="noopener noreferrer">해외 문화예술계 주요 인사 한국 찾는다…K-컬처 세계 진출 발판</a> <span class="single">(단일 출처)</span>
-        <p class="desc">이를 통해 한국 문학이 스페인어권 독자들과 만날 기회를 넓히고 중남미 출판시장과의 협력 기반을 강화할 것으로 기대된다. 부에노스아이레스 국제도서전은 라틴아메리카를 대표하는 국제도서전으로서, 그의 방한은...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">뉴스1</span><span class="dot">·</span><span class="time">2026-07-16 09:24</span><span class="dot">·</span><span class="kw">출판업계</span><span class="dot">·</span><span class="srccount">12개 매체</span>
-        </div>
-        <a class="title" href="https://www.news1.kr/industry/sb-founded/6229893" target="_blank" rel="noopener noreferrer">&quot;중소 출판·인쇄업계 상생 마중물&quot;…한솔제지, &#x27;동행 프로젝트&#x27; 가동</a>
-        <p class="desc">한솔제지(213500)가 내수 부진과 제작비 부담으로 어려움을 겪는 중소 출판·인쇄업계를 돕기 위해 &#x27;출판·인쇄 동행(同行) 프로젝트&#x27;를 가동한다. 16일 업계에 따르면 한솔제지는 1인·독립출판사를 포함한 중소 출판...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">imaeil.com</span><span class="dot">·</span><span class="time">2026-07-16 08:34</span><span class="dot">·</span><span class="kw">서점 폐점</span>
-        </div>
-        <a class="title" href="https://www.imaeil.com/page/view/2026071607545607286" target="_blank" rel="noopener noreferrer">돈으로 환산할 수 없는 책과 서점의 가치…21세기, &#x27;좋은 서점&#x27;이 필요한...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">경영상의 어려움이 아닌 건물 매각에 따른 이전에 의한 폐점이지만, 꾸준히 감소하는 성인 종합독서율과 클릭 한 번이면 다음 날 집 앞까지 책을 받아볼 수 있는 시대에 전해진 서점의 폐점 소식은 어딘가 씁쓸한 마음을...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">아시아경제</span><span class="dot">·</span><span class="time">2026-07-16 08:00</span><span class="dot">·</span><span class="kw">출판 시장</span><span class="dot">·</span><span class="srccount">3개 매체</span>
-        </div>
-        <a class="title" href="https://view.asiae.co.kr/article/2026071607290243086" target="_blank" rel="noopener noreferrer">문체부, 해외 문화예술계 주요 인사 10명 초청…국제협력 기반 넓힌다</a>
-        <p class="desc">부에노스아이레스 국제도서전은 라틴아메리카를 대표하는 국제도서전이자 스페인어권 출판시장의 주요 플랫폼 가운데 하나다. 한국을 처음 방문한 마르티네스 총괄국장은 지난달 22일부터 28일까지 서울국제도서전을...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">sportsseoul.com</span><span class="dot">·</span><span class="time">2026-07-16 07:48</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.sportsseoul.com/news/read/1622779?ref=naver" target="_blank" rel="noopener noreferrer">‘수줍던 부산 소년이 어린이 롤모델로’…BTS 정국, 브루노 마스·스테...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">해외 출판업계에 따르면 어린이 전기 시리즈 ‘바이오그라피 포 키즈’는 최근 정국 편을 출간했다. 제목은... 솔로 활동에서도 글로벌 음원시장과 차트에서 존재감을 드러냈다. 무대 위 화려한 기록만이 정국을 설명하는...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">이데일리</span><span class="dot">·</span><span class="time">2026-07-16 07:22</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.edaily.co.kr/news/newspath.asp?newsid=02453446645515176" target="_blank" rel="noopener noreferrer">&quot;라인망가, &#x27;韓 도전만화&#x27; DNA로 日 신인작가 생태계 키운다&quot;</a> <span class="single">(단일 출처)</span>
-        <p class="desc">사타 리드는 현지 시장의 냉정한 판세도 짚었다. 그는 “서비스 규모로만 보면 일본에는 슈에이샤(집영사)라는 거대 출판사가 있고, 그곳이 운영하는 ‘점프 루키+’라는 투고 공간이 있다”며 “그곳은 슈에이샤를...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">abcn.kr</span><span class="dot">·</span><span class="time">2026-07-16 07:00</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.abcn.kr/news/articleView.html?idxno=89479" target="_blank" rel="noopener noreferrer">AI는 일자리를 빼앗는 존재일까?</a> <span class="single">(단일 출처)</span>
-        <p class="desc">음반 산업이라는 거대한 새 시장이 열렸고, 작곡가와 연주자, 음향 기술자라는 새로운 직업군이 생겼습니다.... 퍼졌고 출판업, 편집업, 서점업이라는 새로운 산업이 뒤따라 생겨났습니다. 새로운 기술이 등장할 때마다...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">topstarnews.net</span><span class="dot">·</span><span class="time">2026-07-16 06:46</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.topstarnews.net/news/articleView.html?idxno=16136051" target="_blank" rel="noopener noreferrer">방탄소년단 정국, 아동용 위인전 또 주인공…&#x27;큰 꿈&#x27; 전하는 성장 스토...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">정국의 이름은 출판 시장뿐 아니라 각종 글로벌 랭킹에서도 꾸준히 언급돼 왔다. 그는 음악, 정치, 스포츠, 경제 등 여러 분야 인물과 전 세계 유명한 장소, 음식, 자연 현상, 미술품 등을 소개하는 정보형 웹사이트...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">sisain.co.kr</span><span class="dot">·</span><span class="time">2026-07-16 06:40</span><span class="dot">·</span><span class="kw">출판업계</span>
-        </div>
-        <a class="title" href="https://www.sisain.co.kr/news/articleView.html?idxno=58194" target="_blank" rel="noopener noreferrer">‘AI 3대 강국’ 자신하는 박태웅 위원장이 던지는 진짜 질문</a> <span class="single">(단일 출처)</span>
-        <p class="desc">IT 업계에 뛰어들었다. KTH, 엠파스 등을 거쳤고 기술 전문 서적을 출판하는 한빛미디어와 공론 플랫폼인 녹서포럼 의장을 맡고 있다. 녹서(Green Paper)는 유럽연합 등에서 활발히 사용하는 제도로, 논의의 완성인 백서...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울경제</span><span class="dot">·</span><span class="time">2026-07-15 21:38</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.sedaily.com/article/20068305?ref=naver" target="_blank" rel="noopener noreferrer">N%의 덫, ‘노조의 이익 선취는 나쁜 선례’ 지적 타당해...Post War 분석은...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">장은수 출판평론가, 노정태 경제사회연구원 전문위원 등 8인이 참석했다. 박한슬 약사 겸 작가는 서면으로... 노동시장과 국가 경쟁력에는 어떤 부작용을 초래할 것인지에 대한 문제를 제기했어야 하는 부분이다. 노조에...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">idomin.com</span><span class="dot">·</span><span class="time">2026-07-15 19:00</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.idomin.com/news/articleView.html?idxno=2010219" target="_blank" rel="noopener noreferrer">[현장의 눈] 다시, 일상여행</a> <span class="single">(단일 출처)</span>
-        <p class="desc">내가 걷는 길은 우리 동네 골목일 때가 더 많고, 읍내 오래된 시장과 강변 오솔길일 때가 더 많다. 바랜 간판... 1987년 일본에서 처음 출판됐고, 우리나라에는 2023년 번역돼 나왔다. 겐페이는 본래 쓸모를 잃어버린 건축물...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">kyeongin.com</span><span class="dot">·</span><span class="time">2026-07-15 18:34</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.kyeongin.com/article/1767373" target="_blank" rel="noopener noreferrer">역사지리학자가 들려주는 근현대 변천사 [책이 된 인천, 기록이 된 섬·...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">(도서출판 선인 刊, 2025년)는 근대부터 현대에 이르기까지 ‘인천의 길’을 추적한다. 책의 꾸밈말에서 알 수... 현 인명여고, 중앙어린이교통공원, 옛 구월동농수산물도매시장, 만수동을 지나 한남정맥 위에 있는 성현...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">뉴시스</span><span class="dot">·</span><span class="time">2026-07-15 17:45</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.newsis.com/view/NISX20260715_0003710973" target="_blank" rel="noopener noreferrer">6월 가장 많이 팔린 책은 &#x27;나의 첫 번째 부동산 교과서&#x27;</a> <span class="single">(단일 출처)</span>
-        <p class="desc">한국출판문화진흥원(출판진흥원)은 15일 교보문고, 예스24, 알라딘, 영풍문고를 비롯한 전국 435개 지역서점... 동월 대비 매출액과 상반기 매출액을 고려하였을 때 시장 상황의 개선을 기대해 볼 수 있을 듯하다&quot;고 전했다.</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">niceeconomy.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 17:32</span><span class="dot">·</span><span class="kw">출판업계</span>
-        </div>
-        <a class="title" href="http://www.niceeconomy.co.kr/news/articleView.html?idxno=90267" target="_blank" rel="noopener noreferrer">[산업 브리핑] 윤선생·대교·웅진그룹</a> <span class="single">(단일 출처)</span>
-        <p class="desc">◇ 윤선생, 학생 참여형 행사로 여름방학 시즌 공략하는 교육업계 윤선생은 영어 말하기 콘테스트 &#x27;윤선생... 윤 회장은 27살에 백과사전 세일즈맨으로 사회생활을 시작한 뒤 출판, 교육, 화장품, 생활가전 렌탈 사업 등을...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">weeklytoday.com</span><span class="dot">·</span><span class="time">2026-07-15 16:56</span><span class="dot">·</span><span class="kw">출판업계</span>
-        </div>
-        <a class="title" href="http://www.weeklytoday.com/news/articleView.html?idxno=785516" target="_blank" rel="noopener noreferrer">[카드업계 동향] 신한카드ㆍKB국민카드ㆍ현대카드(7.15)</a> <span class="single">(단일 출처)</span>
-        <p class="desc">공연업계·배우 창작 활동도 지원 KB국민카드가 선한 영향력을 실천하는 소상공인의 실제 사연을... 디자인과 인쇄·제본 완성도를 기준으로 선정된 출판물 33권을 소개한다. 15일과 18일에는 Joost Grootens와 Kim Boske가...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">헤럴드경제</span><span class="dot">·</span><span class="time">2026-07-15 15:05</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://biz.heraldcorp.com/article/10809914?ref=naver" target="_blank" rel="noopener noreferrer">“일상을 낯설게”…사진 거장 마틴 파 아시아 첫 대규모 회고전</a> <span class="single">(단일 출처)</span>
-        <p class="desc">아이나 시장 풍경을 담은 작품도 있다. ‘남한’은 1998~2007년 사이 한국을 방문해 여러 장소와 대상을 담은... 이번 전시에서는 마틴 파의 사진책과 다양한 출판 형식의 작업도 대거 출품된다. 그의 사진집 150권 중...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">kyosu.net</span><span class="dot">·</span><span class="time">2026-07-15 14:34</span><span class="dot">·</span><span class="kw">출판 시장</span><span class="dot">·</span><span class="srccount">2개 매체</span>
-        </div>
-        <a class="title" href="https://www.kyosu.net/news/articleView.html?idxno=207712" target="_blank" rel="noopener noreferrer">전주서 첫 열리는 &#x27;인생독서×인생서점&#x27; 북페어, 지역서점 22곳 한자리에</a>
-        <p class="desc">행사 첫날인 17일에는 김승수 한국출판문화산업진흥원장과 조지훈 전주시장 등 출판·문화계 주요 인사들이 참석해 지역서점 관계자들을 격려하고 현장을 둘러본다. 이 자리에서는 책 읽는 문화를 넓히기 위한 연대와...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">isplus.com</span><span class="dot">·</span><span class="time">2026-07-15 14:21</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://isplus.com/article/view/isp202607150113" target="_blank" rel="noopener noreferrer">‘2026 K포럼 크리에이터 브랜드 선정식’ 개최…영풍문고·스타디엠 등...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">영풍문고는 독서문화 확산과 고객 중심 서비스 개선을 통해 출판문화 발전에 기여한 점을 인정받아... 스타디엠코퍼레이션은 지역 기반 광고 플랫폼을 통해 소상공인과 지역 소비자를 연결하고, 로컬 광고시장의 운영...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">뉴시스</span><span class="dot">·</span><span class="time">2026-07-15 14:07</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://www.newsis.com/view/NISX20260715_0003710449" target="_blank" rel="noopener noreferrer">&quot;30년 전 한국과 지금의 한국은 많이 달라졌어?&quot;…마틴 파가 끝내 남긴...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">1994년 매그넘 포토스 정회원이 됐으며 사진가를 넘어 편집자·출판인·컬렉터로 활동했고, 2014년에는 마틴 파 재단을 설립해 영국 다큐멘터리 사진의 보존과 연구, 신진 작가 지원에도 힘썼다. 실제로 전시장에는...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">SBS</span><span class="dot">·</span><span class="time">2026-07-15 14:04</span><span class="dot">·</span><span class="kw">출판 시장</span><span class="dot">·</span><span class="srccount">3개 매체</span>
-        </div>
-        <a class="title" href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008659052&amp;plink=ORI&amp;cooper=NAVER" target="_blank" rel="noopener noreferrer">&quot;검색용 도서로 제미나이 훈련&quot;…미 출판사·작가, 구글에 소송</a>
-        <p class="desc">▲ 구글 제미나이3.1 프로 구글이 미국 유명 출판사와 베스트셀러 작가로부터 또 인공지능(AI) 모델 훈련 관련... AI 모델의 저작물 학습이 &#x27;공정 이용&#x27;(fair use)으로 인정받으려면 원작을 베껴 시장 가치를 훼손하지 않는...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">ilyoseoul.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 14:00</span><span class="dot">·</span><span class="kw">출판 시장</span><span class="dot">·</span><span class="srccount">3개 매체</span>
-        </div>
-        <a class="title" href="https://www.ilyoseoul.co.kr/news/articleView.html?idxno=519883" target="_blank" rel="noopener noreferrer">&quot;&#x27;출판도시의 대변신&#x27;… 파주, AI 콘텐츠 산업 메카로 도약&quot;</a>
-        <p class="desc">파주시청 전경 사진 파주시(시장 손배찬)가 대한민국 출판문화의 상징인 파주출판도시를 인공지능(AI) 기반 콘텐츠 산업의 핵심 거점으로 탈바꿈시키기 위한 본격적인 행보에 나섰다. 오랜 기간 축적해 온 출판 콘텐츠와 AI...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">뉴시스</span><span class="dot">·</span><span class="time">2026-07-15 13:12</span><span class="dot">·</span><span class="kw">출판 시장</span><span class="dot">·</span><span class="srccount">4개 매체</span>
-        </div>
-        <a class="title" href="https://www.newsis.com/view/NISX20260715_0003710223" target="_blank" rel="noopener noreferrer">전주남부시장서 &#x27;백년의 서포&#x27; 운영…전통시장·독립출판 결합</a>
-        <p class="desc">사업단은 시장을 하나의 책방이자 문화공간으로 재해석해 방문객들이 독립출판물과 시장의 역사, 문화를 함께 체험할 수 있도록 프로그램을 구성했다. 행사장에서는 청년몰 내 팝업 공간과 시장 내 주단집을 중심으로...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">intn.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 12:02</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="http://www.intn.co.kr/news/articleView.html?idxno=2051943" target="_blank" rel="noopener noreferrer">공정위, 민생안정 확립 기여한 직원에 특별성과 포상금 수여</a> <span class="single">(단일 출처)</span>
-        <p class="desc">그런데 그 과정에서 조사관들은 밀가루 시장에서도 담합이 있었음을 시사하는 단서를 발견했다.... 회복했으며, 출판사와 인쇄업체 등의 부담을 완화하고 도서·교재 등 인쇄물의 가격 안정에도 기여했다고 밝혔다....</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">아시아경제</span><span class="dot">·</span><span class="time">2026-07-15 11:47</span><span class="dot">·</span><span class="kw">출판 시장</span>
-        </div>
-        <a class="title" href="https://view.asiae.co.kr/article/2026071511473294106" target="_blank" rel="noopener noreferrer">출판진흥원, 6월 화제의 책 200선 발표…상반기 1위는 &#x27;프로젝트 헤일메...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">6%, 매출액은 9063억원으로 3.3% 각각 늘었다. 출판전산망 관계자는 &quot;매년 6월은 계절적 요인으로 연중 매출이 가장 낮은 달이지만, 전년 대비 매출 증가세를 고려하면 시장 상황 개선을 기대할 수 있다&quot;고 밝혔다.</p>
-      </div>
+  <main>
+    <section id="g0" class="dept">
+      <h2 class="dept-head"><span class="dept-name">출판</span><span class="dept-count">30건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://magazine.hankyung.com/business/article/202606306165b" target="_blank" rel="noopener noreferrer">흔들리지 않는 투자자 外[이주의 책]</a>
+          <p class="s-meta"><span class="s-src">한국경제</span><span class="s-dot">·</span><time>07/16 12:30</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">그렇다면 이런 시장 상황에 대처하는 방법은 무엇일까. 투자자는 이렇게 상황에 따라 매 순간을... 중국이라는 역설 박민희 지음│한겨레출판│2만2000원 미·중 경쟁의 역설적 측면은 한국에 무엇을 의미할까. 저자는...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://zdnet.co.kr/view/?no=20260716115321" target="_blank" rel="noopener noreferrer">문체부-한국국제문화교류진흥원, 한국 현장 잇는 국제교류 본격 나서</a>
+          <p class="s-meta"><span class="s-src">ZDNet Korea</span><span class="s-dot">·</span><time>07/16 11:57</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">‘부에노스아이레스 국제도서전’은 라틴아메리카를 대표하는 국제도서전이자 스페인어권 출판시장의 주요 플랫폼 가운데 하나로서 이번 방한은 한국 문학과 출판 콘텐츠의 중남미 확장 가능성을 모색한 계기가...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260716_0003711996" target="_blank" rel="noopener noreferrer">평기자 출신 中 신문방송 총괄 광전총국 전 국장 비리 조사</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>07/16 11:54</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">이후 베이징시 당위원회 선전부 부부장, 베이징시 당위원회 부비서기, 상무위원 겸 선전부 부장, 베이징시 부시장 등을 지냈다. 이후 2011년 중앙선전부 부부장 겸 국가광전총국 주임으로 승진한 뒤 2013년 국가신문출판광...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.nc.press/news/articleView.html?idxno=620962" target="_blank" rel="noopener noreferrer">해외 문화예술계 리더들 방한…K-컬처 협력 넓힌다</a>
+          <p class="s-meta"><span class="s-src">nc.press</span><span class="s-dot">·</span><time>07/16 11:45</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">초청 사업은 개별 민간 영역에서 독자적으로 접촉하기 어려운 해외 인사들과 국내 업계를 연결해 주는 역할을 한다. 해외 의사결정권자들이 한국의 예술과 출판 현장을 직접 경험하도록 함으로써 향후 한국 작품의 해외...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://newscham.net/articles/116925" target="_blank" rel="noopener noreferrer">자신에게만 몰두한 중국, 세계를 배울 기회를 잃는다</a>
+          <p class="s-meta"><span class="s-src">newscham.net</span><span class="s-dot">·</span><time>07/16 11:30</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">중국 출판사의 편집자와 이야기를 나눴다. 그는 ⟪글로벌 불평등⟫(Global Inequality)이 중국에서 좋은... 중국산 전기차가 세계 시장에서 폭발적으로 성장한 것과 중국의 소프트파워가 커진 속도를 비교해 보라....</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.techm.kr/news/articleView.html?idxno=153424" target="_blank" rel="noopener noreferrer">리디, 커머스로 영역 확장...실물 상품 판매 위한 약관 개정</a>
+          <p class="s-meta"><span class="s-src">techm.kr</span><span class="s-dot">·</span><time>07/16 10:20</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">전자책과 웹툰·웹소설 등 디지털 콘텐츠 중심 사업을 출판물과 지식재산권(IP) 상품 등 실물 커머스까지... 시장에서는 리디가 보유한 콘텐츠와 이용자 기반을 활용해 종이책과 웹툰·웹소설 관련 굿즈 등을 판매할...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.nocutnews.co.kr/news/6548972?utm_source=naver&amp;utm_medium=article&amp;utm_campaign=20260716095546" target="_blank" rel="noopener noreferrer">전국 독립출판 축제 &#x27;전주책쾌&#x27;…전주 남부시장서 17일 개막</a>
+          <p class="s-meta"><span class="s-src">노컷뉴스</span><span class="s-dot">·</span><time>07/16 09:56</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">전북 전주시의 대표 독립출판 축제인 &#x27;제4회 독립출판 북페어 전주책쾌&#x27;가 오는 17일부터 이틀간 남부시장 문화공판장 작당과 로컬공판장 모이장에서 열린다. &#x27;전국 서포를 품고 책쾌가 온다&#x27;를 주제로 열리는 올해...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.beyondpost.co.kr/view.php?ud=20260716092249615092e75d13a3_30" target="_blank" rel="noopener noreferrer">고교 수학 &#x27;조건부확률&#x27; 난도 1위…교육계, &#x27;개념·유형&#x27; 연계 학습으로...</a>
+          <p class="s-meta"><span class="s-src">beyondpost.co.kr</span><span class="s-dot">·</span><time>07/16 09:44</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">이에 따라 교육 현장과 출판 업계는 단순한 공식 암기를 넘어, 개념과 유형을 유기적으로 연결하는 방향으로 학습 전략을 전면 재편하고 있다. ◆ 확통 내 최고 난도 단원 &#x27;조건부확률&#x27;…&quot;단순 암기 안 통해&quot; 16일 입시...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ajunews.com/view/20260716092323328" target="_blank" rel="noopener noreferrer">해외 문화예술계 주요 인사 한국 찾는다…K-컬처 세계 진출 발판</a>
+          <p class="s-meta"><span class="s-src">아주경제</span><span class="s-dot">·</span><time>07/16 09:38</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">이를 통해 한국 문학이 스페인어권 독자들과 만날 기회를 넓히고 중남미 출판시장과의 협력 기반을 강화할 것으로 기대된다. 부에노스아이레스 국제도서전은 라틴아메리카를 대표하는 국제도서전으로서, 그의 방한은...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/industry/sb-founded/6229893" target="_blank" rel="noopener noreferrer">&quot;중소 출판·인쇄업계 상생 마중물&quot;…한솔제지, &#x27;동행 프로젝트&#x27; 가동</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>07/16 09:24</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-media">14개 매체</span></p>
+          <p class="s-desc">한솔제지(213500)가 내수 부진과 제작비 부담으로 어려움을 겪는 중소 출판·인쇄업계를 돕기 위해 &#x27;출판·인쇄 동행(同行) 프로젝트&#x27;를 가동한다. 16일 업계에 따르면 한솔제지는 1인·독립출판사를 포함한 중소 출판...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.imaeil.com/page/view/2026071607545607286" target="_blank" rel="noopener noreferrer">돈으로 환산할 수 없는 책과 서점의 가치…21세기, &#x27;좋은 서점&#x27;이 필요한...</a>
+          <p class="s-meta"><span class="s-src">imaeil.com</span><span class="s-dot">·</span><time>07/16 08:34</time><span class="s-dot">·</span><span class="s-kw">서점 폐점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">경영상의 어려움이 아닌 건물 매각에 따른 이전에 의한 폐점이지만, 꾸준히 감소하는 성인 종합독서율과 클릭 한 번이면 다음 날 집 앞까지 책을 받아볼 수 있는 시대에 전해진 서점의 폐점 소식은 어딘가 씁쓸한 마음을...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://view.asiae.co.kr/article/2026071607290243086" target="_blank" rel="noopener noreferrer">문체부, 해외 문화예술계 주요 인사 10명 초청…국제협력 기반 넓힌다</a>
+          <p class="s-meta"><span class="s-src">아시아경제</span><span class="s-dot">·</span><time>07/16 08:00</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">부에노스아이레스 국제도서전은 라틴아메리카를 대표하는 국제도서전이자 스페인어권 출판시장의 주요 플랫폼 가운데 하나다. 한국을 처음 방문한 마르티네스 총괄국장은 지난달 22일부터 28일까지 서울국제도서전을...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sportsseoul.com/news/read/1622779?ref=naver" target="_blank" rel="noopener noreferrer">‘수줍던 부산 소년이 어린이 롤모델로’…BTS 정국, 브루노 마스·스테...</a>
+          <p class="s-meta"><span class="s-src">sportsseoul.com</span><span class="s-dot">·</span><time>07/16 07:48</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">해외 출판업계에 따르면 어린이 전기 시리즈 ‘바이오그라피 포 키즈’는 최근 정국 편을 출간했다. 제목은... 솔로 활동에서도 글로벌 음원시장과 차트에서 존재감을 드러냈다. 무대 위 화려한 기록만이 정국을 설명하는...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.edaily.co.kr/news/newspath.asp?newsid=02453446645515176" target="_blank" rel="noopener noreferrer">&quot;라인망가, &#x27;韓 도전만화&#x27; DNA로 日 신인작가 생태계 키운다&quot;</a>
+          <p class="s-meta"><span class="s-src">이데일리</span><span class="s-dot">·</span><time>07/16 07:22</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">사타 리드는 현지 시장의 냉정한 판세도 짚었다. 그는 “서비스 규모로만 보면 일본에는 슈에이샤(집영사)라는 거대 출판사가 있고, 그곳이 운영하는 ‘점프 루키+’라는 투고 공간이 있다”며 “그곳은 슈에이샤를...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.abcn.kr/news/articleView.html?idxno=89479" target="_blank" rel="noopener noreferrer">AI는 일자리를 빼앗는 존재일까?</a>
+          <p class="s-meta"><span class="s-src">abcn.kr</span><span class="s-dot">·</span><time>07/16 07:00</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">음반 산업이라는 거대한 새 시장이 열렸고, 작곡가와 연주자, 음향 기술자라는 새로운 직업군이 생겼습니다.... 퍼졌고 출판업, 편집업, 서점업이라는 새로운 산업이 뒤따라 생겨났습니다. 새로운 기술이 등장할 때마다...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.topstarnews.net/news/articleView.html?idxno=16136051" target="_blank" rel="noopener noreferrer">방탄소년단 정국, 아동용 위인전 또 주인공…&#x27;큰 꿈&#x27; 전하는 성장 스토...</a>
+          <p class="s-meta"><span class="s-src">topstarnews.net</span><span class="s-dot">·</span><time>07/16 06:46</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">정국의 이름은 출판 시장뿐 아니라 각종 글로벌 랭킹에서도 꾸준히 언급돼 왔다. 그는 음악, 정치, 스포츠, 경제 등 여러 분야 인물과 전 세계 유명한 장소, 음식, 자연 현상, 미술품 등을 소개하는 정보형 웹사이트...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sisain.co.kr/news/articleView.html?idxno=58194" target="_blank" rel="noopener noreferrer">‘AI 3대 강국’ 자신하는 박태웅 위원장이 던지는 진짜 질문</a>
+          <p class="s-meta"><span class="s-src">sisain.co.kr</span><span class="s-dot">·</span><time>07/16 06:40</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">IT 업계에 뛰어들었다. KTH, 엠파스 등을 거쳤고 기술 전문 서적을 출판하는 한빛미디어와 공론 플랫폼인 녹서포럼 의장을 맡고 있다. 녹서(Green Paper)는 유럽연합 등에서 활발히 사용하는 제도로, 논의의 완성인 백서...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sedaily.com/article/20068305?ref=naver" target="_blank" rel="noopener noreferrer">N%의 덫, ‘노조의 이익 선취는 나쁜 선례’ 지적 타당해...Post War 분석은...</a>
+          <p class="s-meta"><span class="s-src">서울경제</span><span class="s-dot">·</span><time>07/15 21:38</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">장은수 출판평론가, 노정태 경제사회연구원 전문위원 등 8인이 참석했다. 박한슬 약사 겸 작가는 서면으로... 노동시장과 국가 경쟁력에는 어떤 부작용을 초래할 것인지에 대한 문제를 제기했어야 하는 부분이다. 노조에...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.idomin.com/news/articleView.html?idxno=2010219" target="_blank" rel="noopener noreferrer">[현장의 눈] 다시, 일상여행</a>
+          <p class="s-meta"><span class="s-src">idomin.com</span><span class="s-dot">·</span><time>07/15 19:00</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">내가 걷는 길은 우리 동네 골목일 때가 더 많고, 읍내 오래된 시장과 강변 오솔길일 때가 더 많다. 바랜 간판... 1987년 일본에서 처음 출판됐고, 우리나라에는 2023년 번역돼 나왔다. 겐페이는 본래 쓸모를 잃어버린 건축물...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.kyeongin.com/article/1767373" target="_blank" rel="noopener noreferrer">역사지리학자가 들려주는 근현대 변천사 [책이 된 인천, 기록이 된 섬·...</a>
+          <p class="s-meta"><span class="s-src">kyeongin.com</span><span class="s-dot">·</span><time>07/15 18:34</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">(도서출판 선인 刊, 2025년)는 근대부터 현대에 이르기까지 ‘인천의 길’을 추적한다. 책의 꾸밈말에서 알 수... 현 인명여고, 중앙어린이교통공원, 옛 구월동농수산물도매시장, 만수동을 지나 한남정맥 위에 있는 성현...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260715_0003710973" target="_blank" rel="noopener noreferrer">6월 가장 많이 팔린 책은 &#x27;나의 첫 번째 부동산 교과서&#x27;</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>07/15 17:45</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">한국출판문화진흥원(출판진흥원)은 15일 교보문고, 예스24, 알라딘, 영풍문고를 비롯한 전국 435개 지역서점... 동월 대비 매출액과 상반기 매출액을 고려하였을 때 시장 상황의 개선을 기대해 볼 수 있을 듯하다&quot;고 전했다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.niceeconomy.co.kr/news/articleView.html?idxno=90267" target="_blank" rel="noopener noreferrer">[산업 브리핑] 윤선생·대교·웅진그룹</a>
+          <p class="s-meta"><span class="s-src">niceeconomy.co.kr</span><span class="s-dot">·</span><time>07/15 17:32</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">◇ 윤선생, 학생 참여형 행사로 여름방학 시즌 공략하는 교육업계 윤선생은 영어 말하기 콘테스트 &#x27;윤선생... 윤 회장은 27살에 백과사전 세일즈맨으로 사회생활을 시작한 뒤 출판, 교육, 화장품, 생활가전 렌탈 사업 등을...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.weeklytoday.com/news/articleView.html?idxno=785516" target="_blank" rel="noopener noreferrer">[카드업계 동향] 신한카드ㆍKB국민카드ㆍ현대카드(7.15)</a>
+          <p class="s-meta"><span class="s-src">weeklytoday.com</span><span class="s-dot">·</span><time>07/15 16:56</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">공연업계·배우 창작 활동도 지원 KB국민카드가 선한 영향력을 실천하는 소상공인의 실제 사연을... 디자인과 인쇄·제본 완성도를 기준으로 선정된 출판물 33권을 소개한다. 15일과 18일에는 Joost Grootens와 Kim Boske가...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://biz.heraldcorp.com/article/10809914?ref=naver" target="_blank" rel="noopener noreferrer">“일상을 낯설게”…사진 거장 마틴 파 아시아 첫 대규모 회고전</a>
+          <p class="s-meta"><span class="s-src">헤럴드경제</span><span class="s-dot">·</span><time>07/15 15:05</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">아이나 시장 풍경을 담은 작품도 있다. ‘남한’은 1998~2007년 사이 한국을 방문해 여러 장소와 대상을 담은... 이번 전시에서는 마틴 파의 사진책과 다양한 출판 형식의 작업도 대거 출품된다. 그의 사진집 150권 중...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.kyosu.net/news/articleView.html?idxno=207712" target="_blank" rel="noopener noreferrer">전주서 첫 열리는 &#x27;인생독서×인생서점&#x27; 북페어, 지역서점 22곳 한자리에</a>
+          <p class="s-meta"><span class="s-src">kyosu.net</span><span class="s-dot">·</span><time>07/15 14:34</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">행사 첫날인 17일에는 김승수 한국출판문화산업진흥원장과 조지훈 전주시장 등 출판·문화계 주요 인사들이 참석해 지역서점 관계자들을 격려하고 현장을 둘러본다. 이 자리에서는 책 읽는 문화를 넓히기 위한 연대와...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://isplus.com/article/view/isp202607150113" target="_blank" rel="noopener noreferrer">‘2026 K포럼 크리에이터 브랜드 선정식’ 개최…영풍문고·스타디엠 등...</a>
+          <p class="s-meta"><span class="s-src">isplus.com</span><span class="s-dot">·</span><time>07/15 14:21</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">영풍문고는 독서문화 확산과 고객 중심 서비스 개선을 통해 출판문화 발전에 기여한 점을 인정받아... 스타디엠코퍼레이션은 지역 기반 광고 플랫폼을 통해 소상공인과 지역 소비자를 연결하고, 로컬 광고시장의 운영...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260715_0003710449" target="_blank" rel="noopener noreferrer">&quot;30년 전 한국과 지금의 한국은 많이 달라졌어?&quot;…마틴 파가 끝내 남긴...</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>07/15 14:07</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">1994년 매그넘 포토스 정회원이 됐으며 사진가를 넘어 편집자·출판인·컬렉터로 활동했고, 2014년에는 마틴 파 재단을 설립해 영국 다큐멘터리 사진의 보존과 연구, 신진 작가 지원에도 힘썼다. 실제로 전시장에는...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008659052&amp;plink=ORI&amp;cooper=NAVER" target="_blank" rel="noopener noreferrer">&quot;검색용 도서로 제미나이 훈련&quot;…미 출판사·작가, 구글에 소송</a>
+          <p class="s-meta"><span class="s-src">SBS</span><span class="s-dot">·</span><time>07/15 14:04</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">▲ 구글 제미나이3.1 프로 구글이 미국 유명 출판사와 베스트셀러 작가로부터 또 인공지능(AI) 모델 훈련 관련... AI 모델의 저작물 학습이 &#x27;공정 이용&#x27;(fair use)으로 인정받으려면 원작을 베껴 시장 가치를 훼손하지 않는...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ilyoseoul.co.kr/news/articleView.html?idxno=519883" target="_blank" rel="noopener noreferrer">&quot;&#x27;출판도시의 대변신&#x27;… 파주, AI 콘텐츠 산업 메카로 도약&quot;</a>
+          <p class="s-meta"><span class="s-src">ilyoseoul.co.kr</span><span class="s-dot">·</span><time>07/15 14:00</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">파주시청 전경 사진 파주시(시장 손배찬)가 대한민국 출판문화의 상징인 파주출판도시를 인공지능(AI) 기반 콘텐츠 산업의 핵심 거점으로 탈바꿈시키기 위한 본격적인 행보에 나섰다. 오랜 기간 축적해 온 출판 콘텐츠와 AI...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260715_0003710223" target="_blank" rel="noopener noreferrer">전주남부시장서 &#x27;백년의 서포&#x27; 운영…전통시장·독립출판 결합</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>07/15 13:12</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">5개 매체</span></p>
+          <p class="s-desc">사업단은 시장을 하나의 책방이자 문화공간으로 재해석해 방문객들이 독립출판물과 시장의 역사, 문화를 함께 체험할 수 있도록 프로그램을 구성했다. 행사장에서는 청년몰 내 팝업 공간과 시장 내 주단집을 중심으로...</p>
+        </li>
+        </ol>
     </section>
-    <section class="group">
-      <h2>리테일 업계 <span class="count">23건</span></h2>
-      <div class="card">
-        <div class="meta">
-          <span class="src">한국경제</span><span class="dot">·</span><span class="time">2026-07-16 11:14</span><span class="dot">·</span><span class="kw">쿠팡</span>
-        </div>
-        <a class="title" href="https://www.hankyung.com/article/202607156887g" target="_blank" rel="noopener noreferrer">[단독] 쿠팡 &#x27;AI 초격차&#x27; 시동…&quot;성능만 높여선 부족&quot; 수억개 상품정보...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">쿠팡이 인공지능(AI) 기반 검색과 상품 추천을 고도화하기 위해 기존 상품정보를 전면 개편하고 나섰다. 수억... 16일 업계에 따르면 쿠팡은 기존 상품정보를 새로운 표준 템플릿으로 전환하는 작업을 진행하고 있다....</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">한겨레</span><span class="dot">·</span><span class="time">2026-07-16 10:48</span><span class="dot">·</span><span class="kw">쿠팡</span><span class="dot">·</span><span class="srccount">12개 매체</span>
-        </div>
-        <a class="title" href="https://www.hani.co.kr/arti/politics/bluehouse/1268508.html" target="_blank" rel="noopener noreferrer">이 대통령, 쿠팡 논란에 “과징금, 표적 아냐… 법에 따른 것”</a>
-        <p class="desc">최근 개인정보 유출과 관련해 개인정보보호위원회로부터 거액의 과징금을 부과받은 쿠팡을 염두에 둔... 앞서 개인정보보호위원회는 지난달 대규모 개인정보 유출 사고에 대해 쿠팡에 6246억원의 과징금을 부과했다....</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">dailypop.kr</span><span class="dot">·</span><span class="time">2026-07-16 10:40</span><span class="dot">·</span><span class="kw">올리브영</span>
-        </div>
-        <a class="title" href="http://www.dailypop.kr/news/articleView.html?idxno=100580" target="_blank" rel="noopener noreferrer">500평 규모 K-뷰티 &#x27;올리브영 뷰티맨션 성수&#x27; 가보니…퍼스널 컬러 진단...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">이런 흐름을 가장 적극적으로 반영한 곳 가운데 하나가 올리브영이다. 올리브영은 지난 6월 30일 K-뷰티 브랜드와 팝업스토어가 밀집한 성수동에 약 500평 규모, 지상 4층짜리 &#x27;올리브영 뷰티 맨션 성수&#x27;를 열었다. 국내...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">조선일보</span><span class="dot">·</span><span class="time">2026-07-16 10:20</span><span class="dot">·</span><span class="kw">쿠팡</span>
-        </div>
-        <a class="title" href="https://it.chosun.com/news/articleView.html?idxno=2023092165921" target="_blank" rel="noopener noreferrer">네이버 N배송, 새벽·일요일까지…쿠팡 추격 속도</a> <span class="single">(단일 출처)</span>
-        <p class="desc">쿠팡이 로켓배송을 앞세워 선점한 빠른 배송 수요를 공략하려는 행보로 분석된다. 16일 네이버는 풀필먼트 솔루션 &#x27;N배송 by 네이버&#x27;의 오픈 베타 서비스를 시작했다고 밝혔다. 기존 오늘배송과 내일배송 중심이던 N배송을...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">MBC</span><span class="dot">·</span><span class="time">2026-07-16 09:34</span><span class="dot">·</span><span class="kw">쿠팡</span><span class="dot">·</span><span class="srccount">5개 매체</span>
-        </div>
-        <a class="title" href="https://imnews.imbc.com/replay/2026/nw930/article/6837827_36996.html" target="_blank" rel="noopener noreferrer">쿠팡으로 꼬인 한미 관계‥주미대사까지 호출</a>
-        <p class="desc">◀ 앵커 ▶ 쿠팡이 로비 업체를 통해 백악관과 미국 의회, 정부 등에 전방위 로비를 해온 사실이 확인된 가운데 강경화 주미한국대사가 이례적으로 닷새간 서울에 들어왔습니다. 쿠팡 문제가 한미 간 통상·안보 협의에...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">sateconomy.co.kr</span><span class="dot">·</span><span class="time">2026-07-16 09:30</span><span class="dot">·</span><span class="kw">롯데백화점</span>
-        </div>
-        <a class="title" href="https://sateconomy.co.kr/news/view/1065572402591016" target="_blank" rel="noopener noreferrer">롯데백화점, 외국인 매출 1조 보인다</a> <span class="single">(단일 출처)</span>
-        <p class="desc">상반기 6400억원으로 백화점 3사 1위…지난해 연간 실적 87% 달성 명동 넘어 잠실·부산·동부산까지 관광 상권 확대 롯데백화점이 외국인 매출 1조원 시대를 눈앞에 두고 있다. 명동 본점을 중심으로 형성됐던 외국인...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">socialvalue.kr</span><span class="dot">·</span><span class="time">2026-07-16 07:06</span><span class="dot">·</span><span class="kw">GS25</span>
-        </div>
-        <a class="title" href="https://www.socialvalue.kr/news/view/1065597820041250" target="_blank" rel="noopener noreferrer">CU·GS25 양강 굳어진 편의점 시장…세븐일레븐, 글로벌 소싱으로 승부</a> <span class="single">(단일 출처)</span>
-        <p class="desc">국내 편의점 업계에서 CU와 GS25가 양강 구도를 굳힌 가운데 세븐일레븐이 글로벌 소싱 상품을 앞세워... 지난해 말 기준 국내 점포 수는 CU 1만8711개, GS25 1만8005개, 세븐일레븐 1만1040개로 주요 사업자 모두 전국 단위...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">etoday.co.kr</span><span class="dot">·</span><span class="time">2026-07-16 06:02</span><span class="dot">·</span><span class="kw">롯데백화점</span><span class="dot">·</span><span class="srccount">6개 매체</span>
-        </div>
-        <a class="title" href="https://www.etoday.co.kr/news/view/2604223" target="_blank" rel="noopener noreferrer">롯데백화점, 자체 캐릭터 IP 키운다…&#x27;킨더유니버스&#x27; 애니 첫 공개</a>
-        <p class="desc">이투데이=박선현 기자 | 생활습관·안전교육 13편 상영 전문기관 검수로 신뢰도 강화 롯데백화점이 자체 개발 캐릭터를 활용한 콘텐츠와 상품을 확대하며 지식재산권(IP) 사업 강화에 나선다. 롯데백화점은 서울...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울신문</span><span class="dot">·</span><span class="time">2026-07-16 05:06</span><span class="dot">·</span><span class="kw">올리브영</span>
-        </div>
-        <a class="title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716046003?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">올리브영 美 1호점 개장… ‘온리원’ 정신으로 북미 K컬처 확산</a> <span class="single">(단일 출처)</span>
-        <p class="desc">이 회장은 지난 5월 29일(현지시간) 미국 최초 올리브영 매장인 로스앤젤레스(LA) 패서디나점을 찾아 개장 준비상황을 살피며 경영진과 북미 사업 확대 방향을 논의했다. 이 자리에는 김홍기 CJ 대표, 이선정 CJ올리브영...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울신문</span><span class="dot">·</span><span class="time">2026-07-16 05:05</span><span class="dot">·</span><span class="kw">롯데백화점</span>
-        </div>
-        <a class="title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716042001?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">롯데백화점, 리테일 혁신 ‘고객만족도 1위’</a> <span class="single">(단일 출처)</span>
-        <p class="desc">롯데백화점이 2026 국가고객만족도(NCSI) 조사에서 ‘백화점 부문 1위’를 차지했다고 15일 밝혔다. NCSI는 한국생산성본부(KPC)가 미국 미시간대학과 공동으로 개발한 고객만족도 조사로 소비자가 직접 기업의 제품이나...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울신문</span><span class="dot">·</span><span class="time">2026-07-16 05:05</span><span class="dot">·</span><span class="kw">현대백화점</span>
-        </div>
-        <a class="title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716039003?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">현대백화점, 플래그십으로 도쿄 명품가 공략</a> <span class="single">(단일 출처)</span>
-        <p class="desc">현대백화점이 일본 도쿄의 명품 거리 오모테산도에 K-콘텐츠 수출 플랫폼 ‘더현대 글로벌’의 첫 플래그십 스토어를 선보이고 일본 핵심 상권 공략에 나선다. 현대백화점은 지난 10일 일본 럭셔리 패션과...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">gamemeca.com</span><span class="dot">·</span><span class="time">2026-07-15 19:58</span><span class="dot">·</span><span class="kw">현대백화점</span>
-        </div>
-        <a class="title" href="https://www.gamemeca.com/mv.php?inflow=naver_s&amp;gid=1777867" target="_blank" rel="noopener noreferrer">롤, 여의도·판교 현대백화점서 와일드 팬페스트 연다</a> <span class="single">(단일 출처)</span>
-        <p class="desc">▲ 리그 오브 레전드 와일드 팬 페스트 이미지 (사진제공: 라이엇게임즈) 라이엇게임즈는 현대백화점과 협력하여 전략적 팀 전투, 리프트바운드, 리그 오브 레전드: 와일드 리프트를 아우르는 와일드 팬페스트를...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">thefirstmedia.net</span><span class="dot">·</span><span class="time">2026-07-15 18:32</span><span class="dot">·</span><span class="kw">롯데백화점</span>
-        </div>
-        <a class="title" href="http://www.thefirstmedia.net/news/articleView.html?idxno=203937" target="_blank" rel="noopener noreferrer">롯데호텔 리워즈·롯데백화점 에비뉴엘 등급 연계…프리미엄 혜택 강화</a> <span class="single">(단일 출처)</span>
-        <p class="desc">▲롯데호텔 리워즈 멤버십 롯데호텔앤리조트는 롯데백화점과 우수회원 멤버십 등급 연계 프로그램을 운영한다고 15일 밝혔다. 이번 제휴는 계열사 간 시너지를 바탕으로 호텔과 쇼핑을 아우르는 프리미엄 고객 경험을...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">sentv.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 17:48</span><span class="dot">·</span><span class="kw">GS25</span>
-        </div>
-        <a class="title" href="https://www.sentv.co.kr/article/view/sentv202607150111" target="_blank" rel="noopener noreferrer">CU·GS25 &quot;24시간 배달&quot;… 편의점업계, 즉시배송에 사활</a> <span class="single">(단일 출처)</span>
-        <p class="desc">CU는 쿠팡이츠를 통한 배달 서비스를 24시간으로 확대했고, GS25도 주요 권역에서 24시간 배송을 시작하며... CU는 전년 동기 대비 189.3%, 이마트24는 188%, GS25는 54%, 세븐일레븐은 25% 늘어나는 등 악천후에도 즉시배송...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">fieldnews.kr</span><span class="dot">·</span><span class="time">2026-07-15 17:06</span><span class="dot">·</span><span class="kw">GS25</span>
-        </div>
-        <a class="title" href="http://www.fieldnews.kr/news/articleView.html?idxno=29993" target="_blank" rel="noopener noreferrer">몽골 교역 키우는 이재명 정부…현지 유통망 선점한 CU·GS25·이마트 수...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">GS리테일은 2021년 몽골 현지 기업과 합작법인을 설립한 뒤 GS25를 300개까지 확대했다. 회사는 합작법인 &#x27;디지털 콘셉트&#x27; 지분 10%를 보유하고 있다. GS25는 한국 식품과 자체브랜드(PB) 상품 판매를 확대하며 현지 소비자...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울경제</span><span class="dot">·</span><span class="time">2026-07-15 17:04</span><span class="dot">·</span><span class="kw">&quot;리테일 경험&quot;</span>
-        </div>
-        <a class="title" href="https://www.sedaily.com/article/20068180?ref=naver" target="_blank" rel="noopener noreferrer">“러너팩은 1만원 이하로”…CU, AI 가상소비자에 먼저 묻는다</a> <span class="single">(단일 출처)</span>
-        <p class="desc">원하는 경험을 미리 예측하는 단계로 디지털 혁신을 이루고자 한다”며 “변화하는 고객 니즈를 더욱 정교하게 반영해 개인화된 상품과 서비스를 제공하는 새로운 리테일 경험을 만들어 나갈 것”이라고 말했다.</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">sportsq.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 16:12</span><span class="dot">·</span><span class="kw">올리브영</span>
-        </div>
-        <a class="title" href="http://www.sportsq.co.kr/news/articleView.html?idxno=496404" target="_blank" rel="noopener noreferrer">올리브베러도 순항, CJ올리브영의 거침없는 질주</a> <span class="single">(단일 출처)</span>
-        <p class="desc">헬스앤뷰티(H&amp;B) 시장을 지배해 온 CJ올리브영의 성공 방정식이 웰니스 생태계로 이식되고 있다. 신세계 등 유통 대기업들의 진출로 웰니스 시장은 격전지가 됐다. 올리브영은 특유의 맞춤형 큐레이션과 오프라인 체험...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">economist.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 16:08</span><span class="dot">·</span><span class="kw">&quot;리테일 경험&quot;</span>
-        </div>
-        <a class="title" href="https://economist.co.kr/article/view/ecn202607150043" target="_blank" rel="noopener noreferrer">편의점 CU, AI로 소비자 마음 읽는다</a> <span class="single">(단일 출처)</span>
-        <p class="desc">경험을 미리 예측하는 단계로 디지털 혁신을 이루고자 한다”며 “이를 통해 CU는 변화하는 고객 니즈를 더욱 정교하게 반영해 개인화된 상품과 서비스를 제공하는 새로운 리테일 경험을 만들어 나갈 것”이라고 말했다.</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">더벨</span><span class="dot">·</span><span class="time">2026-07-15 15:18</span><span class="dot">·</span><span class="kw">현대백화점</span>
-        </div>
-        <a class="title" href="https://www.thebell.co.kr/free/content/ArticleView.asp?key=202607131433406080105052" target="_blank" rel="noopener noreferrer">[더벨][Company Watch] 현대백화점 외국인 매출 1조 눈앞, 새 성장축으로</a> <span class="single">(단일 출처)</span>
-        <p class="desc">외국인 고객이 현대백화점의 새 성장 축으로 급부상했다. 더현대서울을 중심으로 관련 매출이 빠르게 늘어나면서 내수 소비 의존도를 낮추는 데 큰 역할을 하고 있다. 현대백화점은 점포별 입지와 고객 특성에 맞춘...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">매일경제</span><span class="dot">·</span><span class="time">2026-07-15 14:56</span><span class="dot">·</span><span class="kw">현대백화점</span>
-        </div>
-        <a class="title" href="https://www.mk.co.kr/article/12099223" target="_blank" rel="noopener noreferrer">“최저가경쟁 대신 큐레이션 통했다”…현대백화점 ‘더현대 하이’, 1...</a> <span class="single">(단일 출처)</span>
-        <p class="desc">현대백화점이 지난 4월 선보인 프리미엄 큐레이션 전문몰 &#x27;더현대 하이(Hi)&#x27;가 출시 100일 만에 신규 가입자 70만명을 확보하며 빠르게 안착했다. 검색과 최저가 경쟁 대신 큐레이션을 앞세운 전략이 신규 고객 유입은 물론...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">startuptoday.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 14:02</span><span class="dot">·</span><span class="kw">현대백화점</span>
-        </div>
-        <a class="title" href="https://www.startuptoday.co.kr/news/articleView.html?idxno=806728" target="_blank" rel="noopener noreferrer">[이슈]현대백화점, 이번엔 장호준 &#x27;전복죽&#x27;...셰프 모시기 계속</a> <span class="single">(단일 출처)</span>
-        <p class="desc">현대백화점이 새로운 다이닝 콘텐츠를 내놨다. 오는 16일까지 목동점 지하 2층에서 &#x27;장호준의 명품게우 통전복죽&#x27; 팝업스토어를 선보인다. 유명 일식 셰프 장호준과 협업해 선보이는 명품게우 통전복죽은 전복 게우(전복의...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">국민일보</span><span class="dot">·</span><span class="time">2026-07-15 12:47</span><span class="dot">·</span><span class="kw">현대백화점</span><span class="dot">·</span><span class="srccount">4개 매체</span>
-        </div>
-        <a class="title" href="https://www.kmib.co.kr/article/view.asp?arcid=0030114095&amp;code=61151111&amp;cp=nv" target="_blank" rel="noopener noreferrer">라이엇 게임즈, 현대백화점과 ‘와일드 팬페스트’ 개최… 역대 최대 규...</a>
-        <p class="desc">라이엇 게임즈가 현대백화점과 함께 ‘전략적 팀 전투(TFT)’ ‘리프트바운드’ ‘리그 오브 레전드: 와일드 리프트’를 아우르는 오프라인 행사 ‘와일드 팬페스트’를 개최한다고 15일 밝혔다. 이번 행사는 TFT의 신규...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">pointe.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 12:02</span><span class="dot">·</span><span class="kw">&quot;리테일 경험&quot;</span><span class="dot">·</span><span class="srccount">2개 매체</span>
-        </div>
-        <a class="title" href="https://www.pointe.co.kr/news/articleView.html?idxno=81821" target="_blank" rel="noopener noreferrer">BGF리테일-인텔리시아 &#x27;AI 합성소비자&#x27; 도입...고객 경험·매장 운영 효...</a>
-        <p class="desc">새로운 리테일 경험을 만들어 나갈 것&quot;이라고 말했다. 한편, BGF리테일은 한컴과 협력해 사내 지식 검색 AI 플랫폼 &#x27;ASK&#x27;를 도입하는 등 사내 디지털 전환(AX)에도 속도를 내고 있다. 사내 데이터를 통합 학습한 ASK는...</p>
-      </div>
+    <section id="g1" class="dept">
+      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">21건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="http://www.updownnews.co.kr/news/articleView.html?idxno=318001" target="_blank" rel="noopener noreferrer">로켓페이, 우려를 확신으로 바꿀 쿠팡의 반격 카드</a>
+          <p class="s-meta"><span class="s-src">updownnews.co.kr</span><span class="s-dot">·</span><time>07/16 11:40</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">업다운뉴스=김준철 기자 / 이커머스 기업 쿠팡이 새 영토로 진격한다. 그동안 쿠팡 앱 안에서만 통용되던 자체 결제 시스템을 외부 세상으로 확장하겠다는 선언이다. 유통 시장을 집어삼킨 쿠팡의 시선이 이제 금융과 온...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.hankyung.com/article/202607156887g" target="_blank" rel="noopener noreferrer">[단독] 쿠팡 &#x27;AI 초격차&#x27; 시동…수억개 상품정보 싹 바꿨다</a>
+          <p class="s-meta"><span class="s-src">한국경제</span><span class="s-dot">·</span><time>07/16 11:14</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">쿠팡이 인공지능(AI) 기반 검색과 상품 추천을 고도화하기 위해 기존 상품정보를 전면 개편하고 나섰다. 수억... 16일 업계에 따르면 쿠팡은 기존 상품정보를 새로운 표준 템플릿으로 전환하는 작업을 진행하고 있다....</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.hankookilbo.com/news/article/A2026071610570002065?did=NA" target="_blank" rel="noopener noreferrer">李, 쿠팡 염두 &quot;&#x27;나만 표적&#x27;이란 기업 있더라&quot;... 개인정보유출 제재 강...</a>
+          <p class="s-meta"><span class="s-src">한국일보</span><span class="s-dot">·</span><time>07/16 11:06</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">최근 대규모 개인정보 유출 사태에 대한 우리 정부의 대응에 대해 &#x27;차별적 대우&#x27;라고 주장한 쿠팡을 염두에 둔 메시지로 풀이된다. 송경희 개인정보보호위원장은 &quot;이 대통령이 말씀하신 대로 위원회는 국가나 기업, 기관에...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://view.asiae.co.kr/article/2026071610572012157" target="_blank" rel="noopener noreferrer">쿠팡 억지 주장 겨냥?…李대통령 &quot;개인정보 유출 제재 강화, 특정 기업...</a>
+          <p class="s-meta"><span class="s-src">아시아경제</span><span class="s-dot">·</span><time>07/16 10:57</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-media">20개 매체</span></p>
+          <p class="s-desc">특정 기업명을 직접 언급하지는 않았지만, 최근 개인정보보호위원회로부터 역대 최대 규모인 6246억8100만원의 과징금을 부과받은 쿠팡을 우회적으로 지목한 것으로 풀이된다. 쿠팡은 과징금 처분에 불복해 법적 대응을...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.dailypop.kr/news/articleView.html?idxno=100580" target="_blank" rel="noopener noreferrer">500평 규모 K-뷰티 &#x27;올리브영 뷰티맨션 성수&#x27; 가보니…퍼스널 컬러 진단...</a>
+          <p class="s-meta"><span class="s-src">dailypop.kr</span><span class="s-dot">·</span><time>07/16 10:40</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">이런 흐름을 가장 적극적으로 반영한 곳 가운데 하나가 올리브영이다. 올리브영은 지난 6월 30일 K-뷰티 브랜드와 팝업스토어가 밀집한 성수동에 약 500평 규모, 지상 4층짜리 &#x27;올리브영 뷰티 맨션 성수&#x27;를 열었다. 국내...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://sateconomy.co.kr/news/view/1065572402591016" target="_blank" rel="noopener noreferrer">롯데백화점, 외국인 매출 1조 보인다</a>
+          <p class="s-meta"><span class="s-src">sateconomy.co.kr</span><span class="s-dot">·</span><time>07/16 09:30</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">상반기 6400억원으로 백화점 3사 1위…지난해 연간 실적 87% 달성 명동 넘어 잠실·부산·동부산까지 관광 상권 확대 롯데백화점이 외국인 매출 1조원 시대를 눈앞에 두고 있다. 명동 본점을 중심으로 형성됐던 외국인...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.socialvalue.kr/news/view/1065597820041250" target="_blank" rel="noopener noreferrer">CU·GS25 양강 굳어진 편의점 시장…세븐일레븐, 글로벌 소싱으로 승부</a>
+          <p class="s-meta"><span class="s-src">socialvalue.kr</span><span class="s-dot">·</span><time>07/16 07:06</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">국내 편의점 업계에서 CU와 GS25가 양강 구도를 굳힌 가운데 세븐일레븐이 글로벌 소싱 상품을 앞세워... 지난해 말 기준 국내 점포 수는 CU 1만8711개, GS25 1만8005개, 세븐일레븐 1만1040개로 주요 사업자 모두 전국 단위...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.etoday.co.kr/news/view/2604223" target="_blank" rel="noopener noreferrer">롯데백화점, 자체 캐릭터 IP 키운다…&#x27;킨더유니버스&#x27; 애니 첫 공개</a>
+          <p class="s-meta"><span class="s-src">etoday.co.kr</span><span class="s-dot">·</span><time>07/16 06:02</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">7개 매체</span></p>
+          <p class="s-desc">이투데이=박선현 기자 | 생활습관·안전교육 13편 상영 전문기관 검수로 신뢰도 강화 롯데백화점이 자체 개발 캐릭터를 활용한 콘텐츠와 상품을 확대하며 지식재산권(IP) 사업 강화에 나선다. 롯데백화점은 서울...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716046003?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">올리브영 美 1호점 개장… ‘온리원’ 정신으로 북미 K컬처 확산</a>
+          <p class="s-meta"><span class="s-src">서울신문</span><span class="s-dot">·</span><time>07/16 05:06</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">이 회장은 지난 5월 29일(현지시간) 미국 최초 올리브영 매장인 로스앤젤레스(LA) 패서디나점을 찾아 개장 준비상황을 살피며 경영진과 북미 사업 확대 방향을 논의했다. 이 자리에는 김홍기 CJ 대표, 이선정 CJ올리브영...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716042001?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">롯데백화점, 리테일 혁신 ‘고객만족도 1위’</a>
+          <p class="s-meta"><span class="s-src">서울신문</span><span class="s-dot">·</span><time>07/16 05:05</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">롯데백화점이 2026 국가고객만족도(NCSI) 조사에서 ‘백화점 부문 1위’를 차지했다고 15일 밝혔다. NCSI는 한국생산성본부(KPC)가 미국 미시간대학과 공동으로 개발한 고객만족도 조사로 소비자가 직접 기업의 제품이나...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.seoul.co.kr/news/economy/industry/2026/07/16/20260716039003?wlog_tag3=naver" target="_blank" rel="noopener noreferrer">현대백화점, 플래그십으로 도쿄 명품가 공략</a>
+          <p class="s-meta"><span class="s-src">서울신문</span><span class="s-dot">·</span><time>07/16 05:05</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">현대백화점이 일본 도쿄의 명품 거리 오모테산도에 K-콘텐츠 수출 플랫폼 ‘더현대 글로벌’의 첫 플래그십 스토어를 선보이고 일본 핵심 상권 공략에 나선다. 현대백화점은 지난 10일 일본 럭셔리 패션과...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sentv.co.kr/article/view/sentv202607150111" target="_blank" rel="noopener noreferrer">CU·GS25 &quot;24시간 배달&quot;… 편의점업계, 즉시배송에 사활</a>
+          <p class="s-meta"><span class="s-src">sentv.co.kr</span><span class="s-dot">·</span><time>07/15 17:48</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">CU는 쿠팡이츠를 통한 배달 서비스를 24시간으로 확대했고, GS25도 주요 권역에서 24시간 배송을 시작하며... CU는 전년 동기 대비 189.3%, 이마트24는 188%, GS25는 54%, 세븐일레븐은 25% 늘어나는 등 악천후에도 즉시배송...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.fieldnews.kr/news/articleView.html?idxno=29993" target="_blank" rel="noopener noreferrer">몽골 교역 키우는 이재명 정부…현지 유통망 선점한 CU·GS25·이마트 수...</a>
+          <p class="s-meta"><span class="s-src">fieldnews.kr</span><span class="s-dot">·</span><time>07/15 17:06</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">GS리테일은 2021년 몽골 현지 기업과 합작법인을 설립한 뒤 GS25를 300개까지 확대했다. 회사는 합작법인 &#x27;디지털 콘셉트&#x27; 지분 10%를 보유하고 있다. GS25는 한국 식품과 자체브랜드(PB) 상품 판매를 확대하며 현지 소비자...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sedaily.com/article/20068180?ref=naver" target="_blank" rel="noopener noreferrer">“러너팩은 1만원 이하로”…CU, AI 가상소비자에 먼저 묻는다</a>
+          <p class="s-meta"><span class="s-src">서울경제</span><span class="s-dot">·</span><time>07/15 17:04</time><span class="s-dot">·</span><span class="s-kw">&quot;리테일 경험&quot;</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">원하는 경험을 미리 예측하는 단계로 디지털 혁신을 이루고자 한다”며 “변화하는 고객 니즈를 더욱 정교하게 반영해 개인화된 상품과 서비스를 제공하는 새로운 리테일 경험을 만들어 나갈 것”이라고 말했다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.sportsq.co.kr/news/articleView.html?idxno=496404" target="_blank" rel="noopener noreferrer">올리브베러도 순항, CJ올리브영의 거침없는 질주</a>
+          <p class="s-meta"><span class="s-src">sportsq.co.kr</span><span class="s-dot">·</span><time>07/15 16:12</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">헬스앤뷰티(H&amp;B) 시장을 지배해 온 CJ올리브영의 성공 방정식이 웰니스 생태계로 이식되고 있다. 신세계 등 유통 대기업들의 진출로 웰니스 시장은 격전지가 됐다. 올리브영은 특유의 맞춤형 큐레이션과 오프라인 체험...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://economist.co.kr/article/view/ecn202607150043" target="_blank" rel="noopener noreferrer">편의점 CU, AI로 소비자 마음 읽는다</a>
+          <p class="s-meta"><span class="s-src">economist.co.kr</span><span class="s-dot">·</span><time>07/15 16:08</time><span class="s-dot">·</span><span class="s-kw">&quot;리테일 경험&quot;</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">경험을 미리 예측하는 단계로 디지털 혁신을 이루고자 한다”며 “이를 통해 CU는 변화하는 고객 니즈를 더욱 정교하게 반영해 개인화된 상품과 서비스를 제공하는 새로운 리테일 경험을 만들어 나갈 것”이라고 말했다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://sports.hankooki.com/news/articleView.html?idxno=6936492" target="_blank" rel="noopener noreferrer">라이엇 게임즈, 현대백화점과 &#x27;와일드 팬페스트&#x27; 개최</a>
+          <p class="s-meta"><span class="s-src">sports.hankooki.com</span><span class="s-dot">·</span><time>07/15 15:56</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">ⓒ라이엇 게임즈  라이엇 게임즈는 현대백화점과 함께 &#x27;전략적 팀 전투(이하 TFT)&#x27;, &#x27;리프트바운드&#x27;, &#x27;리그 오브 레전드: 와일드 리프트(이하 와일드 리프트)&#x27;를 아우르는 &#x27;와일드 팬페스트&#x27;를 진행한다고 15일 밝혔다. TFT...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.thebell.co.kr/free/content/ArticleView.asp?key=202607131433406080105052" target="_blank" rel="noopener noreferrer">[더벨][Company Watch] 현대백화점 외국인 매출 1조 눈앞, 새 성장축으로</a>
+          <p class="s-meta"><span class="s-src">더벨</span><span class="s-dot">·</span><time>07/15 15:18</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">외국인 고객이 현대백화점의 새 성장 축으로 급부상했다. 더현대서울을 중심으로 관련 매출이 빠르게 늘어나면서 내수 소비 의존도를 낮추는 데 큰 역할을 하고 있다. 현대백화점은 점포별 입지와 고객 특성에 맞춘...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.mk.co.kr/article/12099223" target="_blank" rel="noopener noreferrer">“최저가경쟁 대신 큐레이션 통했다”…현대백화점 ‘더현대 하이’, 1...</a>
+          <p class="s-meta"><span class="s-src">매일경제</span><span class="s-dot">·</span><time>07/15 14:56</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">현대백화점이 지난 4월 선보인 프리미엄 큐레이션 전문몰 &#x27;더현대 하이(Hi)&#x27;가 출시 100일 만에 신규 가입자 70만명을 확보하며 빠르게 안착했다. 검색과 최저가 경쟁 대신 큐레이션을 앞세운 전략이 신규 고객 유입은 물론...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.pointdaily.co.kr/news/articleView.html?idxno=312023" target="_blank" rel="noopener noreferrer">BGF리테일, 인텔리시아와 AI 데이터 기반 기술 도입 MOU…리테일 혁신 가...</a>
+          <p class="s-meta"><span class="s-src">pointdaily.co.kr</span><span class="s-dot">·</span><time>07/15 14:32</time><span class="s-dot">·</span><span class="s-kw">&quot;리테일 경험&quot;</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">경험을 미리 예측하는 단계로 디지털 혁신을 이루고자 한다&quot;며 &quot;이를 통해 CU는 변화하는 고객 니즈를 더욱 정교하게 반영해 개인화된 상품과 서비스를 제공하는 새로운 리테일 경험을 만들어 나갈 것&quot;이라고 말했다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.startuptoday.co.kr/news/articleView.html?idxno=806728" target="_blank" rel="noopener noreferrer">[이슈]현대백화점, 이번엔 장호준 &#x27;전복죽&#x27;...셰프 모시기 계속</a>
+          <p class="s-meta"><span class="s-src">startuptoday.co.kr</span><span class="s-dot">·</span><time>07/15 14:02</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">현대백화점이 새로운 다이닝 콘텐츠를 내놨다. 오는 16일까지 목동점 지하 2층에서 &#x27;장호준의 명품게우 통전복죽&#x27; 팝업스토어를 선보인다. 유명 일식 셰프 장호준과 협업해 선보이는 명품게우 통전복죽은 전복 게우(전복의...</p>
+        </li>
+        </ol>
     </section>
-    <section class="group">
-      <h2>경쟁사 <span class="count">1건</span></h2>
-      <div class="card">
-        <div class="meta">
-          <span class="src">조선일보</span><span class="dot">·</span><span class="time">2026-07-15 15:18</span><span class="dot">·</span><span class="kw">예스24</span>
-        </div>
-        <a class="title" href="https://www.chosun.com/culture-life/culture_general/2026/07/15/2VVFMTFT5ZEV3DHJ3FQON6JHNE/?utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=naver-news" target="_blank" rel="noopener noreferrer">장르 소설이 뜨겁다…예스24 ‘한국문학 미래가 될 젊은 작가’에 청예</a> <span class="single">(단일 출처)</span>
-        <p class="desc">매년 20만명 이상이 참여하는 예스24 ‘2026 한국 문학의 미래가 될 젊은 작가’ 투표에서 요즘 주목받는 장르 작가 청예가 1위로 뽑혔다. 앞서 김초엽(2021년), 천선란(2022년), 조예은(2025) 등 장르 작가들이 잇달아...</p>
-      </div>
+    <section id="g2" class="dept">
+      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">1건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.chosun.com/culture-life/culture_general/2026/07/15/2VVFMTFT5ZEV3DHJ3FQON6JHNE/?utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=naver-news" target="_blank" rel="noopener noreferrer">장르 소설이 뜨겁다…예스24 ‘한국문학 미래가 될 젊은 작가’에 청예</a>
+          <p class="s-meta"><span class="s-src">조선일보</span><span class="s-dot">·</span><time>07/15 15:18</time><span class="s-dot">·</span><span class="s-kw">예스24</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">매년 20만명 이상이 참여하는 예스24 ‘2026 한국 문학의 미래가 될 젊은 작가’ 투표에서 요즘 주목받는 장르 작가 청예가 1위로 뽑혔다. 앞서 김초엽(2021년), 천선란(2022년), 조예은(2025) 등 장르 작가들이 잇달아...</p>
+        </li>
+        </ol>
     </section>
-    <section class="group">
-      <h2>자사·주주사 <span class="count">3건</span></h2>
-      <div class="card">
-        <div class="meta">
-          <span class="src">파이낸셜뉴스</span><span class="dot">·</span><span class="time">2026-07-16 09:20</span><span class="dot">·</span><span class="kw">교보생명</span><span class="dot">·</span><span class="srccount">2개 매체</span>
-        </div>
-        <a class="title" href="http://www.fnnews.com/news/202607160918008354" target="_blank" rel="noopener noreferrer">영화 속 파리로 초대…교보생명 &#x27;살롱 드 교보&#x27; 성황</a>
-        <p class="desc">교보생명이 우수고객을 위한 문화 프로그램을 통해 한여름 밤 특별한 예술 경험을 선사했다. 교보생명은 지난 9일 서울 종로구 교보생명빌딩에서 우수고객 350명을 초청해 예술문화 프로그램 &#x27;살롱 드 교보&#x27;를 개최했다고...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">서울경제</span><span class="dot">·</span><span class="time">2026-07-16 07:01</span><span class="dot">·</span><span class="kw">교보문고</span>
-        </div>
-        <a class="title" href="https://www.sedaily.com/article/20068177?ref=naver" target="_blank" rel="noopener noreferrer">교보문고 랜선팬싸 5년만에…누적 100회·70만 조회수</a> <span class="single">(단일 출처)</span>
-        <p class="desc">교보문고는 대표 오리지널 콘텐츠인 랜선팬사인회(이하 랜선팬싸)가 5주년을 맞아 누적 100회, 조회수 70만 회를 기록했다고 16일 밝혔다. 랜선팬싸는 작가와 독자가 온라인에서 실시간으로 만나 책에 대한 이야기를...</p>
-      </div>
-      <div class="card">
-        <div class="meta">
-          <span class="src">whitepaper.co.kr</span><span class="dot">·</span><span class="time">2026-07-15 12:10</span><span class="dot">·</span><span class="kw">교보생명</span>
-        </div>
-        <a class="title" href="http://www.whitepaper.co.kr/news/articleView.html?idxno=264616" target="_blank" rel="noopener noreferrer">교보생명 대산신용호기념사업회, 보험학 연구지원 4건 선정</a> <span class="single">(단일 출처)</span>
-        <p class="desc">화이트페이퍼, WHITEPAPER(사진=교보생명)  교보생명의 공익법인인 사단법인 대산신용호기념사업회가 초고령사회와 연금개혁, 보험산업 구조 변화 등 주요 현안을 연구할 보험학 과제 4건을 선정하고 이를 지원한다....</p>
-      </div>
+    <section id="g3" class="dept">
+      <h2 class="dept-head"><span class="dept-name">자사·주주사</span><span class="dept-count">2건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="http://www.fnnews.com/news/202607160918008354" target="_blank" rel="noopener noreferrer">영화 속 파리로 초대…교보생명 &#x27;살롱 드 교보&#x27; 성황</a>
+          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>07/16 09:20</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">교보생명이 우수고객을 위한 문화 프로그램을 통해 한여름 밤 특별한 예술 경험을 선사했다. 교보생명은 지난 9일 서울 종로구 교보생명빌딩에서 우수고객 350명을 초청해 예술문화 프로그램 &#x27;살롱 드 교보&#x27;를 개최했다고...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sedaily.com/article/20068177?ref=naver" target="_blank" rel="noopener noreferrer">교보문고 랜선팬싸 5년만에…누적 100회·70만 조회수</a>
+          <p class="s-meta"><span class="s-src">서울경제</span><span class="s-dot">·</span><time>07/16 07:01</time><span class="s-dot">·</span><span class="s-kw">교보문고</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">교보문고는 대표 오리지널 콘텐츠인 랜선팬사인회(이하 랜선팬싸)가 5주년을 맞아 누적 100회, 조회수 70만 회를 기록했다고 16일 밝혔다. 랜선팬싸는 작가와 독자가 온라인에서 실시간으로 만나 책에 대한 이야기를...</p>
+        </li>
+        </ol>
     </section>
+  </main>
 
   <footer>
-    본 리포트의 제목·링크·보도시각·출처는 모두 네이버 뉴스 검색 API의 원본 데이터입니다.
-    동일 사실을 여러 매체가 보도한 경우 대표 매체 1건으로 통합했으며, 한 매체만 보도한 건은 제목 끝에 <b>(단일 출처)</b>로 표기했습니다.
-    출처는 원문 링크의 도메인 기준입니다.
+    <p>본 리포트의 제목·링크·보도시각·출처는 모두 <strong>네이버 뉴스 검색 API의 원본 데이터</strong>입니다. 동일 사실을 여러 매체가 보도하면 대표 매체 1건으로 통합(<b>N개 매체</b>)했고, 한 매체만 보도한 건은 <b>단일 출처</b>로 표기했습니다. 출처는 원문 링크의 도메인 기준입니다.</p>
+    <p class="gen">수집 109건 → 통합 54건 · 제외 412건 · 생성 2026-07-16 13:09 KST</p>
   </footer>
 </div>
 </body>

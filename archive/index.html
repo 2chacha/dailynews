@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>뉴스 클리핑 아카이브</title>
+<title>뉴스 클리핑 · 아카이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&display=swap" rel="stylesheet">
 <style>
- body{font-family:'Segoe UI','Malgun Gothic','Noto Sans KR',system-ui,sans-serif;
-   max-width:640px;margin:40px auto;padding:0 18px;line-height:1.8;color:#1a1c1f}
- @media(prefers-color-scheme:dark){body{background:#14161a;color:#e6e8eb}}
- h1{font-size:1.3rem} a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
- @media(prefers-color-scheme:dark){a{color:#60a5fa}}
- ul{padding-left:18px} .muted{color:#888;list-style:none}
+ :root{ --paper:#f5f4ef; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83; --line:#e5e1d7;
+   --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+   --serif:"Nanum Myeongjo","AppleMyungjo",Batang,Georgia,serif;
+   --sans:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif; }
+ @media(prefers-color-scheme:dark){ :root{ --paper:#141311; --ink:#e9e6df; --muted:#a49e92;
+   --faint:#867e71; --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14); } }
+ *{box-sizing:border-box}
+ body{ font-family:var(--sans); max-width:600px; margin:0 auto; padding:0 20px 60px;
+   line-height:1.6; color:var(--ink); background:var(--paper); }
+ .head{ text-align:center; padding:46px 0 18px; border-bottom:3px double var(--rule); }
+ .kicker{ margin:0; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+ h1{ margin:.22em 0 .5em; font-family:var(--serif); font-weight:800; font-size:2rem; }
+ .back{ display:inline-block; font-size:.85rem; text-decoration:none; color:var(--accent); }
+ .back:hover{ text-decoration:underline; }
+ ul{ list-style:none; margin:22px 0 0; padding:0; }
+ li{ border-top:1px solid var(--line); }
+ li a{ display:block; padding:14px 4px; text-decoration:none; color:var(--ink);
+   font-variant-numeric:tabular-nums; transition:background .15s,color .15s; }
+ li a:hover{ color:var(--accent); background:var(--accent-soft); }
+ .d{ font-family:var(--serif); font-size:1.05rem; font-weight:700; }
+ .empty{ color:var(--faint); padding:14px 4px; }
 </style></head>
 <body>
- <h1>📚 뉴스 클리핑 아카이브</h1>
- <p><a href="../index.html">→ 오늘자 최신 리포트</a></p>
+ <header class="head">
+   <p class="kicker">Archive</p>
+   <h1>뉴스 클리핑 아카이브</h1>
+   <a class="back" href="../index.html">→ 오늘자 최신 리포트</a>
+ </header>
  <ul>
-    <li><a href="2026-07-16.html">2026-07-16</a></li>
+    <li><a href="2026-07-16.html"><span class="d">2026-07-16</span></a></li>
  </ul>
 </body></html>
