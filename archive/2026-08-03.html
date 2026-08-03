@@ -40,6 +40,10 @@
   .nameplate{ margin:.22em 0 .14em; font-family:var(--serif); font-weight:800; color:var(--ink);
     font-size:clamp(2.1rem,6vw,2.9rem); letter-spacing:-.01em; }
   .dateline{ margin:0; font-size:.82rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .archive-link{ display:inline-block; margin-top:14px; font-size:.8rem; color:var(--accent);
+    text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:6px 15px;
+    transition:background .15s,border-color .15s; }
+  .archive-link:hover{ background:var(--accent-soft); border-color:var(--accent); }
 
   .summary{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px;
     padding:16px 2px; border-bottom:1px solid var(--line); }
@@ -95,27 +99,33 @@
   <header class="masthead">
     <p class="kicker">출판·유통 시장 데일리 브리프</p>
     <h1 class="nameplate">뉴스 클리핑</h1>
-    <p class="dateline">2026년 8월 3일 월요일 · 최근 24시간 08/02 09:00–08/03 09:00 KST</p>
+    <p class="dateline">2026년 8월 3일 월요일 · 최근 24시간 08/02 09:53–08/03 09:53 KST</p>
+    <a class="archive-link" href="index.html">지난 리포트 아카이브 →</a>
   </header>
 
   <div class="summary">
     <div class="figs">
-      <div class="fig"><span class="n">15</span><span class="l">총 기사</span></div>
+      <div class="fig"><span class="n">19</span><span class="l">총 기사</span></div>
       <div class="fig"><span class="n">7</span><span class="l">다중매체</span></div>
-      <div class="fig"><span class="n">8</span><span class="l">단일 출처</span></div>
+      <div class="fig"><span class="n">12</span><span class="l">단일 출처</span></div>
       <div class="fig"><span class="n">4</span><span class="l">분야</span></div>
     </div>
-    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>헤럴드경제 2 · 경향신문 1 · 서울신문 1 · 세계일보 1 · jnilbo.com 1</p>
+    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>헤럴드경제 3 · 뉴시스 2 · 경향신문 1 · 서울신문 1 · 세계일보 1</p>
   </div>
 
-  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>4</b></a><a href="#g1">리테일 업계 <b>11</b></a><a href="#g2">경쟁사 <b>0</b></a><a href="#g3">자사·주주사 <b>0</b></a></nav>
+  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>4</b></a><a href="#g1">리테일 업계 <b>14</b></a><a href="#g2">경쟁사 <b>1</b></a><a href="#g3">자사·주주사 <b>0</b></a></nav>
 
   <main>
     <section id="g0" class="dept">
       <h2 class="dept-head"><span class="dept-name">출판</span><span class="dept-count">4건</span></h2>
         <ol class="stories">
         <li class="story">
-          <a class="s-title" href="https://weekly.khan.co.kr/article/202608030600021" target="_blank" rel="noopener noreferrer">“나마저 접으면 대학교 앞 서점은 전멸”…아내 콩팥 받고 살아나 책을...</a>
+          <a class="s-title" href="https://biz.heraldcorp.com/article/10828682?ref=naver" target="_blank" rel="noopener noreferrer">“성수·북촌은 어떻게 떴을까”…지역 살리는 8인의 PR 비책</a>
+          <p class="s-meta"><span class="s-src">헤럴드경제</span><span class="s-dot">·</span><time>08/03 09:48</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">출판사 새로운사람들은 PR 전문가 8인이 공동 집필한 신간 ‘로컬 시프트(Local Shift)’를 출간했다. 이 책은... 또한 지역 경쟁력이 대규모 개발이나 시설 확충이 아닌 골목, 시장, 음식, 말투, 주민의 기억 등 기존 자산을...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://weekly.khan.co.kr/article/202608030600021" target="_blank" rel="noopener noreferrer">아내 콩팥 받고 살아나 책을 지키는 그 남자…“나마저 접으면 대학교 ...</a>
           <p class="s-meta"><span class="s-src">경향신문</span><span class="s-dot">·</span><time>08/03 06:04</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
           <p class="s-desc">출판시장의 불합리한 이윤 구조, 반짝하고 끝나는 독서 문화, 젠트리피케이션이 겹친 복합적 문제다. 개인의 문제가 아니라 구조의 문제다.” -5월 도서정가제 개선 토론회는 어떻게 봤나. “하던 얘기를 똑같이 하더라....</p>
         </li>
@@ -129,16 +139,31 @@
           <p class="s-meta"><span class="s-src">세계일보</span><span class="s-dot">·</span><time>08/02 19:02</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
           <p class="s-desc">미술시장의 힘은 검증을 마치고 인생 2막을 준비하는 50대 전후 중진 작가에서 나온다. 이들에게 전시·해외 진출·연구·출판·미술관 소장으로 이어지는 사다리를 놓아야 한다. 기업의 예술 투자도 시상제도와 레지던스에...</p>
         </li>
-        <li class="story">
-          <a class="s-title" href="https://www.jnilbo.com/news/articleView.html?idxno=90000053810" target="_blank" rel="noopener noreferrer">58주째 이어진 흥행…&#x27;케데헌&#x27;, 만화·소설로 IP 확장</a>
-          <p class="s-meta"><span class="s-src">jnilbo.com</span><span class="s-dot">·</span><time>08/02 09:53</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
-          <p class="s-desc">빌보드는 지난 30일(현지시간) 넷플릭스와 출판사 랜덤 하우스가 영미권 출판 시장에서 &#x27;케데헌&#x27; 만화책을 펴냈다고 전했다. 208쪽 분량의 만화책은 전면 컬러 그래픽 노블 형식으로, &#x27;케데헌&#x27; 속 주요 장면과 거의 모든...</p>
-        </li>
         </ol>
     </section>
     <section id="g1" class="dept">
-      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">11건</span></h2>
+      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">14건</span></h2>
         <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.socialvalue.kr/news/view/1065572581765267" target="_blank" rel="noopener noreferrer">K더마 키우는 올리브영…&#x27;어드밴스드 더마&#x27; 고객 접점 확대</a>
+          <p class="s-meta"><span class="s-src">socialvalue.kr</span><span class="s-dot">·</span><time>08/03 09:24</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">CJ올리브영이 고기능 스킨케어 카테고리 &#x27;어드밴스드 더마(Advanced Derma)&#x27;의 판매 채널과 체험 콘텐츠를 확대하며 K더마 시장 공략에 속도를 내고 있다. 올리브영은 어드밴스드 더마를 론칭한 지 4개월 만에 전용 매대를...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202608030908063920491" target="_blank" rel="noopener noreferrer">[뷰티톡톡] CJ올리브영ㆍLG생활건강ㆍ그래비티ㆍ미샤</a>
+          <p class="s-meta"><span class="s-src">dnews.co.kr</span><span class="s-dot">·</span><time>08/03 09:22</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">▲CJ올리브영, 고기능 스킨케어 &#x27;어드밴스드 더마&#x27; 전용 매대 650개 매장 확대 CJ올리브영이 국내 제약사와 협업해 올해 3월 말 론칭한 고기능 스킨케어 카테고리 &#x27;어드밴스드 더마&#x27;의 전용 매대를 전국 650개 매장으로...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.businesskorea.co.kr/news/articleView.html?idxno=273989" target="_blank" rel="noopener noreferrer">LG생활건강 &#x27;피지 모락셀라&#x27; 쿠팡 세탁세제 1위 등극..매출 316% 폭증</a>
+          <p class="s-meta"><span class="s-src">businesskorea.co.kr</span><span class="s-dot">·</span><time>08/03 09:16</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">LG생활건강의 프리미엄 세탁세제 브랜드 피지(FiJi)가 쿠팡 시장을 석권하며 대세 브랜드로서의 입지를... 지난 7월 월간 실적 기준 피지 모락셀라 냄새제거 세탁세제 코튼향 2.1L 제품은 쿠팡 세탁세제 카테고리에서...</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.yna.co.kr/view/AKR20260803022500030?input=1195m" target="_blank" rel="noopener noreferrer">GS25, &#x27;신선강화매장&#x27; 5년 만에 1천호점…일반점 대비 12배 매출</a>
+          <p class="s-meta"><span class="s-src">연합뉴스</span><span class="s-dot">·</span><time>08/03 09:13</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">2021년 도입 후 올해 226개점 추가…근거리 장보기 채널로 육성 편의점 GS25는 신선식품 구성을 강화한 &#x27;신선강화형 매장&#x27;이 도입 5년 만에 1천호점을 열었다고 3일 밝혔다. GS25의 신선강화형 매장은 편의점의 역할을...</p>
+        </li>
         <li class="story">
           <a class="s-title" href="https://sports.donga.com/ent/article/all/20260803/134410300/1" target="_blank" rel="noopener noreferrer">“눈을 뗄 수 없다”…쿠팡플레이 ‘지금 불륜’ 평점 4.6 터뜨린 역대급...</a>
           <p class="s-meta"><span class="s-src">동아일보</span><span class="s-dot">·</span><time>08/03 08:53</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
@@ -146,17 +171,22 @@
         </li>
         <li class="story">
           <a class="s-title" href="https://www.news1.kr/industry/distribution/6246803" target="_blank" rel="noopener noreferrer">GS25신선강화점, 1000호점오픈…&quot;1~2인 가구 장보기 수요 잡는다&quot;</a>
-          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>08/03 08:26</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">4개 매체</span></p>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>08/03 08:26</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">14개 매체</span></p>
           <p class="s-desc">GS리테일이 운영하는 편의점 GS25는 1000번째 신선강화형 매장 &#x27;GS25천안두정골든점&#x27;을 오픈했다고 3일 밝혔다. GS25천안두정골든점은 천안시 서북구 두정동에 문을 연 40평 규모의 신규 매장이다. 대규모 아파트 단지를...</p>
         </li>
         <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260803_0003733392" target="_blank" rel="noopener noreferrer">&quot;채소 달걀도 집 앞에서&quot; GS25 신선강화점 1000호 돌파</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>08/03 08:25</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">GS리테일이 운영하는 편의점 GS25가 신선강화형 매장 1000호점인 &#x27;GS25 천안두정골든점&#x27;을 열었다고 3일 밝혔다. 신선강화형 매장은 채소와 과일, 달걀, 육류 등 신선식품 구색을 강화해 편의점을 근거리 장보기 채널로...</p>
+        </li>
+        <li class="story">
           <a class="s-title" href="https://biz.heraldcorp.com/article/10828501?ref=naver" target="_blank" rel="noopener noreferrer">“장보러 오세요” GS25 신선강화점, 5년만에 1000호점</a>
-          <p class="s-meta"><span class="s-src">헤럴드경제</span><span class="s-dot">·</span><time>08/03 08:22</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-meta"><span class="s-src">헤럴드경제</span><span class="s-dot">·</span><time>08/03 08:22</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
           <p class="s-desc">편의점 GS25가 신선강화형 매장 1000호점인 ‘GS25천안두정골든점’을 열었다고 3일 밝혔다. 신규 매장은 충남 천안시 서북구 두정동에 약 40평 규모로 들어섰다. 신선식품 중심의 근거리 장보기 수요를 겨냥했다....</p>
         </li>
         <li class="story">
           <a class="s-title" href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=473662" target="_blank" rel="noopener noreferrer">편의점 브랜드평판 8월 빅데이터 분석... 1위 GS25 편의점, 2위 세븐일레...</a>
-          <p class="s-meta"><span class="s-src">pinpointnews.co.kr</span><span class="s-dot">·</span><time>08/03 07:02</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-meta"><span class="s-src">pinpointnews.co.kr</span><span class="s-dot">·</span><time>08/03 07:02</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
           <p class="s-desc">조사에서는 GS25가 1위를 지킨 가운데 세븐일레븐과 이마트24가 뒤를 이었고, CU는 브랜드평판지수가 전월보다 400% 넘게 급등하며 가장 큰 상승폭을 기록했다. 한국기업평판연구소는 7월 3일부터 8월 3일까지 GS25...</p>
         </li>
         <li class="story">
@@ -166,23 +196,13 @@
         </li>
         <li class="story">
           <a class="s-title" href="https://www.chosun.com/opinion/contribution/2026/08/02/PPRBRXHL4JFN7CWWCNVXPZEM4M/?utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=naver-news" target="_blank" rel="noopener noreferrer">[기고] ‘쿠팡 사태’가 드러낸 美 기업 차별 의혹, 한·미 동맹 흔든다</a>
-          <p class="s-meta"><span class="s-src">조선일보</span><span class="s-dot">·</span><time>08/02 23:38</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-meta"><span class="s-src">조선일보</span><span class="s-dot">·</span><time>08/02 23:38</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
           <p class="s-desc">그러나 최근 쿠팡을 둘러싼 논란은 한국의 규제 시스템이 과연 일관되고 공정하게 적용되고 있는지에 대한... 기업인 쿠팡을 지목했다. 쿠팡은 2025년 말 개인정보 유출 사고를 겪었다. 전직 직원이 약 3300만명의 고객 계정에...</p>
         </li>
         <li class="story">
-          <a class="s-title" href="http://www.bizwnews.com/news/articleView.html?idxno=141849" target="_blank" rel="noopener noreferrer">쿠팡플레이, &#x27;2026 쿠팡플레이 시리즈&#x27; 앞두고 &#x27;팀 K리그&#x27; 오픈 트레이닝...</a>
-          <p class="s-meta"><span class="s-src">bizwnews.com</span><span class="s-dot">·</span><time>08/02 17:58</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
-          <p class="s-desc">사진=쿠팡플레이  쿠팡플레이가 &#x27;2026 쿠팡플레이 시리즈&#x27;를 앞두고 오는 8월 4일 경기도 부천시 부천종합운동장에서 열리는 &#x27;팀 K리그&#x27; 오픈 트레이닝의 상세 프로그램을 공개했다. 쿠팡플레이에 따르면 팀 K리그는 다음...</p>
-        </li>
-        <li class="story">
-          <a class="s-title" href="http://www.fnnews.com/news/202608021419499477" target="_blank" rel="noopener noreferrer">쿠팡, &quot;PB 협력사, 안정적 판로 기반으로 연구개발 투자 확대 이어져&quot;</a>
-          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>08/02 16:03</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-media">5개 매체</span></p>
+          <a class="s-title" href="http://www.fnnews.com/news/202608021830498285" target="_blank" rel="noopener noreferrer">쿠팡 PB 제조로 매출 증가... 협력사, R&amp;D 확대 선순환</a>
+          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>08/02 18:32</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-media">7개 매체</span></p>
           <p class="s-desc">쿠팡 자체브랜드(PB) 제조를 맡은 국내 중소기업들이 판매 기반 안정화를 바탕으로 연구개발(R&amp;D) 투자를 확대하고 있다. 생산은 제조사가, 유통은 쿠팡 PB 자회사 씨피엘비(CPLB)가 맡는 협업 구조가 저성장 국면에서도...</p>
-        </li>
-        <li class="story">
-          <a class="s-title" href="https://www.ccdn.co.kr/news/articleView.html?idxno=1091509" target="_blank" rel="noopener noreferrer">&#x27;현관 비밀번호까지 털렸는데…&#x27; 쿠팡, 개인정보 유출 1인당 10만 원 배...</a>
-          <p class="s-meta"><span class="s-src">ccdn.co.kr</span><span class="s-dot">·</span><time>08/02 15:32</time><span class="s-dot">·</span><span class="s-kw">쿠팡</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
-          <p class="s-desc">쿠팡의 대규모 개인정보 유출 사태와 관련해 소비자분쟁조정위원회가 쿠팡의 첫 손해배상 책임을 인정하고 피해자 1인당 10만 원을 배상하라는 결정을 내렸다. 위원회는 지난해 12월 소비자 50명이 제기한 쿠팡 개인정보...</p>
         </li>
         <li class="story">
           <a class="s-title" href="https://biz.heraldcorp.com/article/10828147?ref=naver" target="_blank" rel="noopener noreferrer">롯데백화점 대구점, ‘하이마운틴 어드벤처’ 오픈</a>
@@ -197,8 +217,14 @@
         </ol>
     </section>
     <section id="g2" class="dept">
-      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">0건</span></h2>
-        <p class="empty">최근 24시간 내 수집된 기사가 없습니다.</p>
+      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">1건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISX20260803_0003733558" target="_blank" rel="noopener noreferrer">바다 보며 책 읽는다…밀리의서재, 9.81파크 제주서 독서 공간 운영</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>08/03 09:17</time><span class="s-dot">·</span><span class="s-kw">밀리의서재</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">KT밀리의서재가 제주 여행과 독서를 결합한 오프라인 독서 프로젝트를 선보인다. 밀리의서재는 9.81파크 제주 내 카페 스페이스컵에서 &#x27;밀리플레이스&#x27; 특별 공간 &#x27;제주에 온 밀리&#x27;를 운영한다고 3일 밝혔다. 밀리플레이스는...</p>
+        </li>
+        </ol>
     </section>
     <section id="g3" class="dept">
       <h2 class="dept-head"><span class="dept-name">자사·주주사</span><span class="dept-count">0건</span></h2>
@@ -208,7 +234,7 @@
 
   <footer>
     <p>본 리포트의 제목·링크·보도시각·출처는 모두 <strong>네이버 뉴스 검색 API의 원본 데이터</strong>입니다. 동일 사실을 여러 매체가 보도하면 대표 매체 1건으로 통합(<b>N개 매체</b>)했고, 한 매체만 보도한 건은 <b>단일 출처</b>로 표기했습니다. 출처는 원문 링크의 도메인 기준입니다.</p>
-    <p class="gen">수집 28건 → 통합 15건 · 제외 241건 · 생성 2026-08-03 09:00 KST</p>
+    <p class="gen">수집 44건 → 통합 19건 · 제외 273건 · 생성 2026-08-03 09:53 KST</p>
   </footer>
 </div>
 </body>
