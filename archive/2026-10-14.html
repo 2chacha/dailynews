@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>뉴스 클리핑 · 2026-10-14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+    --serif:"Nanum Myeongjo","AppleMyungjo",Batang,Georgia,serif;
+    --sans:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+      --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14); }
+  }
+  :root[data-theme="light"]{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+  }
+  :root[data-theme="dark"]{
+    --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+    --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ transition:none!important; } }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px 72px; }
+  a{ color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  .masthead{ text-align:center; padding:46px 0 20px; border-bottom:3px double var(--rule); }
+  .kicker{ margin:0; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .nameplate{ margin:.22em 0 .14em; font-family:var(--serif); font-weight:800; color:var(--ink);
+    font-size:clamp(2.1rem,6vw,2.9rem); letter-spacing:-.01em; }
+  .dateline{ margin:0; font-size:.82rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .archive-link{ display:inline-block; margin-top:14px; font-size:.8rem; color:var(--accent);
+    text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:6px 15px;
+    transition:background .15s,border-color .15s; }
+  .archive-link:hover{ background:var(--accent-soft); border-color:var(--accent); }
+
+  .summary{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px;
+    padding:16px 2px; border-bottom:1px solid var(--line); }
+  .figs{ display:flex; gap:26px; }
+  .fig{ display:flex; flex-direction:column; line-height:1.05; }
+  .fig .n{ font-family:var(--serif); font-size:1.55rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .fig .l{ font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); margin-top:4px; }
+  .topsrc{ margin:0 0 0 auto; font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .topsrc-l{ color:var(--faint); margin-right:6px; }
+
+  .deptnav{ position:sticky; top:0; z-index:5; display:flex; gap:4px; flex-wrap:wrap;
+    padding:10px 0; margin-bottom:6px; background:var(--paper); border-bottom:1px solid var(--line); }
+  .deptnav a{ font-size:.82rem; color:var(--muted); text-decoration:none; padding:4px 11px;
+    border-radius:999px; white-space:nowrap; transition:background .15s,color .15s; }
+  .deptnav a:hover{ color:var(--ink); background:var(--accent-soft); }
+  .deptnav a b{ color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; margin-left:3px; }
+
+  .dept{ margin-top:36px; scroll-margin-top:58px; }
+  .dept-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    margin:0 0 4px; padding-bottom:9px; border-bottom:2px solid var(--ink); }
+  .dept-name{ font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--ink); }
+  .dept-count{ font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .stories{ list-style:none; margin:0; padding:0; }
+  .story{ padding:16px 0; border-top:1px solid var(--line); }
+  .stories .story:first-child{ border-top:none; }
+  .s-title{ display:block; font-family:var(--serif); font-size:1.14rem; font-weight:700;
+    line-height:1.38; color:var(--ink); text-decoration:none; text-wrap:balance; transition:color .15s; }
+  .s-title:hover{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+  .s-meta{ margin:6px 0 0; font-size:.76rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .s-src{ color:var(--muted); font-weight:600; }
+  .s-kw{ color:var(--faint); }
+  .s-dot{ color:var(--faint); margin:0 7px; }
+  .s-media{ color:var(--accent); font-weight:600; }
+  .s-single{ color:var(--faint); font-style:italic; }
+  .s-desc{ margin:7px 0 0; font-size:.875rem; color:var(--muted); line-height:1.6; }
+  .outlets{ margin-top:9px; display:flex; flex-wrap:wrap; gap:5px; }
+  .outlet{ font-size:.72rem; color:var(--muted); text-decoration:none; border:1px solid var(--line);
+    border-radius:6px; padding:3px 9px; transition:color .12s,border-color .12s,background .12s; }
+  .outlet:hover{ color:var(--accent); border-color:var(--accent); background:var(--accent-soft); }
+  .empty{ color:var(--faint); font-size:.9rem; padding:8px 0; }
+
+  footer{ margin-top:54px; padding-top:18px; border-top:3px double var(--rule);
+    color:var(--faint); font-size:.76rem; line-height:1.65; }
+  footer p{ margin:0 0 6px; }
+  footer strong{ color:var(--muted); }
+  footer .gen{ font-variant-numeric:tabular-nums; }
+
+  @media (max-width:560px){
+    .summary{ gap:12px 18px; } .figs{ gap:18px; }
+    .topsrc{ margin:6px 0 0; width:100%; }
+    .deptnav{ overflow-x:auto; flex-wrap:nowrap; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">출판·유통 시장 데일리 브리프</p>
+    <h1 class="nameplate">뉴스 클리핑</h1>
+    <p class="dateline">2026년 10월 14일 수요일 · 최근 24시간 10/13 09:00–10/14 09:00 KST</p>
+    <a class="archive-link" href="index.html">지난 리포트 아카이브 →</a>
+  </header>
+
+  <div class="summary">
+    <div class="figs">
+      <div class="fig"><span class="n">40</span><span class="l">총 기사</span></div>
+      <div class="fig"><span class="n">15</span><span class="l">다중매체</span></div>
+      <div class="fig"><span class="n">25</span><span class="l">단일 출처</span></div>
+      <div class="fig"><span class="n">4</span><span class="l">분야</span></div>
+    </div>
+    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>데일리안 2 · 파이낸셜뉴스 2 · 이데일리 2 · sisain.co.kr 1 · gjdream.com 1</p>
+  </div>
+
+  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>11</b></a><a href="#g1">리테일 업계 <b>19</b></a><a href="#g2">경쟁사 <b>3</b></a><a href="#g3">자사·주주사 <b>7</b></a></nav>
+
+  <main>
+    <section id="g0" class="dept">
+      <h2 class="dept-head"><span class="dept-name">출판</span><span class="dept-count">11건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.dailian.co.kr/news/view/1700891/?sc=Naver" target="_blank" rel="noopener noreferrer">느리지만 여운 남는 위로…그래도봄이 어루만지는 마음 [출판사 인사이...</a>
+          <p class="s-meta"><span class="s-src">데일리안</span><span class="s-dot">·</span><time>10/14 08:54</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">출판 시장은 위기지만, 출판사의 숫자는 증가하고 있습니다. 오랜 출판사들은 여전히 영향력을 발휘하며 시장을 지탱 중이고, 1인 출판이 활발해져 늘어난 작은 출판사들은 다양성을 무기로 활기를 불어넣습니다. 다만 일부 출판사가 공급을 책임지던 전보다는, 출판사의 존재감이 희미해지고 있습니다. 그래서 소개합니다. 대형 출판사부터 눈에 띄는 작은 출판사까지. 책</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sisain.co.kr/news/articleView.html?idxno=58629" target="_blank" rel="noopener noreferrer">“괜찮아질 수 없지만 괜찮아” [새로 나온 책]</a>
+          <p class="s-meta"><span class="s-src">sisain.co.kr</span><span class="s-dot">·</span><time>10/14 06:35</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">자연의 것들은 그저 자란다이윤 리 지음, 정혜윤 옮김, 다산책방 펴냄“자식들은 죽고 부모는 계속 살아간다.”빈센트와 제임스는 3년 4개월 6일의 터울로 태어났고 6년 4개월 19일의 간격을 두고 죽었다. 둘은 소설가이자 프린스턴 대학에서 문예창작부 학장으로 있는 이윤 리의 아이들이다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.gjdream.com/news/articleView.html?idxno=673419" target="_blank" rel="noopener noreferrer">[조대영의 헌책방 순례기](10) 부산 보수동 책방 골목</a>
+          <p class="s-meta"><span class="s-src">gjdream.com</span><span class="s-dot">·</span><time>10/14 00:00</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">한글날 부산에 갔다. 연휴 첫날이어서인지 부산에 가는 사람이 많았다. 부산 사상에 가는 표를 구하고자 했는데, 8시 30분까지 매진이었다. 배차 간격이 짧은 것으로 보아 버스를 증편한 것이 분명한데도, 표가 없었다. 부산 노포로 방향을 선회했다. 노포행도 매진을 기록하고 있었다. 7시 30분발 프리미엄 버스표가 한 석 눈에 띄었고, 잠시 망설이다가 표를 발권했다. 부산에 가는 사람이 많을 만…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.mediapen.com/news/view/1129658" target="_blank" rel="noopener noreferrer">강지영 작가, 빈에서 &#x27;K-북 커넥트&#x27; 개최…한국문학의 매력 알린다</a>
+          <p class="s-meta"><span class="s-src">mediapen.com</span><span class="s-dot">·</span><time>10/13 16:24</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[미디어펜=이석원 문화미디어 전문기자] 주오스트리아한국문화원(원장 신동호)이 빈 대학교 한국학과와 손잡고 한국문학의 깊이와 스릴러 장르의 매력을 오스트리아 현지에 알리는 뜻깊은 자</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://sports.khan.co.kr/article/202610131529003?pt=nv" target="_blank" rel="noopener noreferrer">‘2026 파주페어 북앤컬처’, K-도서의 향연 ‘북소리’와 ‘글로벌 IP ...</a>
+          <p class="s-meta"><span class="s-src">경향신문</span><span class="s-dot">·</span><time>10/13 15:30</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">지난 10월 9일 개막한 ‘2026 파주페어 북앤컬처’가 오는 16일부터 18일까지 ‘북소리’ 프로그램과 K-BOOK IP 수출 지원 프로그램으로 축제의 열기를 이어간다. (재)출판도시문화재단(이사장 강성민)은...</p>
+          <div class="outlets"><a class="outlet" href="https://sports.khan.co.kr/article/202610131529003?pt=nv" target="_blank" rel="noopener noreferrer">경향신문</a><a class="outlet" href="https://www.gosiweek.com/article/1065596931355488" target="_blank" rel="noopener noreferrer">gosiweek.com</a><a class="outlet" href="https://www.kyosu.net/news/articleView.html?idxno=211193" target="_blank" rel="noopener noreferrer">kyosu.net</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ppss.kr/news/articleView.html?idxno=315286" target="_blank" rel="noopener noreferrer">캐릭터 스티커에서 책갈피·포토카드까지…편의점 수집형 빵, 협업 IP 다...</a>
+          <p class="s-meta"><span class="s-src">ppss.kr</span><span class="s-dot">·</span><time>10/13 14:46</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">(PPSS 이효원 기자)편의점 수집형 빵의 범위가 넓어지고 있다. 과거 캐릭터 스티커 중심이던 동봉 굿즈가 출판사 책갈피, 아이돌 포토카드 등 팬덤별 굿즈로 다양</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.naeil.com/news/read/604885?ref=naver" target="_blank" rel="noopener noreferrer">정부·중앙은행, 정책결정시 시장과 소통 중요성 강조</a>
+          <p class="s-meta"><span class="s-src">naeil.com</span><span class="s-dot">·</span><time>10/13 13:02</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">올해 노벨경제학상 수상자로 선정된 마이클 우드퍼드 미국 컬럼비아대 교수는 정부와 중앙은행 등 정책당국이 시장과 적극 소통할 필요성을 강조했다. 우드퍼드 교수는 12일(현지시간) 수상자로 선정된 직후 가진 기자회견에서 “경제주체가 당국의 정책을 어떻게 이해하는지와 무관하게 정책을 운용해서는 안된다”며 “정부가 레버를 당겨 경제를 통제하는 행위처럼 여겨서는 안된다”고 지적했다. 그는 자신의 연구…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.mt.co.kr/future/2026/10/13/2026101309440893854" target="_blank" rel="noopener noreferrer">멘탯, AI 기업용 도서 데이터 검색 서비스 출시…거래 장벽 완화 초점</a>
+          <p class="s-meta"><span class="s-src">머니투데이</span><span class="s-dot">·</span><time>10/13 11:30</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-media">6개 매체</span></p>
+          <p class="s-desc">[이 기사에 나온 스타트업에 대한 보다 다양한 기업정보는 유니콘팩토리 빅데이터 플랫폼 ‘데이터랩’에서 볼 수 있습니다. ] 도서 인공지능(AI) 라이선싱 플랫폼 멘탯이 AI 기업을 위한 정식 라이선스 도서 데이터 검색 서비스 &#x27;멘탯 디스커버리&#x27;를 출시했다고 13일 밝혔다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.mt.co.kr/future/2026/10/13/2026101309440893854" target="_blank" rel="noopener noreferrer">머니투데이</a><a class="outlet" href="https://www.cstimes.com/news/articleView.html?idxno=723717" target="_blank" rel="noopener noreferrer">cstimes.com</a><a class="outlet" href="http://www.hansbiz.co.kr/news/articleView.html?idxno=872150" target="_blank" rel="noopener noreferrer">hansbiz.co.kr</a><a class="outlet" href="https://platum.kr/archives/296149" target="_blank" rel="noopener noreferrer">platum.kr</a><a class="outlet" href="https://www.epnc.co.kr/news/articleView.html?idxno=408124" target="_blank" rel="noopener noreferrer">epnc.co.kr</a><a class="outlet" href="https://www.ablenews.co.kr/news/articleView.html?idxno=233792" target="_blank" rel="noopener noreferrer">ablenews.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ggilbo.com/news/articleView.html?idxno=1186408" target="_blank" rel="noopener noreferrer">당진시, 17일 제11회 독서문화축제 개최</a>
+          <p class="s-meta"><span class="s-src">ggilbo.com</span><span class="s-dot">·</span><time>10/13 10:22</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">당진시(시장 김기재)는 오는 17일 오후 1시부터 6시까지 당진시립중앙도서관 일원에서 ‘제11회 당진시 독서문화축제’를 개최​한다고 13일 밝혔다.이번 축제는 ‘AI시대, 도서관에서 살아남기’​를 주제로 인공지능 기술이 빠르게 발전하는 시대에 책과 도서관의 의미를 되짚어보고, 시민들이 독서문화를 친근하게 접할 수 있도록 다양한 프로그램으로 구성됐다.특히 올해 축제는 단순히 여러 체험 프로그램…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://tk.newdaily.co.kr/site/data/html/2026/10/13/2026101300095.html" target="_blank" rel="noopener noreferrer">대구시, 게임·웹툰·출판 한자리에…콘텐츠페어 16일 개막</a>
+          <p class="s-meta"><span class="s-src">tk.newdaily.co.kr</span><span class="s-dot">·</span><time>10/13 10:20</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">게임과 웹툰, 출판, 캐릭터 등 다양한 콘텐츠를 직접 경험하고 관련 산업의 흐름을 살펴볼 수 있는 전시회가 대구에서 열린다. 시민들에게는 콘텐츠를 즐기는 축제를, 지역 기업에는 투자와 해외시장 진출을 모색하는 기회를 제공하는 행사다.대구시는 오는 16일부터 17일까지 이틀간 엑스코에서 ‘2026 제5회 대구콘텐츠페어’를 개최한다. ‘Play 콘텐츠, Experience 대구’를 슬로건으로 열…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=494710" target="_blank" rel="noopener noreferrer">출판 업종, 미디어 실적 호조에 방긋… 아시아경제·예림당 강세</a>
+          <p class="s-meta"><span class="s-src">pinpointnews.co.kr</span><span class="s-dot">·</span><time>10/13 09:08</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">출판 업종이 13일 미디어 부문의 실적 개선 호재에 2.87% 상승하며 순항하고 있다.디지털 콘텐츠 시장 확대와 주요 기업의 영업이익 대폭 증가가 업종 전반의 투자 심리를 끌어올리는 주된 이유로 풀이된다.한국거래소에 따르면 이날 오전 9시3분 현재 아시아경제가 영업이익 증가율 115.58%를 기록한 실적 호조에 힘입어 7.06% 오른 1,304원에 거래 중이다.도서 출판과 자회사 실적 회복…</p>
+          <div class="outlets"><a class="outlet" href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=494710" target="_blank" rel="noopener noreferrer">pinpointnews.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE50NjFUQnJWYjgyRERndVhjWG1abVJyejM5TUpkUUlRN0t3Qll5Z0xfdHhVcU1PcmtNaTRkWnlPYjExUFRhdV9zMHFOY1IyZ1lRWEJUNGtJem1yUmtLcXZmdU1qeVZLcEJ3aWFn?oc=5" target="_blank" rel="noopener noreferrer">www.ksdaily.co.kr</a></div>
+        </li>
+        </ol>
+    </section>
+    <section id="g1" class="dept">
+      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">19건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/industry/distribution/6319185" target="_blank" rel="noopener noreferrer">GS25, 게임 협업 고객 객단가 4배…&#x27;블루 아카이브&#x27; 3번째 협업</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>10/14 08:53</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">게임 IP 상품 누적 2300만 개 판매 GS25가 게임 지식재산권(IP) 협업 상품 누적 판매량 2300만 개를 기록한 가운데, 해당 상품 구매 고객의 평균 객단가가 일반 고객보다 최대 4배 높은 것으 …</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://view.asiae.co.kr/article/2026101407413540397" target="_blank" rel="noopener noreferrer">&#x27;꿀잠 보장&#x27; 시그니엘호텔 침구…롯데백화점 잠실점에 첫 매장</a>
+          <p class="s-meta"><span class="s-src">아시아경제</span><span class="s-dot">·</span><time>10/14 08:24</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">롯데호텔앤리조트가 롯데백화점 잠실점에 첫 자체 브랜드 매장을 열고 호텔 침구와 라이프스타일 상품 판매를 확.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.fnnews.com/news/202610140751352049" target="_blank" rel="noopener noreferrer">대구 4개 롯데백화점·아울렛, 더블찬스 위크 눈길</a>
+          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>10/14 08:01</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">대구지역 4개 롯데백화점과 아울렛이 가을 행사를 진행, 눈길을 끈다.특히 지역 축제와 연계한 콘텐츠를 통해 고객들이 쇼핑과 체험을 함께 즐길 수 있도록 해 관심이 크다 롯데백화점 대구·상인점과 롯데아울렛 이시아폴리스·율하점은 오는 16일부터 25일까지 10일간..</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.yna.co.kr/view/PYH20261013184300013?input=1196m" target="_blank" rel="noopener noreferrer">신세계백화점, 센텀시티 남성관 새단장 오픈</a>
+          <p class="s-meta"><span class="s-src">연합뉴스</span><span class="s-dot">·</span><time>10/14 06:01</time><span class="s-dot">·</span><span class="s-kw">신세계백화점</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">(서울=연합뉴스) 신세계백화점 센텀시티점이 5층 남성 전문관을 대대적으로 리뉴얼, 컨템포러리와 디자이너 브랜드 비중을 확대해 새롭게 선보인다고 ...</p>
+          <div class="outlets"><a class="outlet" href="https://www.yna.co.kr/view/PYH20261013184300013?input=1196m" target="_blank" rel="noopener noreferrer">연합뉴스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5UdEtGNWR1Qll4Tll5UjNod2xvZ3dPTlBhZlliR0ozb1RhZFNzWHpaZjRHd1N1SlBkSzFNV0ROT01ld29YakZuNmVjZW5qckFfbHNnX0haTjBEMHlZVWt0UTVZX1RiTFhJQUFSOWhB?oc=5" target="_blank" rel="noopener noreferrer">뉴스인사이드</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBKTlhlSHFBbnowQW5DR3J1cEkxa3FNNzhKWmktNzNyZ09pNjVpMy1YZV9RTUhJMlJMdHVPSWVvUnlTS2J4TUpucjFVejRocVZDUFF2Vy1PZkFlVGRGa1JGd281cmsxNnRDRWozMmlR?oc=5" target="_blank" rel="noopener noreferrer">뉴스후플러스</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQRm1DbzcyOUNVMmV2eXFiR3E3WHh2VnNiUmVzMGhGN1gzRjlOb0tSU0lHTVczakhnUUNjRzN2UE1MeG1wazZWU3VoNF9sSm0tZ19GUGJaR2w2dnR2angwZ1hTcGo3TzNwbkVtUTV2VEhDM0ItcmNwRGYzUTFwLXNwZA?oc=5" target="_blank" rel="noopener noreferrer">가우디부터 日벚꽃까지…롯데백화점, VIP 위한 여행 만든다</a>
+          <p class="s-meta"><span class="s-src">이데일리</span><span class="s-dot">·</span><time>10/14 06:00</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">대한민국 No.1 종합 경제지 이데일리 - 국내외 증권·기업 등 경제 및 종합 뉴스를 빠르고, 정확하게 전달합니다.</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQRm1DbzcyOUNVMmV2eXFiR3E3WHh2VnNiUmVzMGhGN1gzRjlOb0tSU0lHTVczakhnUUNjRzN2UE1MeG1wazZWU3VoNF9sSm0tZ19GUGJaR2w2dnR2angwZ1hTcGo3TzNwbkVtUTV2VEhDM0ItcmNwRGYzUTFwLXNwZA?oc=5" target="_blank" rel="noopener noreferrer">이데일리</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ZSld1UE11SlZtb0RSZVVJa0hETVRKcVZucW9JaXA1cGdSczFscUZQbnFSRUlMd29WdjVZS1MtOHZqUGE2a3RwVzc3WVh5MVFNdHNDTTQ5NVJwTHhO?oc=5" target="_blank" rel="noopener noreferrer">뉴스핌</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9WbjhXdVhwSGVTcXllNU1yUGxJZWVvUG9XVl9hMGk3djVzelZpd2VhcnhhRXg5Rk1nUGxnTjlSdXNMR2xKSld4NVprbDlHVDdnYWFEc0ozRjRBYUt3dUk3QWZnZElHME9CLVdkNnNaUHQ?oc=5" target="_blank" rel="noopener noreferrer">더현대 광주 대형 공법 변경에 도서관 붕괴 악몽 겹쳐 &gt; 뉴스</a>
+          <p class="s-meta"><span class="s-src">더코리아</span><span class="s-dot">·</span><time>10/13 22:32</time><span class="s-dot">·</span><span class="s-kw">더현대</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBJSExYTkpoeTJOTmNxeXJIMzN4YV9hckI4UnRNNURNbk1JMGVNRkNqaFg3elk4SkxmX2JiQ1pnRlN3MWVRSGUwdzhVOFhrbVUyUXIxWHM0RG9HWTBsUDQ5bDNRQVoyMG40WEE?oc=5" target="_blank" rel="noopener noreferrer">올리브영 전국 성장세 &#x27;경남선 주춤&#x27;</a>
+          <p class="s-meta"><span class="s-src">경남매일</span><span class="s-dot">·</span><time>10/13 21:36</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBJSExYTkpoeTJOTmNxeXJIMzN4YV9hckI4UnRNNURNbk1JMGVNRkNqaFg3elk4SkxmX2JiQ1pnRlN3MWVRSGUwdzhVOFhrbVUyUXIxWHM0RG9HWTBsUDQ5bDNRQVoyMG40WEE?oc=5" target="_blank" rel="noopener noreferrer">경남매일</a><a class="outlet" href="http://www.gnmaeil.com/news/articleView.html?idxno=596453" target="_blank" rel="noopener noreferrer">gnmaeil.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mTFVJZVZtOVlWY3BVVldEWXFGNnhIdEdleTZKS3pCcWhneURORl9VUThyVmRSTTRiMGhfSHdSS09TczdHZ2FyTW1LYzcxN2JMVDlpT0NrR2lpdw?oc=5" target="_blank" rel="noopener noreferrer">명품 스위스 초컬릿 &#x27;카이에&#x27;를 올리브영에서도 살 수 있다고?</a>
+          <p class="s-meta"><span class="s-src">한국경제</span><span class="s-dot">·</span><time>10/13 17:40</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">명품 스위스 초컬릿 &#x27;카이에&#x27;를 올리브영에서도 살 수 있다고? , 1819년 시작한 최고(最古) 초컬릿 브랜드 &#x27;카이에&#x27; 부드러운 알프스 우유 넣은 밀크초컬릿으로 유명 메사네트웍스 &quot;올리브영&amp;middot;컬리에 카이에 입점&quot;</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.swtvnews.com/news/newsview.php?ncode=1065594548757598" target="_blank" rel="noopener noreferrer">GS25, 건전지 공급가 CU보다 120% 높아…공정위, ‘통행세 의혹’ 조사</a>
+          <p class="s-meta"><span class="s-src">swtvnews.com</span><span class="s-dot">·</span><time>10/13 17:20</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">GS25, 건전지 공급가 CU보다 120% 높아…공정위, ‘통행세 의혹’ 조사 [SWTV 유호경 기자] GS리테일이 제조사가 직접 납품할 수 있는 상품에 실질적 역할이 불분명한 중간 벤더를 끼워 넣어 이른바 ‘통행세’를 챙겨줬다는 의혹을 사고 있다. 이에 공정거래위원회는 부당지원 및 대규모유통업법 위반 여부를 두고 사실관계 확인에 나선다는 방침이다. 13일 정무위원회 국정감사 자료에 따르면,…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5TbUI0VUdrQWZOYUJSMmoxUUMwNVRQRUlScXpqb1lReVJTbXc1My1kaUR2U2NnMUljbmJQOUdBZldmR01ET0xkSGl5LVlDVDNEbDdVX1RZdXMxM2VKaU5BZHprclFCSWZJck81Q0RqUQ?oc=5" target="_blank" rel="noopener noreferrer">새벽 4시 오픈런했더니 기존 떡 8알이 4알로…롯데백화점 ‘떡지순례’ 논란</a>
+          <p class="s-meta"><span class="s-src">뉴스퀘스트</span><span class="s-dot">·</span><time>10/13 16:45</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE5TbUI0VUdrQWZOYUJSMmoxUUMwNVRQRUlScXpqb1lReVJTbXc1My1kaUR2U2NnMUljbmJQOUdBZldmR01ET0xkSGl5LVlDVDNEbDdVX1RZdXMxM2VKaU5BZHprclFCSWZJck81Q0RqUQ?oc=5" target="_blank" rel="noopener noreferrer">뉴스퀘스트</a><a class="outlet" href="https://www.newsquest.co.kr/news/articleView.html?idxno=302538" target="_blank" rel="noopener noreferrer">newsquest.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9tYWVsb1B3TThSclFNMG1GWk1TM1pDVFQ2QzJrRktNWmxyamprZVl1UEdwOWY0R0RXQ0RnTFFPTFJicV82RktzRFBNZUN6NkxScTFmSHhUcHdXeVZ1WlR3?oc=5" target="_blank" rel="noopener noreferrer">남녀 구역 없앤 디앤드퀘스천…더현대 서울서 26FW 신상 먼저 만난다</a>
+          <p class="s-meta"><span class="s-src">스타패션</span><span class="s-dot">·</span><time>10/13 16:33</time><span class="s-dot">·</span><span class="s-kw">더현대</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://sports.donga.com/economy/article/all/20261013/134830753/1" target="_blank" rel="noopener noreferrer">편의점 GS25, “넷플릭스 한국 진출 10주년 협업 상품 만나요”</a>
+          <p class="s-meta"><span class="s-src">동아일보</span><span class="s-dot">·</span><time>10/13 15:45</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">[스포츠동아 정정욱 기자] 편의점 GS25가 넷플릭스 한국 진출 10주년 협업 상품을 선보였다. 베개 형태의 패키지에 담은 ‘점보갈릭새우칩’, 1인용 간식인 ‘레드&amp;블랙 피자’가 대표 아이템이다. 또 ‘오징어 게임’, ‘케이팝 데몬 헌터스’, ‘이 사랑 통역 되나요?…</p>
+          <div class="outlets"><a class="outlet" href="https://sports.donga.com/economy/article/all/20261013/134830753/1" target="_blank" rel="noopener noreferrer">동아일보</a><a class="outlet" href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5PbWxiNEVwNi1Ed1NhQ0JKQW5sRW1iTTdMU3Fad04xekVBLW1XYjVZb1NVcXMxTkFCQ0FnMTVuNm1SNjVSUF82QnhRaDl0MkhmaFZacExfWjdSQkI4dmJSYmxOR3NtcVVlUG5PRHJQSjZHU2s?oc=5" target="_blank" rel="noopener noreferrer">스포츠동아</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pczB5MVdYNWZMNXA3WjRBTDMyZDA3RklIVldtSkczTG1tZHhYdWh4OVFoWTlMOFotUnNXRWVHSVNFSzVzV3FYc19sNkVIaWlNbHc?oc=5" target="_blank" rel="noopener noreferrer">롯데백화점, 창원 첫 &#x27;무신사 스탠다드&#x27; 매장 연다</a>
+          <p class="s-meta"><span class="s-src">노컷뉴스</span><span class="s-dot">·</span><time>10/13 15:24</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">롯데백화점 창원점이 오는 15일 영플라자 2층에 창원 첫 &#x27;무신사 스탠다드&#x27; 매장을 연다.</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9pczB5MVdYNWZMNXA3WjRBTDMyZDA3RklIVldtSkczTG1tZHhYdWh4OVFoWTlMOFotUnNXRWVHSVNFSzVzV3FYc19sNkVIaWlNbHc?oc=5" target="_blank" rel="noopener noreferrer">노컷뉴스</a><a class="outlet" href="https://www.newsis.com/view/NISX20261013_0003824570" target="_blank" rel="noopener noreferrer">뉴시스</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5MSkQ3U0NoTzFaS0htVWlNd0ZEc2tKWTE5eElmS0JxMUhKcEpWTTViVDJ2aG5BeVp1MkRrcTZaMEZPTEFVRHNHUlZ5MHowTVJT?oc=5" target="_blank" rel="noopener noreferrer">[라이프스타일 뉴스클리핑] 2026년 10월 13일(화): &#x27;MZ 핫플&#x27; 된 백화점…더현대 신규고객 2030 비중 47%, 식품관 첫 방문객 78%</a>
+          <p class="s-meta"><span class="s-src">시사N라이프</span><span class="s-dot">·</span><time>10/13 12:17</time><span class="s-dot">·</span><span class="s-kw">더현대</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">풀뿌리 시민사회와 창업자들과 함께하는 뉴스미디어</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tZ1JHQ1kwZ1pzd1ZQVTg0WGdJRVpTbXEyUlM1TFM0TWJNVTJsVnNMb3FpNGVPX0ZRTG9sUklOWmt4ZzRMWktTenJZZGJfMVBQbGlCc0NSb1Y0Y3ZlUVF2cQ?oc=5" target="_blank" rel="noopener noreferrer">롯데백화점, 제니 모습 담긴 포토스팟 운영</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>10/13 12:14</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">5개 매체</span></p>
+          <p class="s-desc">[서울=뉴시스] 롯데백화점은 오는 18일까지 서울 중구 본점에서 브랜드 앰배서더 &#x27;제니&#x27;의 모습이 담긴 포토스팟을 운영한다고 13일 밝혔다. 사진은 외국인 모델들이 포즈를 취하고 있다. (사진=롯데백화점 제공) 2026.10.13. photo@newsis.com *재판매 및 DB 금지</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tZ1JHQ1kwZ1pzd1ZQVTg0WGdJRVpTbXEyUlM1TFM0TWJNVTJsVnNMb3FpNGVPX0ZRTG9sUklOWmt4ZzRMWktTenJZZGJfMVBQbGlCc0NSb1Y0Y3ZlUVF2cQ?oc=5" target="_blank" rel="noopener noreferrer">뉴시스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9kSnFLQ0tWWjVEb1paTlJzRUNwMENJbnBGZWVkRmhlQTlOeE1YSnVLeHlvVGp5WGVLTGc2LTUtb1lTc1BTYVJrXzY0WmJqSVJoN1VpXzAyZy1kQnpj?oc=5" target="_blank" rel="noopener noreferrer">뉴스핌</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9QRjM0Q3pxckY2a0FUOVNpTWJCYlVfRlBCMVR6c1RKeGxyMWVocUFMbUZaeXNTOXQzZm0tSkdqa09JOXV5N29rYjcwREpYejlOX1Zzd3QzSGxubEdvUGdWZVlvNDBqdGRVenh6T1l3?oc=5" target="_blank" rel="noopener noreferrer">뉴스인사이드</a><a class="outlet" href="https://www.newsinside.kr/news/articleView.html?idxno=5023371" target="_blank" rel="noopener noreferrer">newsinside.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiakFVX3lxTE04QlVLaFd6d0J2MU5KMjh3a19UVVBRN254VDU3N1JZY1F4Z1ptVnlhT3l3ODNMOEpJRkE5OWtGZGl1NDhpQkxnaFdFUGplSU4ycUJXMlBYUWhHdWRiNjVKY0p6OVB3VmF5WUE?oc=5" target="_blank" rel="noopener noreferrer">비즈월드</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1rZFg0Y3hWSXZTV05YdHdvcEs1WkFOUUsyV3l2ZXVKT0ZscHBiaGdqdklGT00wTDYzNnFvLUZKUGJuMHBfb1k3bTlhMWtRM3VVS2ZoTHU0WmxVU3JTTExDVEN1c0tqdkZMSVBN?oc=5" target="_blank" rel="noopener noreferrer">오프라인 고객 접점 강화 나선 샥즈... &#x27;롯데백화점 광주점&#x27; 브랜드샵 오픈</a>
+          <p class="s-meta"><span class="s-src">디지털포스트</span><span class="s-dot">·</span><time>10/13 11:57</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPa01Zdk9QTXBCT3J0dXAyblpJMVB5NTc1T1FaOTNyQURnSUdLWmVUdlJJWTQ5UFJLUnduV1cyOEJwZDBiMmx5Z0Y1SDNiNFN2RGt6UVdKZnp0dkxTOERtWHlyNGpOa0lIYjRZZUxkS3JyUVE3Z1ZyWUlWTW1QdGNiblpYYXBRSG1rY0pDTkJnTUYzcTJfV0RnNjlDOTVmWkxLa0VodHFycDltYkEwMktlaTZhNG42X0VGSE5RLUFxRFVWdThzWm52WWRKTkhhTEd3aUhGLXVHanNBZHRYX2RvM1pMam5RRUZ2d0JhVjFKSlNtdWx1a1RoTQ?oc=5" target="_blank" rel="noopener noreferrer">전통주 모바일로 주문해 GS25서 받는다…aT·GS리테일 판로 확대</a>
+          <p class="s-meta"><span class="s-src">데일리안</span><span class="s-dot">·</span><time>10/13 11:04</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">한국농수산식품유통공사(aT)가 GS리테일의 온라인 플랫폼과 전국 유통망을 활용해 지역 전통주의 판매 접점을 넓힌다. 소비자가 모바일로 전통주를 주문한 뒤 가까운 GS25에서 수령할 수 있도록 하고, 판매 성과가 확인된 제품은 오프라인 매장까지 유통 채널을 확대하는 방안도 추진한다.aT는 지난 8일 서울 GS타워에서 GS리테일과 전통주 소비 활성화와 지역 양</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5mb3pwNkx1Wm0yTWxVS29UdnFMbTVBLWk1Z29zRDJlZXQ1X1NuX1cwWFpoMVZfY0dYRG9jVktBaERsbWRJTDZ2TFQwelRPRGRTb0wwNWZNMEcxMWUxem9mLUlCYTdfdkFKc2xIMHZKOWY?oc=5" target="_blank" rel="noopener noreferrer">[K뷰티 세계화의 새 지평]올리브영, 세포라와 손잡고 아시아 K뷰티 시장 공략…글로벌 유통망 확대</a>
+          <p class="s-meta"><span class="s-src">전국뉴스</span><span class="s-dot">·</span><time>10/13 10:04</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5mb3pwNkx1Wm0yTWxVS29UdnFMbTVBLWk1Z29zRDJlZXQ1X1NuX1cwWFpoMVZfY0dYRG9jVktBaERsbWRJTDZ2TFQwelRPRGRTb0wwNWZNMEcxMWUxem9mLUlCYTdfdkFKc2xIMHZKOWY?oc=5" target="_blank" rel="noopener noreferrer">전국뉴스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE8xeGo3d3lNY0hmVWNHSm5Wb2Rsa1ZzenRZMkRMRXV5NTh6VzJMZnBKOWZiUVJodU5KcUR3VEZqYWpIT0Nwb1lURWNhcUpWdVJFbGN0RDhMbFFaNVF0QVZnbllKeWRPYktvOFUwTjZpS1M?oc=5" target="_blank" rel="noopener noreferrer">위키리크스한국</a><a class="outlet" href="http://www.wikileaks-kr.org/news/articleView.html?idxno=193144" target="_blank" rel="noopener noreferrer">wikileaks-kr.org</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0MDltZnRza3gxNlc2LUNwNk9CaWVTRU0zc29BRGJCelBfTHJVdl94OTBNMTU0b1ZYS01zZGJIbldieHp5RjZDa1IzLTU3aHJaV3ZRVHlzUEtBRElLRXdtbWcwa3A3ajV6?oc=5" target="_blank" rel="noopener noreferrer">[국감 &#x27;26] &#x27;직원 3명·재고자산 0원&#x27; 업체가 170억 거래…GS25의 &#x27;수상한 벤더&#x27;</a>
+          <p class="s-meta"><span class="s-src">www.ebn.co.kr</span><span class="s-dot">·</span><time>10/13 09:58</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">5개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0MDltZnRza3gxNlc2LUNwNk9CaWVTRU0zc29BRGJCelBfTHJVdl94OTBNMTU0b1ZYS01zZGJIbldieHp5RjZDa1IzLTU3aHJaV3ZRVHlzUEtBRElLRXdtbWcwa3A3ajV6?oc=5" target="_blank" rel="noopener noreferrer">www.ebn.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE95bnIxWG13Mi1obGxQRFdGSkxubzFUYUdzRkY1OUJLNXFkRnFNNktZOWI4OHdGTUJHeEczc1AzS0NoZXljbzZWUU8tU2RTSEFpTGFjMllmR0RFNFllQ2tTOWZReHhtUQ?oc=5" target="_blank" rel="noopener noreferrer">프라임경제</a><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFAtTTJTT2JaYWwtSVZZLTlFY2cxZlpEMm5QRC1uenlyczRMd0o0TmNzeURJeWNOeEF3Z1BJR2pUN3JoVE1ZTXdudElPYl9nVHp3dW5aTDhlQ3I4akhFM3RMeDJ6NVpGeFdkVUpjQTZnTGk?oc=5" target="_blank" rel="noopener noreferrer">비즈중앙</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1PZ3BjSkhLZ01sYW9zUVo3Ui13UjVYYzhIbk1RZXJ1Sm54cGZhNVB3RWJMYXZhSUFHb25pZHQtMjdFSlRVYlBuVFFuVTNWa2NLQzRCN2V4YnZtVWtnUHQ5bDJaSU5MdlE?oc=5" target="_blank" rel="noopener noreferrer">지이코노미</a><a class="outlet" href="https://www.geconomy.co.kr/news/article.html?no=324309" target="_blank" rel="noopener noreferrer">geconomy.co.kr</a></div>
+        </li>
+        </ol>
+    </section>
+    <section id="g2" class="dept">
+      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">3건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE9Ddy1IVEs3NURPN2VCaXptbVhTZklUWlg4bW9hcFc0eGNvbnFBM2hIR0tpbzQ3bHZhSkRFbGgtNWJuNlB4R3owUjFBMHp4T0Z6dWtmOFl2d0NJR0RZd3dlUFIxSXN1TVBXZG9iNQ?oc=5" target="_blank" rel="noopener noreferrer">브랜드뉴스 조현승 필진기자 저서 ‘스타트업 벤처투자 브리핑’ 예스24 베스트셀러 올라</a>
+          <p class="s-meta"><span class="s-src">브랜드뉴스</span><span class="s-dot">·</span><time>10/13 13:36</time><span class="s-dot">·</span><span class="s-kw">예스24</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE1EMksyQmlzSDNQVXd3a1E1b1c2MDdtY1Q5LU5halFQZFNJcjh5WFlCWWlVb1M4bk54Y3QwZm5fajBuVzF2T2FUaVQ2ei01Nl9yQlltUUNXZlNUYXJsYm1TRERn?oc=5" target="_blank" rel="noopener noreferrer">알라딘, 노벨문학상 수상 작가 앤 카슨 작품 판매 급증</a>
+          <p class="s-meta"><span class="s-src">경인뷰</span><span class="s-dot">·</span><time>10/13 10:21</time><span class="s-dot">·</span><span class="s-kw">알라딘</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPVndBX29VT1FkbnFmRWtrMkgxSXNPU0ZYbzFLdF93SXVQYnFoU2dDNVRuV2hXNzBQeW00b1lXbEF3cHRRdHktLUNTN0VuZUYxSDBMbXBQQnJkNkpzOHdUNVNIRHlpSlBCaG93SS1YZnVhUjUyYlM3YXVyRlpiYUJSYw?oc=5" target="_blank" rel="noopener noreferrer">KT와 SKT의 만남...밀리의서재, &#x27;T day&#x27; 한달 무료 구독 이벤트</a>
+          <p class="s-meta"><span class="s-src">이데일리</span><span class="s-dot">·</span><time>10/13 09:25</time><span class="s-dot">·</span><span class="s-kw">밀리의서재</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">대한민국 No.1 종합 경제지 이데일리 - 국내외 증권·기업 등 경제 및 종합 뉴스를 빠르고, 정확하게 전달합니다.</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPVndBX29VT1FkbnFmRWtrMkgxSXNPU0ZYbzFLdF93SXVQYnFoU2dDNVRuV2hXNzBQeW00b1lXbEF3cHRRdHktLUNTN0VuZUYxSDBMbXBQQnJkNkpzOHdUNVNIRHlpSlBCaG93SS1YZnVhUjUyYlM3YXVyRlpiYUJSYw?oc=5" target="_blank" rel="noopener noreferrer">이데일리</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5rYlVobEd1dFNBSWRjWmVmT2JfbjdYeXRRS2RLU1NwZTRWTGgzLUpyRTI5UEFyS0xLdG9MdjFRYWJ2VWtFZFNtQjkxTVl6UG1ua0hQRTFKQVBaelZqNVZPOXlVRXp5TDgzbU1KZThB0gFuQVVfeXFMTmtiVWhsR3V0U0FJZGNaZWZPYl9uN1h5dFFLZEtTU3BlNFZMaDMtSnJFMjlQQXJLTEt0b0x2MVFhYnZVa0VkU21COTFNWXpQbW5rSFBFMUpBUFp6Vmo1Vk85eVVFenlMODNtTUplOEE?oc=5" target="_blank" rel="noopener noreferrer">파이낸셜투데이</a></div>
+        </li>
+        </ol>
+    </section>
+    <section id="g3" class="dept">
+      <h2 class="dept-head"><span class="dept-name">자사·주주사</span><span class="dept-count">7건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://news.dealsitetv.com/articles/176748" target="_blank" rel="noopener noreferrer">[교보생명 구조개편] 새 자본규제 앞 백기…라플 합병 &#x27;나비 효과&#x27;</a>
+          <p class="s-meta"><span class="s-src">news.dealsitetv.com</span><span class="s-dot">·</span><time>10/14 07:06</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">흡수합병 시 자산 늘고 순익 감소하지만 젊은 고객 시너지 기대돼</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBDU0pCUGJuSTdYZjFMcWwzUnFuNG9HY1FlMy16X0pUdFVhT3JnQzlyYWR4NnlJVE1vQzdDdDlhZ0dNUV9pNlNBVXJleGtuQk5DZ3Z5Q1hEUQ?oc=5" target="_blank" rel="noopener noreferrer">[교보생명 구조개편] 비보험 강화 박차…아쉬운 방향성</a>
+          <p class="s-meta"><span class="s-src">DealSite경제TV</span><span class="s-dot">·</span><time>10/13 18:55</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">SBI저축은행 인수로 교보증권 종투사 진입 &#x27;실기&#x27;</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9HcGdMOEMtWGlSVmRJU3FSdF9zTkRycUszeFFVTG9RNGFpNDNXWjczTmF6X3oyOW5VY0lON2FyRnhHX0EtYzU2NVJnN1dvYW8zT29VRktMQ2ZHdF9PTjFOdVhGUmRrZ2xiRXZzUTdRSE9uRGFr?oc=5" target="_blank" rel="noopener noreferrer">[오늘의 보험] 삼성생명·메트라이프생명·미래에셋생명·교보생명</a>
+          <p class="s-meta"><span class="s-src">파이낸셜리뷰</span><span class="s-dot">·</span><time>10/13 16:36</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaV1VTT3JPU0gwRWZUd0ZJLVhReHlrNjNsZERCbWF5b1NmWEV5OUMyRnFHMVVQOG14SGczcG5KV3dQZmZmV1ZWamJqRldranhCaVN2dVU0bUtxQQ?oc=5" target="_blank" rel="noopener noreferrer">철학부터 시사까지 18문항…교보문고, 교양 모의고사·문화행사 연다</a>
+          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>10/13 14:29</time><span class="s-dot">·</span><span class="s-kw">교보문고</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">교보문고가 철학·역사·과학 등 6개 분야의 지식을 18문항으로 점검하고, 문제와 관련된 책을 찾아보는 온라인 교양 모의고사를 진행한다.13일 교보문고에 따르면 지난 12일 시작한 &#x27;2026년 하반기 교양 모의고사&#x27;는 지난봄 열린 행사의 후속 프로그램이다.참여자는 문..</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaV1VTT3JPU0gwRWZUd0ZJLVhReHlrNjNsZERCbWF5b1NmWEV5OUMyRnFHMVVQOG14SGczcG5KV3dQZmZmV1ZWamJqRldranhCaVN2dVU0bUtxQQ?oc=5" target="_blank" rel="noopener noreferrer">파이낸셜뉴스</a><a class="outlet" href="https://www.news1.kr/life-culture/book/6318974" target="_blank" rel="noopener noreferrer">뉴스1</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1MVVVekhUOUhZTEh0YXc4Vmt3dk9YVzRMSmt2a1J5eGthWW5Nd0pqYXp5eDZwdjBGaU1NNnhiVmtOdERpOTFzRDhyX2ZETlIxdHZPRFkyRmxBOVc1emlsMk9teXdlaXpH?oc=5" target="_blank" rel="noopener noreferrer">교보생명, 건강보험 상품 혁신 주도...시장 경쟁력 강화로 CSM도 급증</a>
+          <p class="s-meta"><span class="s-src">녹색경제신문</span><span class="s-dot">·</span><time>10/13 11:31</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5PZ0VLbndqcks3NkZHbFQxUEZxZGdMWFk3T0VHVkI5WGVReHJGeUxzdTlRUTQ0Wlp1eWRldW5BLWE3MDlFSUpTcC1Nc05nbjU2ZXdUaXBsWmZWeHctQ2FtTHI3NVdYZw?oc=5" target="_blank" rel="noopener noreferrer">교보문고, 가을맞이 온라인 교양 시험부터 롯데월드 제휴 행사까지</a>
+          <p class="s-meta"><span class="s-src">싱글리스트</span><span class="s-dot">·</span><time>10/13 09:39</time><span class="s-dot">·</span><span class="s-kw">교보문고</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMibEFVX3lxTFAyc3FfV2pxMTd2clFyOGpWbEhPUDdoRE9obnNTeXR5bXFLVHFIbzBMMEJrTTVvVHJhRnJOZlRxYzgzallMQkc0MGc4S1QzZWtNbmM2NkZrWlkxenFZaXhjSnJsX3RBYU10SzY0OA?oc=5" target="_blank" rel="noopener noreferrer">[빅데이터투데이] 생명보험 2026년 10월 브랜드평판 랭킹... 1위 한화생명, 2위 미래에셋생명, 3위 교보생명</a>
+          <p class="s-meta"><span class="s-src">파이낸스투데이</span><span class="s-dot">·</span><time>10/13 09:07</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMibEFVX3lxTFAyc3FfV2pxMTd2clFyOGpWbEhPUDdoRE9obnNTeXR5bXFLVHFIbzBMMEJrTTVvVHJhRnJOZlRxYzgzallMQkc0MGc4S1QzZWtNbmM2NkZrWlkxenFZaXhjSnJsX3RBYU10SzY0OA?oc=5" target="_blank" rel="noopener noreferrer">파이낸스투데이</a><a class="outlet" href="https://news.google.com/rss/articles/CBMickFVX3lxTE1sTlVsRzhjeUpjS1lYempRR1RaTExBTlFqaVFiaGhubDdfUENvTFpUa1dUZkE4WHR2LXZ5RGVwT3ptMjZ2ekhpT3c3ZkVBOGZ3T05LNzI3STltSEdpa3BrRGoyMTZ3RnBEa0twQmFuMHRaZw?oc=5" target="_blank" rel="noopener noreferrer">에너지신문</a><a class="outlet" href="https://www.energy-news.co.kr/news/articleView.html?idxno=228895" target="_blank" rel="noopener noreferrer">energy-news.co.kr</a></div>
+        </li>
+        </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>본 리포트의 제목·링크·보도시각·출처는 모두 <strong>네이버 뉴스 검색 API · 구글뉴스 RSS</strong>의 원본 데이터이며, 각 기사 <b>요약</b>은 원문 페이지가 제공하는 대표 설명(메타 요약)을 그대로 가져온 것입니다 — 별도의 생성형 요약은 없습니다. 동일 사실을 여러 매체가 보도하면 대표 1건으로 통합해 <b>N개 매체</b> 수와 언론사별 링크 버튼으로 표시했고, 한 매체만 보도한 건은 <b>단일 출처</b>로 표기했습니다.</p>
+    <p class="gen">수집 77건 → 통합 40건 · 제외 587건 · 생성 2026-10-14 09:00 KST</p>
+  </footer>
+</div>
+</body>
+</html>
