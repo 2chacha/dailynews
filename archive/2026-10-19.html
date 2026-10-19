@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>뉴스 클리핑 · 2026-10-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+    --serif:"Nanum Myeongjo","AppleMyungjo",Batang,Georgia,serif;
+    --sans:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+      --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14); }
+  }
+  :root[data-theme="light"]{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+  }
+  :root[data-theme="dark"]{
+    --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+    --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ transition:none!important; } }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px 72px; }
+  a{ color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  .masthead{ text-align:center; padding:46px 0 20px; border-bottom:3px double var(--rule); }
+  .kicker{ margin:0; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .nameplate{ margin:.22em 0 .14em; font-family:var(--serif); font-weight:800; color:var(--ink);
+    font-size:clamp(2.1rem,6vw,2.9rem); letter-spacing:-.01em; }
+  .dateline{ margin:0; font-size:.82rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .archive-link{ display:inline-block; margin-top:14px; font-size:.8rem; color:var(--accent);
+    text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:6px 15px;
+    transition:background .15s,border-color .15s; }
+  .archive-link:hover{ background:var(--accent-soft); border-color:var(--accent); }
+
+  .summary{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px;
+    padding:16px 2px; border-bottom:1px solid var(--line); }
+  .figs{ display:flex; gap:26px; }
+  .fig{ display:flex; flex-direction:column; line-height:1.05; }
+  .fig .n{ font-family:var(--serif); font-size:1.55rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .fig .l{ font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); margin-top:4px; }
+  .topsrc{ margin:0 0 0 auto; font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .topsrc-l{ color:var(--faint); margin-right:6px; }
+
+  .deptnav{ position:sticky; top:0; z-index:5; display:flex; gap:4px; flex-wrap:wrap;
+    padding:10px 0; margin-bottom:6px; background:var(--paper); border-bottom:1px solid var(--line); }
+  .deptnav a{ font-size:.82rem; color:var(--muted); text-decoration:none; padding:4px 11px;
+    border-radius:999px; white-space:nowrap; transition:background .15s,color .15s; }
+  .deptnav a:hover{ color:var(--ink); background:var(--accent-soft); }
+  .deptnav a b{ color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; margin-left:3px; }
+
+  .dept{ margin-top:36px; scroll-margin-top:58px; }
+  .dept-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    margin:0 0 4px; padding-bottom:9px; border-bottom:2px solid var(--ink); }
+  .dept-name{ font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--ink); }
+  .dept-count{ font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .stories{ list-style:none; margin:0; padding:0; }
+  .story{ padding:16px 0; border-top:1px solid var(--line); }
+  .stories .story:first-child{ border-top:none; }
+  .s-title{ display:block; font-family:var(--serif); font-size:1.14rem; font-weight:700;
+    line-height:1.38; color:var(--ink); text-decoration:none; text-wrap:balance; transition:color .15s; }
+  .s-title:hover{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+  .s-meta{ margin:6px 0 0; font-size:.76rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .s-src{ color:var(--muted); font-weight:600; }
+  .s-kw{ color:var(--faint); }
+  .s-dot{ color:var(--faint); margin:0 7px; }
+  .s-media{ color:var(--accent); font-weight:600; }
+  .s-single{ color:var(--faint); font-style:italic; }
+  .s-desc{ margin:7px 0 0; font-size:.875rem; color:var(--muted); line-height:1.6; }
+  .outlets{ margin-top:9px; display:flex; flex-wrap:wrap; gap:5px; }
+  .outlet{ font-size:.72rem; color:var(--muted); text-decoration:none; border:1px solid var(--line);
+    border-radius:6px; padding:3px 9px; transition:color .12s,border-color .12s,background .12s; }
+  .outlet:hover{ color:var(--accent); border-color:var(--accent); background:var(--accent-soft); }
+  .empty{ color:var(--faint); font-size:.9rem; padding:8px 0; }
+
+  footer{ margin-top:54px; padding-top:18px; border-top:3px double var(--rule);
+    color:var(--faint); font-size:.76rem; line-height:1.65; }
+  footer p{ margin:0 0 6px; }
+  footer strong{ color:var(--muted); }
+  footer .gen{ font-variant-numeric:tabular-nums; }
+
+  @media (max-width:560px){
+    .summary{ gap:12px 18px; } .figs{ gap:18px; }
+    .topsrc{ margin:6px 0 0; width:100%; }
+    .deptnav{ overflow-x:auto; flex-wrap:nowrap; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">출판·유통 시장 데일리 브리프</p>
+    <h1 class="nameplate">뉴스 클리핑</h1>
+    <p class="dateline">2026년 10월 19일 월요일 · 최근 24시간 10/18 09:00–10/19 09:00 KST</p>
+    <a class="archive-link" href="index.html">지난 리포트 아카이브 →</a>
+  </header>
+
+  <div class="summary">
+    <div class="figs">
+      <div class="fig"><span class="n">20</span><span class="l">총 기사</span></div>
+      <div class="fig"><span class="n">6</span><span class="l">다중매체</span></div>
+      <div class="fig"><span class="n">14</span><span class="l">단일 출처</span></div>
+      <div class="fig"><span class="n">4</span><span class="l">분야</span></div>
+    </div>
+    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>job-post.co.kr 1 · kor.theasian.asia 1 · econovill.com 1 · gndomin.com 1 · 세계일보 1</p>
+  </div>
+
+  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>9</b></a><a href="#g1">리테일 업계 <b>5</b></a><a href="#g2">경쟁사 <b>3</b></a><a href="#g3">자사·주주사 <b>3</b></a></nav>
+
+  <main>
+    <section id="g0" class="dept">
+      <h2 class="dept-head"><span class="dept-name">출판</span><span class="dept-count">9건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.job-post.co.kr/news/articleView.html?idxno=232954" target="_blank" rel="noopener noreferrer">남양주시, &#x27;북 페스타&#x27; 성료…독서문화도시 도약</a>
+          <p class="s-meta"><span class="s-src">job-post.co.kr</span><span class="s-dot">·</span><time>10/19 04:52</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[잡포스트] 임택 기자 = 책을 읽으며 휴식을 즐기고, 작가와 만나 이야기를 나누는 특별한 가을 축제가 남양주에서 펼쳐졌다. 야외 공원은 책과 음악, 다양한 체험</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://kor.theasian.asia/archives/418377" target="_blank" rel="noopener noreferrer">[아시아 오늘의 역사·10.19·중양절] 여순사건 발발(1948)·中 작가 루쉰...</a>
+          <p class="s-meta"><span class="s-src">kor.theasian.asia</span><span class="s-dot">·</span><time>10/18 22:06</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">루쉰 2026년 10월 19일(음 9월 9일) 월요일 | 중양절 “사랑하는 마음을 아끼며 삽니다/ 모진 마음을 달래며 삽니다” -나태주 ‘사랑하는 마음 내게 있어도’ 10월 19일 오늘은 음력 9월 9일 중양절. 양수인 9가 두 번 겹치는 날로, 예부터 국화주를 마시고</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.econovill.com/news/articleView.html?idxno=754003" target="_blank" rel="noopener noreferrer">내향인 아나운서는 어떻게 행사 500회를 진행했나 [도서 PICK]</a>
+          <p class="s-meta"><span class="s-src">econovill.com</span><span class="s-dot">·</span><time>10/18 21:50</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">“성격은 바꾸지 않아도 됩니다.”내향인인 권혜경 아나운서가 전하는 조언이다. 그는 초·중·고교 시절 자발적으로 손을 들고 발표한 적이 한 번도 없었다. 사람들 앞에 처음 선 것은 대학교 조별 발표 때였다. 그런 그가 방송과 행사 현장에서 500회 넘는 행사를 진행했다.좋은땅은 권혜경의 첫 책 ‘어쩌다 진행자’를 10월 19일 출간한다. 저자가 20여 년간 쌓은 방송·행사 진행 경험을 토대로…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.gndomin.com/news/articleView.html?idxno=493057" target="_blank" rel="noopener noreferrer">하동시장 역사 담은 &#x27;하동시장백사&#x27; 출판 집담회 열려</a>
+          <p class="s-meta"><span class="s-src">gndomin.com</span><span class="s-dot">·</span><time>10/18 18:02</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">하동시장의 역사와 발자취를 기록하고 새로운 미래를 모색하기 위한 ‘하동시장백사 출판 집담회’가 지난 10월 15일 오전 11시 하동시장 두꺼비광장에서 개최됐다. 하동시장번영회가 주최한 이날 행사에는 하동군의회 최민경 부의장을 비롯해 여러 군의원과 역대 하동시장번영회장 등 관계자들이 참석해 출판 집담회의 의미를 함께 나눴다. 행사는 개회 선언을 시</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.segye.com/newsView/20261018513405?OutUrl=naver" target="_blank" rel="noopener noreferrer">[단독] 저작권 빈틈 타고… 국내 AI기업도 ‘헌책 사냥’ [탐사기획-학습...</a>
+          <p class="s-meta"><span class="s-src">세계일보</span><span class="s-dot">·</span><time>10/18 17:43</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">세계 각지에서 잇따르는 실체가 불분명한 헌책 대량 주문이 인공지능(AI) 업체가 벌인 일이라는 의혹이 제기되는 가운데, 국내에서도 AI 업체의 중고 서적 확보 움직임이 포착됐다. 수요의 배후에 거대 기술기업이 있다는 의혹은 지속적으로 제기됐지만, 국내 AI 기업이 직접 헌책 매입에 나선 사실이 확인된 것은 이번이 처음이다. AI 모델의 성능을 향상하기 위해 종이책을 학습 데이터로 활용하려는…</p>
+          <div class="outlets"><a class="outlet" href="https://www.segye.com/newsView/20261018513405?OutUrl=naver" target="_blank" rel="noopener noreferrer">세계일보</a><a class="outlet" href="https://www.cwn.kr/news/articleView.html?idxno=59593" target="_blank" rel="noopener noreferrer">cwn.kr</a><a class="outlet" href="https://www.sedaily.com/article/20103000?ref=naver" target="_blank" rel="noopener noreferrer">서울경제</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.fieldnews.kr/news/articleView.html?idxno=32334" target="_blank" rel="noopener noreferrer">최현덕 남양주시장, &#x27;북 페스타&#x27; 현장 찾아 시민과 대화…2027 독서대전...</a>
+          <p class="s-meta"><span class="s-src">fieldnews.kr</span><span class="s-dot">·</span><time>10/18 17:08</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">[필드뉴스=남양주 강성원 기자] 남양주시가 정약용도서관 앞 다산문화공원을 야외 독서와 지역서점·독립출판 창작자들이 만나는 공간으로 꾸몄다. 2027 대한민국 독서대전 개최를 앞두고 시민 참여형 독서문화축제 운영 경험을 쌓고 지역 출판계와의 협력도 확대한다는 계획이다.남양주시는 지난 1</p>
+          <div class="outlets"><a class="outlet" href="http://www.fieldnews.kr/news/articleView.html?idxno=32334" target="_blank" rel="noopener noreferrer">fieldnews.kr</a><a class="outlet" href="http://www.newstown.co.kr/news/articleView.html?idxno=718857" target="_blank" rel="noopener noreferrer">newstown.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://kr.aving.net/news/articleView.html?idxno=1815639" target="_blank" rel="noopener noreferrer">앱미디어, 지역 AX 브릿지서 AI 앱북 플랫폼 &#x27;프라페&#x27; 소개... &quot;읽는 책에...</a>
+          <p class="s-meta"><span class="s-src">kr.aving.net</span><span class="s-dot">·</span><time>10/18 14:50</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">앱미디어 / Appmedia(대표 박성훈)는 10월 13일(화)부터 14일(수)까지 이틀간 서울 코엑스 더 플라츠에서 열린</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.cctimes.kr/news/articleView.html?idxno=932430" target="_blank" rel="noopener noreferrer">세명대 오성은 교수 원작 소설, 연상호 감독 영화로 극장 개봉</a>
+          <p class="s-meta"><span class="s-src">cctimes.kr</span><span class="s-dot">·</span><time>10/18 12:22</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">[충청타임즈] 세명대학교 미디어콘텐츠창작학과 오성은 교수가 집필한 장편소설 ‘블랙 인페르노’를 원작으로 한 연상호 감독의 신작 영화 ‘실낙원’이 오는 21일 극장 개봉한다.‘블랙 인페르노’는 연상호 감독과 류용재 작가의 원안을 바탕으로 오 교수가 집필한 작품이다. 이번 영화화는 소설의 서사가 영화라는 영상 콘텐츠로 확장됐다는 점에서 문학과 영상 분야의 협업 사례로 주목된다.소설과 영화는 하나…</p>
+          <div class="outlets"><a class="outlet" href="http://www.cctimes.kr/news/articleView.html?idxno=932430" target="_blank" rel="noopener noreferrer">cctimes.kr</a><a class="outlet" href="https://www.inews365.com/news/article.html?no=939537" target="_blank" rel="noopener noreferrer">inews365.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.abcn.kr/news/articleView.html?idxno=93226" target="_blank" rel="noopener noreferrer">[ABC뉴스 인터뷰] 임지호의 밥에서 달항아리까지…김주원 궁편책 대표가...</a>
+          <p class="s-meta"><span class="s-src">abcn.kr</span><span class="s-dot">·</span><time>10/18 09:54</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">ABC뉴스=성원백 기자 / 한 권의 책이 세상에 나오기까지는 저자의 시간만 필요한 것이 아니다. 저자가 살아온 시간과 기억을 세심하게 발견하고, 그것을 독자의 언어로 옮겨놓는 편집자의 시간이 필요하다. 그래서 출판은 단순히 책을 만드는 일이 아니라 한 사람의 삶과 한 시대의 기억을 기록하는 일이다.1989년 도서출판 창조를 설립하며 출판계에 들어선 김주원 궁편책 대표가 올해 ‘책의 날’을 맞…</p>
+        </li>
+        </ol>
+    </section>
+    <section id="g1" class="dept">
+      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">5건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://biz.chosun.com/distribution/fashion-beauty/2026/10/19/K7O2FN653VF6ZNWZV33MXJFISE/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener noreferrer">토우·첨성대 키링까지… 올리브영, 경주 특화 매장 열어</a>
+          <p class="s-meta"><span class="s-src">조선일보</span><span class="s-dot">·</span><time>10/19 08:57</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">7개 매체</span></p>
+          <p class="s-desc">토우·첨성대 키링까지 올리브영, 경주 특화 매장 열어 135평 규모 경주신라점 오픈 CJ올리브영이 경북 경주에 지역 특화 매장 올리브영 경주신라점을 지난 16일 열었다고 19일 밝혔다. 경주고속버스터미널 맞은편에 들어선 이 매장은 2개 층, 영업면적 약 446㎡135평</p>
+          <div class="outlets"><a class="outlet" href="https://biz.chosun.com/distribution/fashion-beauty/2026/10/19/K7O2FN653VF6ZNWZV33MXJFISE/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener noreferrer">조선일보</a><a class="outlet" href="http://www.popcornnews.net/news/articleView.html?idxno=136361" target="_blank" rel="noopener noreferrer">popcornnews.net</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5kVnEzOXg2OTNtN3VDN0k3dThVczU0ODZIUjhacFEyRkR2Tk9NcDVneDVDU24zNXFLakJ5NTdQRDVLUkxtSUliNDNaamF3NXI4MDFIVWxoVUo3QnNQWlNJRkFxMVZtUXE5?oc=5" target="_blank" rel="noopener noreferrer">시사브리핑</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBaZVp0MnJpSmhQTVh1TE5GTjdFZWw1czViS29CMEZ2TnRiX0FYX0V4VjNEdVd2dmdXUG9QYXdUQlc4MU9DZ2tnZzhZcEdmRWdsNzVqZzBzYU9LS2VOTmYxcWVNZnE?oc=5" target="_blank" rel="noopener noreferrer">매일일보</a><a class="outlet" href="https://www.m-i.kr/news/articleView.html?idxno=2007205" target="_blank" rel="noopener noreferrer">m-i.kr</a><a class="outlet" href="http://www.srtimes.kr/news/articleView.html?idxno=215088" target="_blank" rel="noopener noreferrer">srtimes.kr</a><a class="outlet" href="https://daily.hankooki.com/news/articleView.html?idxno=1415948" target="_blank" rel="noopener noreferrer">daily.hankooki.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.smartbizn.com/news/articleView.html?idxno=156605" target="_blank" rel="noopener noreferrer">신동빈의 &#x27;본질·AX&#x27; 승부수···롯데백화점, 초격차 명품·7조 복합몰로...</a>
+          <p class="s-meta"><span class="s-src">smartbizn.com</span><span class="s-dot">·</span><time>10/19 08:30</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">| 스마트비즈 = 양대규 기자 | 거센 비바람이 불어닥칠 때 진짜 뿌리의 깊이가 드러난다.글로벌 경기 둔화와 내수 침체, 여기에 스마트폰 화면 하나로 골목 상권을</p>
+          <div class="outlets"><a class="outlet" href="https://www.smartbizn.com/news/articleView.html?idxno=156605" target="_blank" rel="noopener noreferrer">smartbizn.com</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE03RkFBNXV1QmRiR0Q4SVV4cHF3UDBJemxxQ1o1UmpleU4zYlFRM2JVYnB2YkpMN1VJRTJJVmx5dDZNemlPVkZkRUx3ZFRVRzZtYjNsTThSdVFyZnd5ZUVxY3h2dmVZcEMwSFdBcQ?oc=5" target="_blank" rel="noopener noreferrer">스마트비즈</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://biz.sbs.co.kr/article_hub/20000340675?division=NAVER" target="_blank" rel="noopener noreferrer">&#x27;5시간째 주차장에 갇혔다&#x27;...신세계백화점 무슨 일이?</a>
+          <p class="s-meta"><span class="s-src">SBS</span><span class="s-dot">·</span><time>10/19 07:43</time><span class="s-dot">·</span><span class="s-kw">신세계백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[사진=연합뉴스]서울에 강한 돌풍을 동반한 폭우에 도로가 물에 잠기고 통제되면서 신세계백화점 강남점에서 고객들이 5시간이 넘도록 출차하지 못하고 지하 주차장에 갇히는 일이 발생했습니다.19일 업계에 따르면 전날 서울 서초구에 위치한 신세계백화점 강남점은 오후 5시쯤부터 출차를 제한했습니다. 백화점 측은 안내 방송을 통해 &quot;현재 주변 도로의 …</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE8yYkxURnJDX2dNZ0pFRHJzRENtUEpRanRDN0VzRE03bGl5VHN5OVE1eVkwaHNmRnJDSlo4bHYxTDBYb2xpcmd4M0NiWQ?oc=5" target="_blank" rel="noopener noreferrer">롯데백화점, 7천명 참가한 2026 스타일런 마쳐 : 문화</a>
+          <p class="s-meta"><span class="s-src">재경일보</span><span class="s-dot">·</span><time>10/18 14:38</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">롯데백화점은 18일 서울 송파구 신천동 롯데월드타워 월드파크 일대에서 7천명의 러너가 참가한 &#x27;2026 스타일런&#x27;을 열었다. 이날 달리기 현장에는 롯데백화점 대표를 비롯해 오스카 가르시아 마세이라스 인디텍스 최고경영자(CEO)가 직접 참여했다. 개성 있는 복장을 착용하고 달리는 패션 중심 러닝 축제인 스타일런은 2017년에 시작해 올해 8회째를 맞았다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISI20261018_0021493051" target="_blank" rel="noopener noreferrer">롯데백화점, 자라 애슬레틱즈와 손잡은 ‘2026 스타일런&#x27; 개최</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>10/18 11:26</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">6개 매체</span></p>
+          <p class="s-desc">[서울=뉴시스] 정병혁 기자 = 18일 서울 송파구 잠실 롯데월드타워 월드파크 일대에서 열린 2026 스타일런 행사에서 참가자들이 출발하고 있다. (사진=롯데백화점 제공) 2026.10.18. photo@newsis.com *재판매 및 DB 금지</p>
+          <div class="outlets"><a class="outlet" href="https://www.newsis.com/view/NISI20261018_0021493051" target="_blank" rel="noopener noreferrer">뉴시스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibEFVX3lxTE96SWpXRnhqNGo1MjBOc1cwNHotbzJEZm0tV2R5bXFIOTZWRmZsTUczbGxNeUI4VkhfZ2R4b3Z1Vk9YTmtrVE5SZTdnWmFYSnBVZWdvbEowcVJ0WWlPbW9fR2FNV2x2VkJJMXp2VQ?oc=5" target="_blank" rel="noopener noreferrer">나눔경제뉴스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3WjFPM0gwUC1TekFYSWdZMzI4NmxKNGhFRlBTa01HSFY2c2E0VGhGTlJ0bWlmTV82a1d4eWw2a1N2SU5oTHlFRXQxM3hRN0VtOUE?oc=5" target="_blank" rel="noopener noreferrer">한국정경신문</a><a class="outlet" href="https://kpenews.com/View.aspx?No=4268100" target="_blank" rel="noopener noreferrer">kpenews.com</a><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1rRVN5NFltcFVsRkZVaDY3Z19OUHJ6dklROTZjSUc3UEY3MmZqakVpTEpyX3JldDNsRzNFdm1SenRfWXdINTBnU2NEb2U0UjRBaWlIb0xmT1RuSlFVN2xCS3JVTm5OX3N1OWV2WTNlUW3SAXRBVV95cUxQRWE4bGtDRTZsN1BZQ3RsVTBodnVJVF9LcEtTRGdnTFgxaFJtclR3aG1Oa1p0dmJ4bVYyTWR6TlAyeUF5QXFQRzhCUXBuSW9rU1pTNG9FOFpoeDFkZGxrYm1xdVUzSzlIM1NWajlDczJ4aDVWeQ?oc=5" target="_blank" rel="noopener noreferrer">더페어</a><a class="outlet" href="http://www.bizwnews.com/news/articleView.html?idxno=149205" target="_blank" rel="noopener noreferrer">bizwnews.com</a></div>
+        </li>
+        </ol>
+    </section>
+    <section id="g2" class="dept">
+      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">3건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/life-culture/general-cultural/6323026" target="_blank" rel="noopener noreferrer">영풍문고 북크닉 &#x27;흡연 대신 독서를&#x27;…김민경과 책 이야기</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>10/19 06:03</time><span class="s-dot">·</span><span class="s-kw">영풍문고</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">도서 9종 &#x27;발견·몰입·확장&#x27; 큐레이션으로 선보여 지난 15일 종로서 북토크…매장·온라인에도 도서 전시 영풍문고가 &#x27;노담(NO 담배)소셜클럽 2.0&#x27;과 함께 연 야외 독서 행사에 청소년과 청년 약 120명이 참여했다. 지난 15일 종각종로본점 광장에서 열린 북크닉에 …</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMickFVX3lxTFBSdVIzY1U5SlFoRTVXYTRWYm1uV0JFSW9FSG9YTEJyN1VjOV9wY3ZCT1pqOFd2QUpsd1FaZFMwZEZfV3FnSDVVUnBQYWdZTXBFamkyUXNGOVdCX2JFNnNvQlZ4SWEyWlQ3aXdFbk11LXlIZw?oc=5" target="_blank" rel="noopener noreferrer">쇼펜하우어 인생수업, 교보·예스24 베스트셀러 상위권</a>
+          <p class="s-meta"><span class="s-src">스페셜타임스</span><span class="s-dot">·</span><time>10/18 15:55</time><span class="s-dot">·</span><span class="s-kw">예스24</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.kbmaeil.com/article/20261018500003" target="_blank" rel="noopener noreferrer">트리니티항공, 밀리의서재·웨이브와 제휴…1개월 무료 이용권 제공</a>
+          <p class="s-meta"><span class="s-src">kbmaeil.com</span><span class="s-dot">·</span><time>10/18 15:24</time><span class="s-dot">·</span><span class="s-kw">밀리의서재</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">트리니티항공이 국내 독서 플랫폼 밀리의서재와 온라인동영상서비스(OTT) 웨이브(Wavve)와 제휴를 맺고 고객 대상 콘텐츠 혜택을 확대한다. 트리니티항공은 내년 3월 31일까지 항공권 예매 및 탑승 고객을 대상으로 ‘위드 트리니티(With TRINITY)’ 프로모션을</p>
+        </li>
+        </ol>
+    </section>
+    <section id="g3" class="dept">
+      <h2 class="dept-head"><span class="dept-name">자사·주주사</span><span class="dept-count">3건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE81TGNjSzk1d0t0d0RtV2RiTFdsMlhkb1ZEYlFoR1BEUmZUcmZ2ZUdVbXJBdUlKUHhwUzdXUThRR25aUnUweU9PVnpXWGRuajUwcTN3MENZS25xYmtCV1hNdTBlSlBfVkV2eGNaUnpYOA?oc=5" target="_blank" rel="noopener noreferrer">[9월 GA 생보사 실적 M/S] 스카이블루에셋, 한화생명 34%, DB생명 30%… 교보생명 6계단 &#x27;껑충&#x27;</a>
+          <p class="s-meta"><span class="s-src">보험저널</span><span class="s-dot">·</span><time>10/19 06:00</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMickFVX3lxTE9Hdy1rcmU4UHZMYkJ3djh0SEh4VGtLMDJ1cy1JdDdmaWUzQ0lSVzNkNEhJRU5hZ0dfa0J3SEwzbFpfWWFCU3BpR1A1elQ5bFRGZm5HVUZWRVlyLUtuOENRY2wyTVJkOHd0UEJONXJGY3ZBUQ?oc=5" target="_blank" rel="noopener noreferrer">교보생명, 디지털 금융·건강관리 사업 확대…스타트업 육성도 강화</a>
+          <p class="s-meta"><span class="s-src">웹이코노미</span><span class="s-dot">·</span><time>10/19 00:52</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.sportsseoul.com/news/read/1642166?ref=naver" target="_blank" rel="noopener noreferrer">“환경교육도 배달합니다”…교보생명, 수소차로 학교·지역사회 누빈다</a>
+          <p class="s-meta"><span class="s-src">sportsseoul.com</span><span class="s-dot">·</span><time>10/18 16:10</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[스포츠서울 | 위수정 기자] 교보생명이 친환경 수소차량을 활용한 이동형 환경교육을 학교에서 지역사회로 확대하며 미래세대의 환경 인식 개선과 친환경 실천 문화 확산에 나선다. 교보생명은 기후부와 함께 운영하는 ‘푸름이 이동환경교실’을 통해 올해 말까지 초·중학생과 지역 주민 등 2만</p>
+        </li>
+        </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>본 리포트의 제목·링크·보도시각·출처는 모두 <strong>네이버 뉴스 검색 API · 구글뉴스 RSS</strong>의 원본 데이터이며, 각 기사 <b>요약</b>은 원문 페이지가 제공하는 대표 설명(메타 요약)을 그대로 가져온 것입니다 — 별도의 생성형 요약은 없습니다. 동일 사실을 여러 매체가 보도하면 대표 1건으로 통합해 <b>N개 매체</b> 수와 언론사별 링크 버튼으로 표시했고, 한 매체만 보도한 건은 <b>단일 출처</b>로 표기했습니다.</p>
+    <p class="gen">수집 47건 → 통합 20건 · 제외 366건 · 생성 2026-10-19 09:00 KST</p>
+  </footer>
+</div>
+</body>
+</html>
