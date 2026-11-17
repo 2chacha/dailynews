@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>뉴스 클리핑 · 2026-11-17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+    --serif:"Nanum Myeongjo","AppleMyungjo",Batang,Georgia,serif;
+    --sans:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+      --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14); }
+  }
+  :root[data-theme="light"]{
+    --paper:#f5f4ef; --card:#fbfaf6; --ink:#1d1c1a; --muted:#726d64; --faint:#948e83;
+    --line:#e5e1d7; --rule:#d7d2c6; --accent:#0f5f57; --accent-soft:rgba(15,95,87,.10);
+  }
+  :root[data-theme="dark"]{
+    --paper:#141311; --card:#1c1b17; --ink:#e9e6df; --muted:#a49e92; --faint:#867e71;
+    --line:#2a2822; --rule:#332f28; --accent:#5bb9ac; --accent-soft:rgba(91,185,172,.14);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ transition:none!important; } }
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 20px 72px; }
+  a{ color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  .masthead{ text-align:center; padding:46px 0 20px; border-bottom:3px double var(--rule); }
+  .kicker{ margin:0; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .nameplate{ margin:.22em 0 .14em; font-family:var(--serif); font-weight:800; color:var(--ink);
+    font-size:clamp(2.1rem,6vw,2.9rem); letter-spacing:-.01em; }
+  .dateline{ margin:0; font-size:.82rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .archive-link{ display:inline-block; margin-top:14px; font-size:.8rem; color:var(--accent);
+    text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:6px 15px;
+    transition:background .15s,border-color .15s; }
+  .archive-link:hover{ background:var(--accent-soft); border-color:var(--accent); }
+
+  .summary{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px;
+    padding:16px 2px; border-bottom:1px solid var(--line); }
+  .figs{ display:flex; gap:26px; }
+  .fig{ display:flex; flex-direction:column; line-height:1.05; }
+  .fig .n{ font-family:var(--serif); font-size:1.55rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .fig .l{ font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--faint); margin-top:4px; }
+  .topsrc{ margin:0 0 0 auto; font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .topsrc-l{ color:var(--faint); margin-right:6px; }
+
+  .deptnav{ position:sticky; top:0; z-index:5; display:flex; gap:4px; flex-wrap:wrap;
+    padding:10px 0; margin-bottom:6px; background:var(--paper); border-bottom:1px solid var(--line); }
+  .deptnav a{ font-size:.82rem; color:var(--muted); text-decoration:none; padding:4px 11px;
+    border-radius:999px; white-space:nowrap; transition:background .15s,color .15s; }
+  .deptnav a:hover{ color:var(--ink); background:var(--accent-soft); }
+  .deptnav a b{ color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; margin-left:3px; }
+
+  .dept{ margin-top:36px; scroll-margin-top:58px; }
+  .dept-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+    margin:0 0 4px; padding-bottom:9px; border-bottom:2px solid var(--ink); }
+  .dept-name{ font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--ink); }
+  .dept-count{ font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .stories{ list-style:none; margin:0; padding:0; }
+  .story{ padding:16px 0; border-top:1px solid var(--line); }
+  .stories .story:first-child{ border-top:none; }
+  .s-title{ display:block; font-family:var(--serif); font-size:1.14rem; font-weight:700;
+    line-height:1.38; color:var(--ink); text-decoration:none; text-wrap:balance; transition:color .15s; }
+  .s-title:hover{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+  .s-meta{ margin:6px 0 0; font-size:.76rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .s-src{ color:var(--muted); font-weight:600; }
+  .s-kw{ color:var(--faint); }
+  .s-dot{ color:var(--faint); margin:0 7px; }
+  .s-media{ color:var(--accent); font-weight:600; }
+  .s-single{ color:var(--faint); font-style:italic; }
+  .s-desc{ margin:7px 0 0; font-size:.875rem; color:var(--muted); line-height:1.6; }
+  .outlets{ margin-top:9px; display:flex; flex-wrap:wrap; gap:5px; }
+  .outlet{ font-size:.72rem; color:var(--muted); text-decoration:none; border:1px solid var(--line);
+    border-radius:6px; padding:3px 9px; transition:color .12s,border-color .12s,background .12s; }
+  .outlet:hover{ color:var(--accent); border-color:var(--accent); background:var(--accent-soft); }
+  .empty{ color:var(--faint); font-size:.9rem; padding:8px 0; }
+
+  footer{ margin-top:54px; padding-top:18px; border-top:3px double var(--rule);
+    color:var(--faint); font-size:.76rem; line-height:1.65; }
+  footer p{ margin:0 0 6px; }
+  footer strong{ color:var(--muted); }
+  footer .gen{ font-variant-numeric:tabular-nums; }
+
+  @media (max-width:560px){
+    .summary{ gap:12px 18px; } .figs{ gap:18px; }
+    .topsrc{ margin:6px 0 0; width:100%; }
+    .deptnav{ overflow-x:auto; flex-wrap:nowrap; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="kicker">출판·유통 시장 데일리 브리프</p>
+    <h1 class="nameplate">뉴스 클리핑</h1>
+    <p class="dateline">2026년 11월 17일 화요일 · 최근 24시간 11/16 09:06–11/17 09:06 KST</p>
+    <a class="archive-link" href="index.html">지난 리포트 아카이브 →</a>
+  </header>
+
+  <div class="summary">
+    <div class="figs">
+      <div class="fig"><span class="n">37</span><span class="l">총 기사</span></div>
+      <div class="fig"><span class="n">14</span><span class="l">다중매체</span></div>
+      <div class="fig"><span class="n">23</span><span class="l">단일 출처</span></div>
+      <div class="fig"><span class="n">4</span><span class="l">분야</span></div>
+    </div>
+    <p class="topsrc"><span class="topsrc-l">많이 다룬 매체</span>세계일보 3 · 뉴스1 3 · 머니투데이 2 · 한겨레 1 · 중앙일보 1</p>
+  </div>
+
+  <nav class="deptnav" aria-label="분야 바로가기"><a href="#g0">출판 <b>9</b></a><a href="#g1">리테일 업계 <b>21</b></a><a href="#g2">경쟁사 <b>0</b></a><a href="#g3">자사·주주사 <b>7</b></a></nav>
+
+  <main>
+    <section id="g0" class="dept">
+      <h2 class="dept-head"><span class="dept-name">출판</span><span class="dept-count">9건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.hani.co.kr/arti/opinion/because/1287626.html" target="_blank" rel="noopener noreferrer">‘AI 학습’ 저작물 무단 이용…창작자 보호책 시급하다 [왜냐면]</a>
+          <p class="s-meta"><span class="s-src">한겨레</span><span class="s-dot">·</span><time>11/16 20:08</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">정지우 | 문화평론가·변호사 최근 앤트로픽이 국내 도서를 대량 구매한 사실이 알려지면서, 인공지능(AI) 학습에 무단 이용되는 것이 아닌가 하는 논란이 커지고 있다. 앞서 해외에서 에이아이 회사가 종이책을 대량 구매한 뒤 제본을 잘라 일괄 스캔하</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.joongang.co.kr/article/25479082" target="_blank" rel="noopener noreferrer">지북, 창간 20주년 맞아 북미·유럽 도서관에 한글책 기증</a>
+          <p class="s-meta"><span class="s-src">중앙일보</span><span class="s-dot">·</span><time>11/16 18:15</time><span class="s-dot">·</span><span class="s-kw">출판업계</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">국내 창작자들의 작품을 소개하는 출판물 ‘지북(zibook)’이 창간 20주년을 맞아 북미·유럽 지역 도서관에 한글책을 기증했다. 지북은 2006년 창간된 창작자 소개 책자로, 건축·인테리어·패션·가구·사진·예술 등 다양한 분야의 창작자와 작품을 소개해 왔다. 국내 창작자들의 작품과 프로젝트를 해외에 알리고 관련 업계 간 교류를 지원하는 역할도 해왔다. 지북 발행인인 곽숙경 대표는 창간 20…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.segye.com/newsView/20261116513763?OutUrl=naver" target="_blank" rel="noopener noreferrer">옥스퍼드에 K문학 전문 출판 브랜드 출범…첫 작품은 차인표 소설</a>
+          <p class="s-meta"><span class="s-src">세계일보</span><span class="s-dot">·</span><time>11/16 18:02</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">영국 옥스퍼드에 한국 문학을 영어권 독자들에게 소개하는 전문 출판 브랜드가 출범했다. 첫 출간작으로는 배우 겸 소설가 차인표의 장편소설이 선정됐다. 16일 영국 현지 언론에 따르면 옥스퍼드대 한국학센터는 현지 독립 출판사 옥스퍼드 이북스(Oxford eBooks)와 한국 문학 전문 출판 브랜드 ‘K-프레스’(K-PRESS) 출범을 위한 업무협약을 체결했다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.segye.com/newsView/20261116513763?OutUrl=naver" target="_blank" rel="noopener noreferrer">세계일보</a><a class="outlet" href="https://www.sportsworldi.com/newsView/20261116504091" target="_blank" rel="noopener noreferrer">sportsworldi.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://biz.chosun.com/it-science/ict/2026/11/16/EGDQ5GMVKZDT5CDUSXU4U42X7Y/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener noreferrer">스포티파이, 韓 ‘듣는 책’ 시장 진출… 아마존도 내년 상륙</a>
+          <p class="s-meta"><span class="s-src">조선일보</span><span class="s-dot">·</span><time>11/16 16:50</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">국내 이용자 720만명 돌파한 스포티파이 음원·팟캐스트 이어 오디오북 서비스 시작 월 7990원 내면 영문 오디오북 15시간 청취 밀리의서재·윌라 주도 시장에 글로벌 기업 가세 세계 최대 음원 스트리밍 서비스 스포티파이가 최근 국내 오디오북 시장에 진출하면서 ‘듣는 책’ 시장…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5d2M5T2JlWHBvUnVPaHRhUUs0SW0zQ0tJRHQwVkpVZVZvYWtPV1B3aFB1OWFMQ3EyWVIwcFRpazkyck9mbHZSQzhBemhkZ0RvUUllYzQ0em5Ya1Q5Y0J2blJaT0g?oc=5" target="_blank" rel="noopener noreferrer">[단독] K-웹툰 `킬러 배드로·비밀 사이`…3조원 북미 코믹스 시장 노크</a>
+          <p class="s-meta"><span class="s-src">디지털데일리</span><span class="s-dot">·</span><time>11/16 15:50</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5d2M5T2JlWHBvUnVPaHRhUUs0SW0zQ0tJRHQwVkpVZVZvYWtPV1B3aFB1OWFMQ3EyWVIwcFRpazkyck9mbHZSQzhBemhkZ0RvUUllYzQ0em5Ya1Q5Y0J2blJaT0g?oc=5" target="_blank" rel="noopener noreferrer">디지털데일리</a><a class="outlet" href="https://www.ddaily.co.kr/page/view/2026111614222144030" target="_blank" rel="noopener noreferrer">ddaily.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ccreview.co.kr/news/articleView.html?idxno=362818" target="_blank" rel="noopener noreferrer">&quot;50일간의 웹툰 마라톤, 새로운 스타를 찾다&quot;…충북 웹툰런 4개 작품 수...</a>
+          <p class="s-meta"><span class="s-src">ccreview.co.kr</span><span class="s-dot">·</span><time>11/16 15:20</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[충청리뷰 이기인 기자] 차세대 웹툰 작가들의 창작 열정이 모인 치열한 서바이벌 무대에서 미래 웹툰산업을 이끌 신진 작가들이 탄생했다.청주시문화산업진흥재단(대표이</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.etoday.co.kr/news/view/2648660" target="_blank" rel="noopener noreferrer">엘리필름, 최마태 첫 사진집 ‘WHILE IT LASTS’ 초판 1000부 판매 기록…...</a>
+          <p class="s-meta"><span class="s-src">etoday.co.kr</span><span class="s-dot">·</span><time>11/16 13:24</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">-9일간 열린 사진전에 약 3000명 방문… 출간 4일 만에 초판 물량 소진-2쇄 사전예약 11월 19일까지 엘리카메라 공식 온라인 스토어서 진행(엘리필름</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.goodmorningcc.com/news/articleView.html?idxno=455876" target="_blank" rel="noopener noreferrer">빗속에서도 이어진 책 향기…&#x27;제3회 금산책삼&#x27; 북페어 성료</a>
+          <p class="s-meta"><span class="s-src">goodmorningcc.com</span><span class="s-dot">·</span><time>11/16 13:20</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[굿모닝충청 노준희 기자] 대형 서점과 출판 인프라가 대도시에 집중된 현실 속에서, 인구 5만 명이 안 되는 군 단위에서 지역 서점과 독립출판 창작자를 전면에 내세운 책 축제를 3회째 이어가고 있다.지난 14일 금산군 금산읍 금빛시장 일원에서는 ‘제3회 금산책삼’ 북페어가 열렸다.‘금</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.thepowernews.co.kr/view.php?ud=2026111610372059269aeda69934_7" target="_blank" rel="noopener noreferrer">부커스, 클라우드 임대부터 맞춤형 구축까지 ‘전자책 플랫폼’ 신사업...</a>
+          <p class="s-meta"><span class="s-src">thepowernews.co.kr</span><span class="s-dot">·</span><time>11/16 10:50</time><span class="s-dot">·</span><span class="s-kw">출판 시장</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">[더파워 최성민 기자]B2B 전자책 구독 플랫폼 전문기업 주식회사 부커스(대표 임동명)가 차세대 전자책 플랫폼 ‘부커스 2.0’ 출시에 이어 ‘클라우드 전용관 임대·운영·유지보수 사업’과 ‘맞춤형 전자책 플랫폼 개발·운영사업’ 등 두 가지 전문사업을 특화해 본격 확대한다고 밝혔다.부커스</p>
+        </li>
+        </ol>
+    </section>
+    <section id="g1" class="dept">
+      <h2 class="dept-head"><span class="dept-name">리테일 업계</span><span class="dept-count">21건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://www.slist.kr/news/articleView.html?idxno=782373" target="_blank" rel="noopener noreferrer">올리브영, &#x27;컬러 그라운드 홍대&#x27; 오픈…&#x27;K-색조&#x27; 육성 본격화</a>
+          <p class="s-meta"><span class="s-src">slist.kr</span><span class="s-dot">·</span><time>11/17 09:02</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">CJ올리브영이 스킨케어에 이은 K-뷰티의 차세대 성장동력으로 ‘K-색조’를 낙점하고, 국내 색조 시장의 저변 확대와 브랜드 성장을 위한 전방위 지원에 나선다.올리브영은 오는 20일 서울 마포구 서교동에 색조 특화 매장 ‘컬러 그라운드 홍대’를 연다고 밝혔다. 올리브영이 특정 상품군(카테고리)을 전면에 내세운 특화 매장을 선보이는 것은 이번이 처음이다.올리브영은 이곳을 K-색조의 글로벌 확산을…</p>
+          <div class="outlets"><a class="outlet" href="https://www.slist.kr/news/articleView.html?idxno=782373" target="_blank" rel="noopener noreferrer">slist.kr</a><a class="outlet" href="http://www.newsdream.kr/news/articleView.html?idxno=122288" target="_blank" rel="noopener noreferrer">newsdream.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9MOVRtMFYzUUdPZ2xubkNIQzhGdkg4SGhhTWVEelROd3J4MzlaU3hmZy12Z0RJdlhiUG1NdUJPazZkUV8xODF4QnRvZE1uTFdoVTdiSA?oc=5" target="_blank" rel="noopener noreferrer">“공항까지 모시러 갑니다”…현대백화점, 외국인 VIP 전용 서비스 도입</a>
+          <p class="s-meta"><span class="s-src">이투데이</span><span class="s-dot">·</span><time>11/17 08:33</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-media">7개 매체</span></p>
+          <p class="s-desc">내년 2월 글로벌 VIP 멤버십 신설…플래티넘·골드 등급 운영업계 첫 공항 차량 의전 서비스…전담 매니저 일대일 쇼핑 지원100만원 이상 구매 외국인 75</p>
+          <div class="outlets"><a class="outlet" href="https://news.google.com/rss/articles/CBMiVEFVX3lxTE9MOVRtMFYzUUdPZ2xubkNIQzhGdkg4SGhhTWVEelROd3J4MzlaU3hmZy12Z0RJdlhiUG1NdUJPazZkUV8xODF4QnRvZE1uTFdoVTdiSA?oc=5" target="_blank" rel="noopener noreferrer">이투데이</a><a class="outlet" href="https://www.etoday.co.kr/news/view/2648982" target="_blank" rel="noopener noreferrer">etoday.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE40bDF3Q0N3Vmk1NEFrcVFsbi1CbFdfSzduaW5HTWltMkdqMXNzc3I3N0lhOFlLRG9jSHZUZ0VOcW1XQ2tOMTJtZUZ2NFVldnR1YjgtQmpKam5NWHhnem9pNDVfOFFDbjA?oc=5" target="_blank" rel="noopener noreferrer">문화저널21</a><a class="outlet" href="https://www.mhj21.com/news/articleView.html?idxno=254832" target="_blank" rel="noopener noreferrer">mhj21.com</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5pd2xLMUJEbFRBSFVLRkJTNUkxNjdaYmVXc0lTdUwyN3QydkpseEE3WlhDMVR0R2xYVWpyWk5YMTB1VjhjTkI5RHEzYlNHUVFpV1dnZy1SWnBrWVlUdjNnTHNUR2E?oc=5" target="_blank" rel="noopener noreferrer">매일일보</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1MckFmYktnWnN2VE5kdFhvbUFiRVJ5X2FXYlBSTkhVbmNQTV8xREkyZFZZRnFEZ2FNR3V4TFdnRzV0aDBlTWFkdTdrNl9GQTEwS05uLTVKRzE2QQ?oc=5" target="_blank" rel="noopener noreferrer">브릿지경제</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBtT3pONDJlRmhCSjU0VnRuS1Y4d1I3V01ZX0U1TWQxaDVTMTJzTndYRnJfWHFzVTNBcXo0emhWMjRKdERCSTdfbkdkRFlrcjJQYW03QVlzYlE?oc=5" target="_blank" rel="noopener noreferrer">뷰어스</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.segye.com/newsView/20261117502887?OutUrl=naver" target="_blank" rel="noopener noreferrer">외국인 65% 몰렸다…무신사·올리브영·신세계 시코르, K뷰티 성지 쟁탈...</a>
+          <p class="s-meta"><span class="s-src">세계일보</span><span class="s-dot">·</span><time>11/17 08:19</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">서울 성수동에 새로 문을 연 무신사 뷰티 매장이 닷새 만에 거래액 5억원을 기록했다. 구매 고객 10명 중 6명 이상이 외국인이었다. CJ올리브영과 신세계백화점의 시코르도 외국인 고객이 몰리는 주요 상권에서 체험형 매장을 확대하고 있다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.segye.com/newsView/20261116515153?OutUrl=naver" target="_blank" rel="noopener noreferrer">롯데백화점, 도쿄 신주쿠에 ‘코이리스’ 임시매장</a>
+          <p class="s-meta"><span class="s-src">세계일보</span><span class="s-dot">·</span><time>11/16 23:14</time><span class="s-dot">·</span><span class="s-kw">롯데백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">롯데백화점은 이달 말까지 일본 도쿄 신주쿠의 복합쇼핑몰 ‘플래그스’에서 국내 패션 브랜드 ‘코이리스’의 임시매장을 운영한다고 16일 밝혔다. 사진은 코이리스 매장이 방문객들로 붐비는 모습. 롯데백화점 제공.</p>
+          <div class="outlets"><a class="outlet" href="https://www.segye.com/newsView/20261116515153?OutUrl=naver" target="_blank" rel="noopener noreferrer">세계일보</a><a class="outlet" href="https://www.tournews21.com/news/articleView.html?idxno=148534" target="_blank" rel="noopener noreferrer">tournews21.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5TcEtLT2UyaEtLLXBZSjJFNWMyMnJmYVpyT2hvS3lzUHhtWVdXOWhWRXBTVGxnTmxPOWlvSGdjZEUzNnd2azRpZjRxVDQtdFVHRHQtNkNTS2w4dw?oc=5" target="_blank" rel="noopener noreferrer">더현대·스타필드 품은 부산 강서 랜드마크</a>
+          <p class="s-meta"><span class="s-src">파이낸셜뉴스</span><span class="s-dot">·</span><time>11/16 18:50</time><span class="s-dot">·</span><span class="s-kw">더현대</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">중흥건설그룹 중흥토건이 부산에 공급하는 &#x27;에코델타시티 중흥S-클래스 리버시티&#x27;가 선착순 동·호 지정 계약을 하고 있다.16일 중흥토건에 따르면 이 단지가 들어서는 에코델타시티는 국내 첫 &#x27;스마트시티 국가시범도시&#x27;로 조성된다.</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://theviewers.co.kr/View.aspx?No=4314882" target="_blank" rel="noopener noreferrer">올리브영, 3분기 매출 늘었지만 이익 준 이유</a>
+          <p class="s-meta"><span class="s-src">theviewers.co.kr</span><span class="s-dot">·</span><time>11/16 17:54</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">CJ올리브영이 외국인 관광객 수요와 해외 사업 확대에 힘입어 성장세를 이어갔다. 다만 미국 오프라인 매장 확대와 물류 인프라 구축에 따른 투자 비용이 반영되면서 순이익은 감소했다.CJ올리브영은 올해 3분기 별도 기준 매출이 1조7290억원으로 전년 동기 대비 11% 증가했다고 16일 밝혔다. 같은 기간 순이익은 1388억원으로 8.4% 감소했다. 금융감독원 전자공시시스템에 공시된 CJ 분기보…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsinside.kr/news/articleView.html?idxno=5049722" target="_blank" rel="noopener noreferrer">CJ올리브영, 9개월 만에 매출 5조 넘었다…외국인이 끌고 북미에 베팅</a>
+          <p class="s-meta"><span class="s-src">newsinside.kr</span><span class="s-dot">·</span><time>11/16 17:48</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">CJ올리브영이 방한 외국인의 K뷰티 소비 확대에 힘입어 올해 1~3분기 누적 매출 5조원을 넘어섰다. 국내에서는 외국인 관광객이 성장을 이끌고, 해외에서는 미국</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611161642113200315" target="_blank" rel="noopener noreferrer">CJ올리브영 3분기 누적 매출 5조원 돌파… 성장률은 둔화</a>
+          <p class="s-meta"><span class="s-src">dnews.co.kr</span><span class="s-dot">·</span><time>11/16 17:02</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">CJ올리브영이 3분기 만에 누적 매출 5조원을 넘어섰지만 분기 매출 증가율은 10%대 초반으로 내려앉았다.... 16일 금융감독원 전자공시시스템에 공시된 CJ 분기보고서에 따르면 CJ올리브영의 3분기 별도 매출은...</p>
+          <div class="outlets"><a class="outlet" href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611161642113200315" target="_blank" rel="noopener noreferrer">dnews.co.kr</a><a class="outlet" href="http://www.yonhapnewstv.co.kr/news/AKR202611161707228TR" target="_blank" rel="noopener noreferrer">yonhapnewstv.co.kr</a><a class="outlet" href="https://www.asiatoday.co.kr/kn/view.php?key=20261116010006170" target="_blank" rel="noopener noreferrer">asiatoday.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBLbzBWSE9UTExlZjZHUjF1bWZpc2loM3lCY1l1d0FpWWJ1clJnLXBfSGoxRnhTRWdfd3dsLS1DNjJlbm5PYW1IODdiZVVueUkwM0VBMXZrWm9vLWlUbVlXeVJBUXI2ZHlwUWtsVWY5UQ?oc=5" target="_blank" rel="noopener noreferrer">“현대백화점, 본업 실적 합격점에도 웃지 못하는 이유…관건은 지누스의 2027년 BEP 달성”</a>
+          <p class="s-meta"><span class="s-src">뉴스퀘스트</span><span class="s-dot">·</span><time>11/16 16:34</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.yna.co.kr/view/AKR20261116139700030?input=1195m" target="_blank" rel="noopener noreferrer">CJ올리브영 3분기 매출 전년 대비 11% 오른 1조7천290억원</a>
+          <p class="s-meta"><span class="s-src">연합뉴스</span><span class="s-dot">·</span><time>11/16 16:25</time><span class="s-dot">·</span><span class="s-kw">올리브영</span><span class="s-dot">·</span><span class="s-media">14개 매체</span></p>
+          <p class="s-desc">(서울=연합뉴스) 조민정 기자 = CJ올리브영이 올해 3분기 1조7천억원대의 매출을 올렸다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.yna.co.kr/view/AKR20261116139700030?input=1195m" target="_blank" rel="noopener noreferrer">연합뉴스</a><a class="outlet" href="https://biz.chosun.com/distribution/channel/2026/11/16/REFBWMH5VZGQFD2MUER5GHGAIM/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener noreferrer">조선일보</a><a class="outlet" href="https://www.livebiz.today/news/articleView.html?idxno=206570" target="_blank" rel="noopener noreferrer">livebiz.today</a><a class="outlet" href="https://www.newsis.com/view/NISX20261116_0003870328" target="_blank" rel="noopener noreferrer">뉴시스</a><a class="outlet" href="https://www.newsquest.co.kr/news/articleView.html?idxno=305140" target="_blank" rel="noopener noreferrer">newsquest.co.kr</a><a class="outlet" href="https://www.newsian.co.kr/news/articleView.html?idxno=101371" target="_blank" rel="noopener noreferrer">newsian.co.kr</a><a class="outlet" href="https://www.ddaily.co.kr/page/view/2026111617162220832" target="_blank" rel="noopener noreferrer">ddaily.co.kr</a><a class="outlet" href="https://www.mydaily.co.kr/page/view/2026111617572240190" target="_blank" rel="noopener noreferrer">mydaily.co.kr</a><a class="outlet" href="https://sateconomy.co.kr/news/view/1065599789613167" target="_blank" rel="noopener noreferrer">sateconomy.co.kr</a><a class="outlet" href="http://www.srtimes.kr/news/articleView.html?idxno=217765" target="_blank" rel="noopener noreferrer">srtimes.kr</a><a class="outlet" href="https://www.viva100.com/article/20261116501376" target="_blank" rel="noopener noreferrer">viva100.com</a><a class="outlet" href="https://biz.sbs.co.kr/article_hub/20000346836?division=NAVER" target="_blank" rel="noopener noreferrer">SBS</a><a class="outlet" href="https://www.news1.kr/industry/distribution/6356143" target="_blank" rel="noopener noreferrer">뉴스1</a><a class="outlet" href="https://www.socialvalue.kr/news/view/1065570178560070" target="_blank" rel="noopener noreferrer">socialvalue.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.ezyeconomy.com/news/articleView.html?idxno=241881" target="_blank" rel="noopener noreferrer">[유통家 단신] 대상·GS25·CJ제일제당·LG생활건강 등</a>
+          <p class="s-meta"><span class="s-src">ezyeconomy.com</span><span class="s-dot">·</span><time>11/16 13:56</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">대상, ‘GWP AWARDS 2026’ 개최…우수 파트너사 11곳 시상대상은 지난 13일 서울 서초구 JW 메리어트 호텔 서울에서 파트너사와의 협력 강화 및 동반성장을 위한 ‘GWP AWARDS 2026’을 개최했다. 행사에는 임정배 대상 대표이사를 비롯한 임직원과 주요 파트너사 관계</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.naeil.com/news/read/608876?ref=naver" target="_blank" rel="noopener noreferrer">신세계백화점, 방수·방한 겨울옷 확대</a>
+          <p class="s-meta"><span class="s-src">naeil.com</span><span class="s-dot">·</span><time>11/16 13:02</time><span class="s-dot">·</span><span class="s-kw">신세계백화점</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">올겨울 평년보다 포근하면서 비와 눈이 많이 내릴 것으로 예상되면서 백화점의 겨울 의류 판매 전략도 달라지고 있다. 두꺼운 방한복뿐 아니라 방수·방풍 기능을 갖춘 의류와 신발이 주요 상품으로 떠오르고 있다. 신세계백화점은 “겨울철 기상 변화에 대비해 주요 점포에서 기능성 의류와 신발을 판매하는 임시 매장을 잇따라 운영한다”고 16일 밝혔다. 기상청에 따르면 10월 엘니뇨 감시구역의 해수면 온도…</p>
+          <div class="outlets"><a class="outlet" href="https://www.naeil.com/news/read/608876?ref=naver" target="_blank" rel="noopener noreferrer">naeil.com</a><a class="outlet" href="https://www.peoplewatch.co.kr/article/view/ppw202611160016" target="_blank" rel="noopener noreferrer">peoplewatch.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.insidevina.com/news/articleView.html?idxno=44514" target="_blank" rel="noopener noreferrer">GS25, &#x27;베트남 최대 편의점&#x27; 정조준…업계 1위 서클K와 격차 단 59곳</a>
+          <p class="s-meta"><span class="s-src">insidevina.com</span><span class="s-dot">·</span><time>11/16 12:50</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">GS리테일이 베트남에서 운영하는 편의점 브랜드 GS25가 공격적 영업망 확장을 통해 점포 수 기준 업계 1위인 서클K를 바짝 뒤쫓고 있다.지난 8월 기준 GS25</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/photos/8215808" target="_blank" rel="noopener noreferrer">GS25에서 만나는 &#x27;티니핑&#x27; 크리스마스 씰</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>11/16 11:48</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">(서울=뉴스1) 최지환 기자 = 16일 서울 강남구 GS25 제이스강남점에서 직원이 크리스마스 씰을 소개하고 있다.올해 크리스마스 씰은 인기 애니메이션 &#x27;캐치! 티니핑&#x27; 캐릭터를 …</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/photos/8215812" target="_blank" rel="noopener noreferrer">GS25, &#x27;캐치! 티니핑과 함께하는 선물같은 크리스마스&#x27; 크리스마슬 씰 판...</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>11/16 11:48</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">(서울=뉴스1) 최지환 기자 = 16일 서울 강남구 GS25 제이스강남점에서 직원이 크리스마스 씰을 소개하고 있다.올해 크리스마스 씰은 인기 애니메이션 &#x27;캐치! 티니핑&#x27; 캐릭터를 …</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFAzVHdlTUZmWEhITGtBdTR1QkkyWHk1MEF3bGVGeFo0eUVXb0JSY1RGR0lPLXZOWmcyaVVuUEFRMEZxeHdlcDRWZzJOT3FhVFFQamV4R0NmVHZXWHA1LVd4OGRqcHNHZw?oc=5" target="_blank" rel="noopener noreferrer">현대백화점, 백화점·면세점 &#x27;쌍끌이&#x27;에 3분기 호실적</a>
+          <p class="s-meta"><span class="s-src">데일리메이커</span><span class="s-dot">·</span><time>11/16 11:27</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="http://www.thevaluenews.co.kr/news/view.php?idx=203305" target="_blank" rel="noopener noreferrer">정지영 현대백화점 대표, &#x27;더현대&#x27; 파리 진출 등 성공 신화 이어간다</a>
+          <p class="s-meta"><span class="s-src">thevaluenews.co.kr</span><span class="s-dot">·</span><time>11/16 10:34</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">프랑스 파리의 유명 백화점에 더현대가 등장했다. 서울 여의도에서 출발한 브랜드가 국내를 넘어 K패션의 해외 진출을 지원하는 유통 플랫폼으로 진화한 것이다.정지영 현대백화점 대표이사 사장은 더현대 서울의 흥행 공식을 지역 점포와 해외 사업에 접목하며 새로운 성장 기반을 다져왔다. 올해 외국인 고객 매출과 백화점 부문 수익성도 개선됐다.지난달 정기 임원인사에서 유임된 정 대표에게는 해외 사업을…</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiY0FVX3lxTE9rbDdlenhBR3g4clJfQ3JXZlRDem9KSU1VQlZ2SXZ5NXZsR1N1NTdTS2ZPS09DeUhFZEc4U0dMdG5sazBpV1dnVWtiV1pxS3gyR3BTd2RQUmM3dVdDOW1vTnIwSQ?oc=5" target="_blank" rel="noopener noreferrer">&#x27;스타일 워즈 더현대 서울과 특급 콜라보 패션쇼 개최! 혜리-홍진경-배정남-최실장과 화제의 출연진이 함께 뉴욕 거리를 누빈다!</a>
+          <p class="s-meta"><span class="s-src">RNX뉴스</span><span class="s-dot">·</span><time>11/16 10:33</time><span class="s-dot">·</span><span class="s-kw">더현대</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsis.com/view/NISI20261116_0021533816" target="_blank" rel="noopener noreferrer">&#x27;GS25에서 티니핑 크리스마스 씰 구매 가능해요&#x27;</a>
+          <p class="s-meta"><span class="s-src">뉴시스</span><span class="s-dot">·</span><time>11/16 10:28</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">[서울=뉴시스] 이영환 기자 = 16일 서울 강남구 GS25 지에스강남점에서 2026년 크리스마스 씰이 공개되고 있다.올해 크리스마스 씰은 인기 애니메이션 &#x27;캐치! 티니핑&#x27; 캐릭터를 활용해 제작됐으며 씰과 함께 키캡, 파우치, 컵 등 굿즈로 기획한 기획세트도 선보인다. 해당 상품은 우리동네GS 앱을 통해 오는 17일부터 29일까지 사전예약, 12월 1일부터..</p>
+          <div class="outlets"><a class="outlet" href="https://www.newsis.com/view/NISI20261116_0021533816" target="_blank" rel="noopener noreferrer">뉴시스</a><a class="outlet" href="https://www.news1.kr/photos/8215810" target="_blank" rel="noopener noreferrer">뉴스1</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.mt.co.kr/living/2026/11/16/2026111610035598700" target="_blank" rel="noopener noreferrer">치킨·빵 조합해 수제버거 만든다...GS25, &#x27;브리오슈번·치즈쏙치킨&#x27; 출...</a>
+          <p class="s-meta"><span class="s-src">머니투데이</span><span class="s-dot">·</span><time>11/16 10:06</time><span class="s-dot">·</span><span class="s-kw">GS25</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">편의점 GS25는 20일부터 &#x27;브리오슈번&#x27;과 &#x27;치즈쏙치킨&#x27;을 선보인다고 16일 밝혔다. 이번 상품은 갓 튀긴 치킨을 패티처럼 활용해 빵 사이에 넣어 수제버거 형태로 즐길 수 있는 것이 특징이다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.mt.co.kr/living/2026/11/16/2026111610035598700" target="_blank" rel="noopener noreferrer">머니투데이</a><a class="outlet" href="https://www.woodkorea.co.kr/news/articleView.html?idxno=92618" target="_blank" rel="noopener noreferrer">woodkorea.co.kr</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.fashionbiz.co.kr/article/231117" target="_blank" rel="noopener noreferrer">현대백화점, 챗GPT에 &#x27;더현대하이&#x27; 연동... AI 맞춤 쇼핑 확대</a>
+          <p class="s-meta"><span class="s-src">fashionbiz.co.kr</span><span class="s-dot">·</span><time>11/16 09:52</time><span class="s-dot">·</span><span class="s-kw">현대백화점</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">더현대하이 챗GPT현대백화점(대표 정지영)의 프리미엄 큐레이션 전문몰 ‘더현대하이(Hi)’가 카카오톡에 이어, 글로벌 생성형 AI 플랫폼 챗GPT를 연동하며 AI 기반 쇼핑 서비스를 확대한다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.fashionbiz.co.kr/article/231117" target="_blank" rel="noopener noreferrer">fashionbiz.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9DTUlTQUlhbnU2Z21hdUFCck5pWFdIdDlRaWpuejYzeXNHUENRVjdkV3EzVjdLeENkeGh6b1NxaWhQMlMtTF9Ndld3SElpVXZE?oc=5" target="_blank" rel="noopener noreferrer">패션비즈</a><a class="outlet" href="http://www.ktnews.com/news/articleView.html?idxno=150214" target="_blank" rel="noopener noreferrer">ktnews.com</a></div>
+        </li>
+        </ol>
+    </section>
+    <section id="g2" class="dept">
+      <h2 class="dept-head"><span class="dept-name">경쟁사</span><span class="dept-count">0건</span></h2>
+        <p class="empty">최근 24시간 내 수집된 기사가 없습니다.</p>
+    </section>
+    <section id="g3" class="dept">
+      <h2 class="dept-head"><span class="dept-name">자사·주주사</span><span class="dept-count">7건</span></h2>
+        <ol class="stories">
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE80ZFJkc2NqR1NYbTJoQVItYUdTUS1sN1pDMjJWMzhhcXA1UnJibEl6SlFVX19oOFUzYTF6aExsT1h1dldnVXc2NjBZdjdjNzRRNDk5TVoyQ0JudERjazdValItVmJHOVZk?oc=5" target="_blank" rel="noopener noreferrer">교보생명, 3분기 순손실 충격 속 보험손익 성장세 주목</a>
+          <p class="s-meta"><span class="s-src">공감신문</span><span class="s-dot">·</span><time>11/17 07:25</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.bloter.net/news/articleView.html?idxno=678791" target="_blank" rel="noopener noreferrer">교보생명, 3Q CSM 7조 돌파…&#x27;보장성&#x27; 기반 보험손익 10.8%↑</a>
+          <p class="s-meta"><span class="s-src">블로터</span><span class="s-dot">·</span><time>11/16 18:10</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-media">2개 매체</span></p>
+          <p class="s-desc">교보생명이 보장성 중심의 영업에 드라이브를 걸면서 보유계약 보험계약마진(CSM) 7조원을 넘겼다. 건강보험 등 고수익 보장성 상품 판매가 늘면서 미래 이익 기반이 확대된 것은 물론 3분기 보험손익도 두 자릿수 성장세를 기록했다.16일 교보생명에 따르면 9월 말 별도 기준 보유계약 CS</p>
+          <div class="outlets"><a class="outlet" href="https://www.bloter.net/news/articleView.html?idxno=678791" target="_blank" rel="noopener noreferrer">블로터</a><a class="outlet" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE9wb2pWTjRyNWUwdmwzVDE1ODR2RWpxdV91eGNnMTFRTFJ0c3B3NF8ycVRJS3o1U0ZfQm9KeDN5M2N0OWx5aWN6X0pFMnVsNjJkQzBRMUcxSUhOMngwOFc4U08zdkRFUnFOeHVkUTBoZw?oc=5" target="_blank" rel="noopener noreferrer">이코노미사이언스</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://news.google.com/rss/articles/CBMicEFVX3lxTE0tMkJ6TXVpRENJUDVPV3R4dldqYkJyVHpSSnBmSHdUc1k3UGhJYk9pTGZOT0pQb0NERUpqOHYtb1pIXzNRbHpoOWlQSG9ZQWY4SFdHQl90dU9BMDJ3Rk1XVEpVMHhRRnZhQ29tOXZ3N0HSAXRBVV95cUxPTG9Tajh4Nk1sNnB1VkxJcTZoMFJ5V3ZGSzNnQmtNSkUxRW10Z1ZkYzFweDVZR01hRXZ2Z05ycFh3ajQwUFU2Q3BYR3Yxd0lKMzNSWUFSbThlNERpd282MEFFWmE3UDJEYkx6bzZiSlpIdDk5OQ?oc=5" target="_blank" rel="noopener noreferrer">교보생명, 악사손보 인수 &#x27;장고&#x27;…수익성이 변수</a>
+          <p class="s-meta"><span class="s-src">포인트데일리</span><span class="s-dot">·</span><time>11/16 18:00</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.mt.co.kr/finance/2026/11/16/2026111617262675990" target="_blank" rel="noopener noreferrer">교보생명, 투자손익 부진 3분기 누적 순익 20%↓…CSM은 첫 7조 돌파</a>
+          <p class="s-meta"><span class="s-src">머니투데이</span><span class="s-dot">·</span><time>11/16 17:33</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-media">18개 매체</span></p>
+          <p class="s-desc">16일 교보생명에 따르면 올해 3분기 누적 연결 기준 당기순이익은 7082억원으로 전년 동기(8844억원) 대비 19.9%(1762억원) 감소했다. 3분기 누적 연결 보험손익은 4070억원으로 전년 동기(4103억원)와 비슷한 수준을 유지했다.</p>
+          <div class="outlets"><a class="outlet" href="https://www.mt.co.kr/finance/2026/11/16/2026111617262675990" target="_blank" rel="noopener noreferrer">머니투데이</a><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBwRGoxZTB1b1ZvbzA4bUFIcWg0Q1Jlcmk3UE9haFpnUml4cnhVSXJqTmpVZ2tOR2EtTVgxMG1sMjBvak1oa0hHWF9waE5KVmE1Tjk1X3JRQ0VlUVA5M1BFOUlDUjFLcDNrbXpJTDI1VmrSAXRBVV95cUxPSGRjYlJSWWRrRExvTW5YZEZ2akdVMlUyZExoM204MF9RamtBZF9NZk5zYXVmUVQzRFpTdmltQnVBQzBCYkJNYy03LV9CZ1gwcEdFOHA2eFB1c1ZBdnVaM1pYZFh0R3ptOE52YUUzWElDZjlRLQ?oc=5" target="_blank" rel="noopener noreferrer">IT조선</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiakFVX3lxTFB3TVUycExPYl8xQTAwNEJGVUdnUzhpUlpUblJwa0NFQ2w5blFnaVh0c2toNS1RZWh6MS1iaXNERTNqQW4zd0tpMUtMdEt4N1ZfekgyWG55YW83WDJaaTZudktoV2x2SjdZaEE?oc=5" target="_blank" rel="noopener noreferrer">뉴스웨이</a><a class="outlet" href="https://news.google.com/rss/articles/CBMib0FVX3lxTE4xcm1Ga0VJSGQ0VmpDbGNFdEZWb2xHcjlXOWV0RlBET0F1QnBsc0RoUFFvM240bTNuM0kwc1dYakh5WkJWVHdTNllsdHc3cGpRcFhCekphVVgwNlkxbGdYRHJ1TTEtX1ZmZ01CcHlDQdIBc0FVX3lxTE5qa1lHVEpEQTdtWUZvcGZ0dmgzLVEtbnMtQmhtYTNhX1l2bkpIaWpadjJ6SmREemNKOV90cmVtLVRwd19NN1dLVTdoVXhyQ0t1NkUxVGc5ZUo2NkxnWlJtek5nVXdmNkp0dG5MWC02N0NTdVU?oc=5" target="_blank" rel="noopener noreferrer">뉴스웍스</a><a class="outlet" href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPWU5oNmN1Uk4wTi0wUzlicmw1TmllVy1pOFVRWjRfMnFpcEMycEpMZVJVY0gtZVVWSGt6YmRhckVmTV9fX1dpZmZpYVZnZExlQzFDd2thaTlJcFBHemRZREdVRG1XdVZRVUY0SVprR1plNjZqOEx2YXI4bUlGUmRiNw?oc=5" target="_blank" rel="noopener noreferrer">이데일리</a><a class="outlet" href="https://view.asiae.co.kr/article/2026111618011615830" target="_blank" rel="noopener noreferrer">아시아경제</a><a class="outlet" href="https://www.newsis.com/view/NISX20261116_0003870441" target="_blank" rel="noopener noreferrer">뉴시스</a><a class="outlet" href="https://dealsite.co.kr/articles/172911" target="_blank" rel="noopener noreferrer">dealsite.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxWndjZDNMVDJJRG5MN0l0RFUxOTBCcjZPQi01Q0x4U0I1UGdCeWV5aldrVzloaDRGSGk3eFVzdk1fZktubFhIU2M4MkhkdzIxZFg3RzdyX2lsSTFiZ2Q3d1Jvb1I?oc=5" target="_blank" rel="noopener noreferrer">PRESS9</a><a class="outlet" href="https://biz.newdaily.co.kr/site/data/html/2026/11/16/2026111650361.html" target="_blank" rel="noopener noreferrer">biz.newdaily.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1oV1MzbmY2dHZiMnhmb1l4NVZtc0RkNkxTTDhMSHk0WlJmOFhGdVNXaFlPLTNDclVJQlF6cVhsZTV0czEyYWFGOWJlZHRYV0pmUjJzY0V5S3F3TXphdU44NnZ1RlRXUEVHNVN3?oc=5" target="_blank" rel="noopener noreferrer">라이센스뉴스</a><a class="outlet" href="https://www.lcnews.co.kr/news/articleView.html?idxno=211491" target="_blank" rel="noopener noreferrer">lcnews.co.kr</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE01eGItcEdIQS1MUl9JYUt2bVo5TVZWT0xFYzcwVWdtQ3kwQUlOcTZNSDBqd0ZUWDkwN2NJazZTWjN1d2hWTnRPbHpVRQ?oc=5" target="_blank" rel="noopener noreferrer">재경일보</a><a class="outlet" href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5FaXVVMVBCeC10UnhaSTJRaE44LWMyVFQ1Mzg1cExESGlYSzkwRUlwYWV3eWtqQmFMbXZUYlFuQ2Z5VWR3LVhSUFMzUXlVaEVMYjdPMXFGZzNHX08xbTJkYjhTVmZIWlI3SHZ4WG1n?oc=5" target="_blank" rel="noopener noreferrer">아시아투데이</a><a class="outlet" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFAwaUpMcHQzTFBEWjBfZlo2Mk1RU3d6Q1JoWEJsNTliYnQtWlhXUGF5eGlUckJOUTJ3V2Q2VGlHeXp0TWl6T0Z1ZHNEbEVOT0MxMUFUM3U4S0pvSTZ0OGVZal8ySHBEeUxDVk03T01XXzA?oc=5" target="_blank" rel="noopener noreferrer">코리아리포트</a><a class="outlet" href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBMR2V6OFZxQnF5c3JZeGI5YWRmTXR3YjlxY0NoUmkwbkV5MFJPUDI0UnJQWTlYMzdrcnpoWWh2VGFhWGJoOGtnZW5vQUJhUktFWlhlNTdrSmZrdXpvWUJXR2tPRFRxMGF1ZTNyRExTNlZFdDjSAXdBVV95cUxQc0QyYUQ2WGR0Y212RGhFMGY4cmRSWWJYRndueWQyc3lueExkenNFaDhKaHh5QTZiMzd6dDNneEw4b1YydFZSbW5LTTk4X0x6ejZJaHc4MHRvS3JWSjBuSFliaktEUmgtWV9GMlZ3ajh1dlN2Sks5UQ?oc=5" target="_blank" rel="noopener noreferrer">인사이트코리아</a><a class="outlet" href="https://biz.heraldcorp.com/article/10939199?ref=naver" target="_blank" rel="noopener noreferrer">헤럴드경제</a><a class="outlet" href="https://www.viva100.com/article/20261117500077" target="_blank" rel="noopener noreferrer">viva100.com</a></div>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.newsworker.co.kr/news/articleView.html?idxno=514255" target="_blank" rel="noopener noreferrer">[진단_보험업계 ⑦교보생명보험] 연결 순익 증가에도 보험 본업 부진......</a>
+          <p class="s-meta"><span class="s-src">newsworker.co.kr</span><span class="s-dot">·</span><time>11/16 13:06</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">교보생명보험(신창재·조대규 각자대표)은 1958년 대한교육보험으로 설립된 생명보험사로, 종신보험과 건강보험, 연금보험, 저축성보험 등을 주요 사업으로 영위하고 있</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.the-today.com/news/articleView.html?idxno=93646" target="_blank" rel="noopener noreferrer">교보생명 &#x27;1000억 베팅&#x27;…악사손보 &#x27;적자 청구서&quot;에도 몸집 불리기?(2부...</a>
+          <p class="s-meta"><span class="s-src">the-today.com</span><span class="s-dot">·</span><time>11/16 10:24</time><span class="s-dot">·</span><span class="s-kw">교보생명</span><span class="s-dot">·</span><span class="s-single">단일 출처</span></p>
+          <p class="s-desc">교보생명의 악사손해보험 인수 추진에 적자와 자본 관리 부담이 따라붙고 있다. 약 1000억원의 신주 투자로 경영권 확보를 추진하지만, 보험영업 손실이 이어지고 판</p>
+        </li>
+        <li class="story">
+          <a class="s-title" href="https://www.news1.kr/life-culture/book/6354846" target="_blank" rel="noopener noreferrer">전자책 대폭 할인…교보문고 &#x27;블랙프라이데이&#x27; 행사</a>
+          <p class="s-meta"><span class="s-src">뉴스1</span><span class="s-dot">·</span><time>11/16 09:59</time><span class="s-dot">·</span><span class="s-kw">교보문고</span><span class="s-dot">·</span><span class="s-media">3개 매체</span></p>
+          <p class="s-desc">전자책은 이달 30일까지 교보문고가 블랙프라이데이 시즌을 맞아 전자책(eBook)과 핫트랙스 상품을 최대 82% 할인하고 추가 혜택을 제공하는 대규모 판촉 행사를 진행한다.이번 프로모션은 …</p>
+          <div class="outlets"><a class="outlet" href="https://www.news1.kr/life-culture/book/6354846" target="_blank" rel="noopener noreferrer">뉴스1</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfUVlzWk9PeW5wTDBjMFQ1bmhWYkstZUhOeWVuX3d6V3UzZ1d5UWlrYjdpU0tCNUloSHd2cVltMFFBcVBOQWpzeDdvc2N3R05xMEZNb3MyS0x6ZHI5anVKMTZXTGFpUQ?oc=5" target="_blank" rel="noopener noreferrer">싱글리스트</a><a class="outlet" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1xSklaYVhrNDJYT1Y1TjZBV0tfQktUZ1pVdVZVQ0RIZlZHZW5zTFVSS29ZdWlja2hCckFHWWFyV0NLekNjWlJINW1FLU9EWjIwcldUZFAzSVY5Zw?oc=5" target="_blank" rel="noopener noreferrer">파이낸셜뉴스</a></div>
+        </li>
+        </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>본 리포트의 제목·링크·보도시각·출처는 모두 <strong>네이버 뉴스 검색 API · 구글뉴스 RSS</strong>의 원본 데이터이며, 각 기사 <b>요약</b>은 원문 페이지가 제공하는 대표 설명(메타 요약)을 그대로 가져온 것입니다 — 별도의 생성형 요약은 없습니다. 동일 사실을 여러 매체가 보도하면 대표 1건으로 통합해 <b>N개 매체</b> 수와 언론사별 링크 버튼으로 표시했고, 한 매체만 보도한 건은 <b>단일 출처</b>로 표기했습니다.</p>
+    <p class="gen">수집 96건 → 통합 37건 · 제외 555건 · 생성 2026-11-17 09:06 KST</p>
+  </footer>
+</div>
+</body>
+</html>
